@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.9
+ *     @version 2.10
  */
 
 
@@ -55,9 +55,10 @@ try {
      * */
     var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
     var titleLink = "";
-    var listItems = "";
+    // var listItems = "";
     var listOfDegrees = "";
     var listOfTitles = "";
+    var listOfDisciplines = "";
     var thumbNailString = "";
     var titleOne = "";
     var degreeOne = "";
@@ -81,7 +82,7 @@ try {
      * */
     if (degrees != "") {
         var arrayOfDegrees = degrees.split('\n');
-        listItems = "";
+        let listItems = "";
         for (let i = 0; i < arrayOfDegrees.length; i++) {
             listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
         }
@@ -98,12 +99,28 @@ try {
      * */
     if (titles != "") {
         var arrayOfTitles = titles.split('\n');
-        listItems = "";
+        let listItems = "";
         for (let i = 0; i < arrayOfTitles.length; i++) {
             listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
         }
         listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
         titleOne = arrayOfTitles[0];
+    }
+
+
+
+
+    /***
+     *  parse the list of disciplines, add <li> tags
+     * 
+     * */
+    if (disciplines != "") {
+        var arrayOfDisciplines = disciplines.split('\n');
+        let listItems = "";
+        for (let i = 0; i < arrayOfDisciplines.length; i++) {
+            listItems += '<li class="list-group-item tag">' + arrayOfDisciplines[i] + '</li>';
+        }
+        listOfDisciplines = '<div class="tags"><ul class="list-group">' + listItems + '</ul></div>';
     }
 
 
@@ -177,12 +194,12 @@ try {
     document.write('<div class="card-text">' + degreeOne + '</div>');
     document.write('<div class="card-text">' + college + '</div>');
     document.write('<div class="card-text">' + department + '</div>');
-
+    document.write('<div class="card-text"><p>' + summary + '</p></div>');
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, listOfDisciplines));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardBody));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardFooter));
     document.write(contactPhone);
     document.write(contactEmail);
-    document.write(disciplines);
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardFooter));
     document.write(endingHTML);
 
