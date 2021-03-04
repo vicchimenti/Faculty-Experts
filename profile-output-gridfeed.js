@@ -115,7 +115,7 @@ try {
      * 
      * */
     if (disciplines != "") {
-        var arrayOfDisciplines = disciplines.split('\n');
+        var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
             listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
