@@ -177,6 +177,8 @@ try {
     document.write('<div class="card-footer">');
     document.write(contactPhone);
     document.write(contactEmail);
+    document.write(disciplines);
+    document.write(primaryExpertise);
     document.write('</div>'); // close card-footer
     document.write(endingHTML);
 
