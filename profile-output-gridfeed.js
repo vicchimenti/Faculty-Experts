@@ -111,10 +111,10 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (profileFullBody == "") {
-        titleLink = '<h3 class="card-title">' + profileTitle + '</h3>';
+    if (biography == "") {
+        titleLink = '<h3 class="card-title">' + contentName + '</h3>';
     } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + profileTitle + '</a></h3>';
+        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + contentName + '</a></h3>';
     }
 
 
@@ -124,11 +124,11 @@ try {
      *  verify Main image and photo credits
      * 
      * */
-    if (frontPageImage == "") {
+    if (primaryImage == "") {
         thumbNailString = '<span class="hidden">No Image Provided</span>';
 
     } else {
-        thumbNailString = '<span class="cardImageWrapper"><img src="' + frontPageImage + '" class="card-img-top" alt="' + profileTitle + '" /></span>';
+        thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
     }
 
 
