@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.10
+ *     @version 2.11
  */
 
 
@@ -118,9 +118,9 @@ try {
         var arrayOfDisciplines = disciplines.split('\n');
         let listItems = "";
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
-            listItems += '<li class="list-group-item tag">' + arrayOfDisciplines[i] + '</li>';
+            listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
         }
-        listOfDisciplines = '<div class="tags"><ul class="list-group">' + listItems + '</ul></div>';
+        listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
 
 
