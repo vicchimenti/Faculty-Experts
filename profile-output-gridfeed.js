@@ -120,15 +120,13 @@ try {
         let listItems = "";
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
             let itemValue = arrayOfDisciplines[i];
-            let matchResult = $.inArray(itemValue, arrayOfDisciplineFields);
-            if (matchResult == matchKey) {
-                listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
-            } else {
+            // let matchResult = $.inArray(itemValue, arrayOfDisciplineFields);
+            if (arrayOfDisciplineFields.includes(itemValue)) {
                 listItems += '<li class="list-group-item itemParent">' + arrayOfDisciplines[i] + '</li>';
+            } else {
+                listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
             }
-
-
-            listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
+            // listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
         }
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
