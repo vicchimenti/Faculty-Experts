@@ -9,3 +9,9 @@ ul.list-group {
     font-size: unset;
     line-height: unset;
 }
+
+.list-group-item {
+    list-style: unset;
+    font-size: unset;
+    margin-left: unset;
+}
