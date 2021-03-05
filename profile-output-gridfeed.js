@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.11
+ *     @version 2.14
  */
 
 
@@ -131,7 +131,7 @@ try {
      * 
      * */
     if (biography == "") {
-        titleLink = '<h3 class="card-title">' + contentName + '</h3>';
+        titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
     } else {
         titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + firstName + ' ' + lastName + '</a></h3>';
     }
