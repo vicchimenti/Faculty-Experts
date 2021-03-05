@@ -54,6 +54,7 @@ try {
      * 
      * */
     var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
+    var matchKey = -1;
     var titleLink = "";
     // var listItems = "";
     var listOfDegrees = "";
@@ -69,7 +70,6 @@ try {
     var openCardFooter = '<div class="card-footer">';
     var closeCardFooter = '</div>';
     var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
-    var arrayOfDisciplineFields = ["Athletics", "Arts & Sciences", "Business and Economics", "Education", "Law", "Nursing", "School of Theology and Ministry", "Science and Engineering"];
     var endingHTML = '</div>';
     var beginningHTML = '<div class="gridFeedItem profileItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
 
@@ -118,11 +118,7 @@ try {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
-            if ($.inArray(arrayOfDisciplines[i], arrayOfDisciplineFields) == "-1") {
-                listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
-            } else {
-                listItems += '<li class="list-group-item itemParent">' + arrayOfDisciplines[i] + '</li>';
-            }
+            listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
         }
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
