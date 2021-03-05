@@ -121,20 +121,20 @@ try {
         // let schoolString = "";
 
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
-
+            let disciplineItem = arrayOfDisciplines[i].trim();
             // Check to see if existing discipline is a top level school
-            if (disciplineString.includes(arrayOfDisciplines[i])) {
+            if (disciplineString.includes(disciplineItem)) {
                 let schoolString = arrayOfSchools.toString();
 
                 // If a school then only display once
-                if (!schoolString.includes(arrayOfDisciplines[i])) {
-                    arrayOfSchools.push(arrayOfDisciplines[i]);
-                    listItems += '<li class="list-group-item itemParent">' + arrayOfDisciplines[i] + '</li>';
+                if (!schoolString.includes(disciplineItem)) {
+                    arrayOfSchools.push(disciplineItem);
+                    listItems += '<li class="list-group-item itemParent">' + disciplineItem + '</li>';
                 }
 
             // If not a school then process as a discipline
             } else {
-                listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
+                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
             }
         }
 
