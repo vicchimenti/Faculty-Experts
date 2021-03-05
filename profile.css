@@ -14,12 +14,17 @@
 .profileItem ul.list-group {
     font-size: unset;
     line-height: unset;
-    padding-top: unset;
+    padding-top: 1rem;
 }
 
 .profileItem .list-group-item {
+    background-color: #f7f7f7;
     font-size: 1rem;
     font-weight: 500;
     list-style: unset;
     margin-left: unset;
+}
+
+.profileItem .card-footer {
+    background-color: #f7f7f7;
 }
