@@ -70,8 +70,9 @@ try {
     var openCardFooter = '<div class="card-footer">';
     var closeCardFooter = '</div>';
     var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
-    var endingHTML = '</div>';
+    var arrayOfDisciplineFields = ["Athletics", "Arts & Sciences", "Business and Economics", "Education", "Law", "Nursing", "School of Theology and Ministry", "Science and Engineering"];
     var beginningHTML = '<div class="gridFeedItem profileItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
+    var endingHTML = '</div>';
 
 
 
@@ -118,6 +119,15 @@ try {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
+            let itemValue = arrayOfDisciplines[i];
+            let matchResult = $.inArray(itemValue, arrayOfDisciplineFields);
+            if (matchResult == matchKey) {
+                listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
+            } else {
+                listItems += '<li class="list-group-item itemParent">' + arrayOfDisciplines[i] + '</li>';
+            }
+
+
             listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
         }
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
