@@ -5,13 +5,14 @@
 }
 
 .profileItem ul.list-group {
-    padding-top: unset;
     font-size: unset;
     line-height: unset;
+    padding-top: unset;
 }
 
 .profileItem .list-group-item {
+    font-size: 1rem;
+    font-weight: 500;
     list-style: unset;
-    font-size: unset;
     margin-left: unset;
 }
