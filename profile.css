@@ -1,4 +1,7 @@
 .profileItem p.card-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding-bottom: 0.25rem;
     padding-top: unset;
 }
 
