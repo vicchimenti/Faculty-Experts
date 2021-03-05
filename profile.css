@@ -1,3 +1,7 @@
+.profileItem p.card-text {
+    padding-top: unset;
+}
+
 .profileItem p.footerText {
     font-size: 1.35rem;
     font-weight: 400;
