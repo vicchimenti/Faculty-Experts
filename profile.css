@@ -1,16 +1,16 @@
-p.footerText {
+.profileItem p.footerText {
     font-size: 1.35rem;
     font-weight: 400;
     padding: 0;
 }
 
-ul.list-group {
+.profileItem ul.list-group {
     padding-top: unset;
     font-size: unset;
     line-height: unset;
 }
 
-.list-group-item {
+.profileItem .list-group-item {
     list-style: unset;
     font-size: unset;
     margin-left: unset;
