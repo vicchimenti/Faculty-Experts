@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.17
+ *     @version 2.18
  */
 
 
@@ -121,12 +121,13 @@ try {
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
             let itemValue = arrayOfDisciplines[i];
             // let matchResult = $.inArray(itemValue, arrayOfDisciplineFields);
-            if (arrayOfDisciplineFields.includes(itemValue)) {
-                listItems += '<li class="list-group-item itemParent">' + arrayOfDisciplines[i] + '</li>';
-            } else {
+            if ((arrayOfDisciplineFields.indexOf(itemValue)) == matchKey) {
                 listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
+            } else {
+                listItems += '<li class="list-group-item itemParent">' + arrayOfDisciplines[i] + '</li>';
             }
             // listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
+            console.log(beasts.indexOf('giraffe'));
         }
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
