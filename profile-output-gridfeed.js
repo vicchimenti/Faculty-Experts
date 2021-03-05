@@ -72,7 +72,7 @@ try {
     var arrayOfDisciplineFields = ["Athletics", "Arts & Sciences", "Business and Economics", "Education", "Law", "Nursing", "School of Theology and Ministry", "Science and Engineering"];
     // var beginningHTML = '<div class="gridFeedItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + profileTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneA" data-position-selected="ZoneA" />">';
     var endingHTML = '</div>';
-    var beginningHTML = '<div class="gridFeedItem profileItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + contentName + '" id="id' + contentID + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
+    var beginningHTML = '<div class="gridFeedItem profileItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
 
 
 
