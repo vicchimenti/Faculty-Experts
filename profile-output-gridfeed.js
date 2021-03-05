@@ -56,7 +56,6 @@ try {
     var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
     var matchKey = -1;
     var titleLink = "";
-    // var listItems = "";
     var listOfDegrees = "";
     var listOfTitles = "";
     var listOfDisciplines = "";
@@ -119,16 +118,11 @@ try {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
-            // let itemValue = arrayOfDisciplines[i].toString();
-            // let disciplineString = arrayOfDisciplineFields.toString();
-            // let matchResult = $.inArray(itemValue, arrayOfDisciplineFields);
             if (disciplineString.includes(arrayOfDisciplines[i])) {
-            // if ((arrayOfDisciplineFields.indexOf(itemValue)) == matchKey) {
                 listItems += '<li class="list-group-item itemParent">' + arrayOfDisciplines[i] + '</li>';
             } else {
                 listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
             }
-            // listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
         }
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
