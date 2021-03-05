@@ -3,3 +3,9 @@ p.footerText {
     font-weight: 400;
     padding: 0;
 }
+
+ul.list-group {
+    padding-top: unset;
+    font-size: unset;
+    line-height: unset;
+}
