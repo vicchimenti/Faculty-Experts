@@ -26,6 +26,10 @@
     margin-left: unset;
 }
 
+.profileItem ul.list-group li:first-child {
+    font-weight: 550;
+}
+
 .profileItem .card-footer {
     background-color: #f7f7f7;
 }
