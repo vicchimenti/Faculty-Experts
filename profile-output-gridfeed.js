@@ -118,7 +118,6 @@ try {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
         let arrayOfSchools =[];
-        // let schoolString = "";
 
         // trim whitespace on all disciplines and process for unordered list
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
