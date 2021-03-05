@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.20
+ *     @version 2.21
  */
 
 
@@ -120,8 +120,10 @@ try {
         let arrayOfSchools =[];
         // let schoolString = "";
 
+        // trim whitespace on all disciplines and process for unordered list
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
             let disciplineItem = arrayOfDisciplines[i].trim();
+
             // Check to see if existing discipline is a top level school
             if (disciplineString.includes(disciplineItem)) {
                 let schoolString = arrayOfSchools.toString();
