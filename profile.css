@@ -7,7 +7,8 @@
 
 .profileItem p.footerText {
     font-size: 1.35rem;
-    font-weight: 400;
+    font-weight: 450;
+    line-height: 1.5;
     padding: 0;
 }
 
