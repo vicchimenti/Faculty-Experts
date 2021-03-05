@@ -118,7 +118,11 @@ try {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
-            listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
+            if ($.inArray(arrayOfDisciplines[i], arrayOfDisciplineFields) == "-1") {
+                listItems += '<li class="list-group-item">' + arrayOfDisciplines[i] + '</li>';
+            } else {
+                listItems += '<li class="list-group-item itemParent">' + arrayOfDisciplines[i] + '</li>';
+            }
         }
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
