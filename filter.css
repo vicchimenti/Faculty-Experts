@@ -1,6 +1,10 @@
 /* Newsroom Experts Filter Field Customizations */
 
-#newsroom-experts #filterField.standardContent h1 {
+#filterField {
+    padding:0;
+}
+
+#filterField.standardContent h1 {
     color: #aa0000;
     font-family: "Oswald",sans-serif;
     font-size: 4.8rem;
@@ -10,16 +14,25 @@
     padding-bottom: 1rem;
 }
 
-#newsroom-experts #filterField.standardContent p {
+#filterField.standardContent p {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.5;
     padding-top: 0;
 }
 
-#filterField {
-    padding:0;
+#filterField.standardContent ul {
+    line-height: 1.5;
+    padding: 1rem 0 1rem 0;
 }
+
+#filterField.standardContent li {
+    font-size: 1.6rem;
+    list-style-type: unset;
+}
+
+.standardContent li {
+    font-size: 1.8rem;
 
 .noResultsToShow {
     background: #e3e3da;
