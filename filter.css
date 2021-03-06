@@ -31,9 +31,6 @@
     list-style-type: unset;
 }
 
-.standardContent li {
-    font-size: 1.8rem;
-
 .noResultsToShow {
     background: #e3e3da;
     padding: 30px;
