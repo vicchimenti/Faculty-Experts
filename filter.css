@@ -16,19 +16,31 @@
 
 #filterField.standardContent p {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
-    padding-top: 0;
+    padding: 0 0 0.5rem 0;
 }
 
 #filterField.standardContent ul {
     line-height: 1.5;
-    padding: 1rem 0 1rem 0;
+    padding: 0 0 0.5rem 0;
 }
 
 #filterField.standardContent li {
     font-size: 1.6rem;
+    font-weight: 500;
     list-style-type: unset;
+}
+
+#filterField.standardContent li a {
+    color: #088099;
+    border-bottom: unset;
+}
+
+#filterField.standardContent li a:hover {
+    color: #aa0000;
+    border-bottom: 2px solid #088099;
+    text-decoration: none;
 }
 
 .noResultsToShow {
