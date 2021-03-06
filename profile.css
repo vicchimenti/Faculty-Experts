@@ -1,3 +1,13 @@
+/* Profile Content Type Customizations */
+
+.card-deck .gridFeedItem.profileItem.card {
+    display: flex;
+    flex: 1 0 calc(30% - 10px);
+    margin: 15px;
+    max-width: 360px;
+    padding: 0;
+}
+
 .profileItem p.card-text {
     font-size: 1.5rem;
     line-height: 1.6;
@@ -32,4 +42,13 @@
 
 .profileItem .card-footer {
     background-color: #f7f7f7;
+}
+
+
+.card-deck .gridFeedItem.profileItem.card {
+    display: flex;
+    flex: 1 0 calc(30% - 10px);
+    margin: 15px;
+    max-width: 360px;
+    padding: 0;
 }
