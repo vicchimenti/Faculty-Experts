@@ -1,0 +1,21 @@
+#newsroom-experts #filterField .standardContent h1 {
+    color: #aa0000;
+    font-size: 4.8rem;
+    font-weight: 100;
+    margin: 0 0 0 3rem;
+    max-width: unset;
+}
+
+#filterField {
+    padding:0;
+}
+
+.noResultsToShow {
+    background: #e3e3da;
+    padding: 30px;
+    margin: 15px;
+}
+
+.hideByDropdownCategories, .hideResultsMessage { 
+    display: none;
+}
