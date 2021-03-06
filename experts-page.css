@@ -1,15 +1,10 @@
+/* Newsroom Experts Page Custom Styles */
+
 #newsroom-experts #header-2 {
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 #newsroom-experts #pageContentWrapper {
-    margin-top: 5rem;
-}
-
-#newsroom-experts #filterField .standardContent h1 {
-    color: #aa0000;
-    font-size: 4.8rem;
-    font-weight: 100;
-    margin: 0 0 0 3rem;
-    max-width: unset;
+    margin-top: 1rem;
 }
