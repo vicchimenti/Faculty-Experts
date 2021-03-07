@@ -48,6 +48,12 @@
     text-decoration: none;
 }
 
+#filterField .form-group {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
 .noResultsToShow {
     background: #e3e3da;
     padding: 30px;
@@ -64,11 +70,4 @@
         margin-left: 0;
         margin-right: 0;
     }
-}
-
-
-.form-group {
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1.5;
 }
