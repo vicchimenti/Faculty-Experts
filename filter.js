@@ -36,7 +36,7 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function() {
                     // assign array of currently visible content items
-                    visibleItems = $('.newsItemWrapper').not('.hideByDropdownCategories');
+                    visibleItems = $('.profileItem').not('.hideByDropdownCategories');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
@@ -86,14 +86,14 @@ $(function () {
                             var typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.newsItemWrapper').removeClass('hideByDropdownCategories');
+                                $(this).parents('.profileItem').removeClass('hideByDropdownCategories');
                             } else {
-                                $(this).parents('.newsItemWrapper').addClass('hideByDropdownCategories');
+                                $(this).parents('.profileItem').addClass('hideByDropdownCategories');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.newsItemWrapper').removeClass('hideByDropdownCategories');
+                        $('.profileItem').removeClass('hideByDropdownCategories');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
