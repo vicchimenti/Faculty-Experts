@@ -71,7 +71,7 @@
 }
 
 .hideByDropdownCategories, .hideResultsMessage { 
-    display: none;
+    display: none !important;
 }
 
 @media screen and (max-width: 1199.98px) {
