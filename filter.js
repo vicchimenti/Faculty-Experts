@@ -60,7 +60,7 @@ $(function () {
                     let keyword = $(this).val().toLowerCase();
                     // filter the items for the input key
                     $(function () {
-                        $('.newsItem').filter(function () {
+                        $('.profileItem').filter(function () {
                             // when the search key is not present in the item then hide the item
                             $(this).toggleClass('hideByDropdownCategories', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
@@ -82,7 +82,7 @@ $(function () {
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
                         // search tags in each item
-                        $('ul.categories').filter(function (i, e) {
+                        $('ul.list-group').filter(function (i, e) {
                             var typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
