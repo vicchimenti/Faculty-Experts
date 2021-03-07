@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script>
 /***
 *   @author Victor Chimenti, MSCS-SE '20
 *   @file filter.js
@@ -8,7 +8,7 @@
 *   This script searches the Newsroom Experts Application content items for matches to the
 *   user selected search parameters in the filter field dropdown menu
 *
-*   @version 4.0
+*   @version 4.1
 */
 
 
