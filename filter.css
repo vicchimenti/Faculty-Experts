@@ -58,7 +58,7 @@
     display: none;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
 
     #filterFieldWrapper {
         margin-left: 0;
