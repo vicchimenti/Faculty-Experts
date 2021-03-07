@@ -1,7 +1,12 @@
 /* Newsroom Experts Filter Field Customizations */
 
+#filterFieldWrapper {
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
 #filterField {
-    padding:0;
+    padding: 0;
 }
 
 #filterField.standardContent h1 {
@@ -51,4 +56,12 @@
 
 .hideByDropdownCategories, .hideResultsMessage { 
     display: none;
+}
+
+@media screen and (max-width: 767.98px) {
+
+    #filterFieldWrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
