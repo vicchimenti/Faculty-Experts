@@ -63,6 +63,13 @@
     line-height: 1.5;
 }
 
+.standardContent h2.organizerTitle {
+    color: #aa0000;
+    font-family: "Oswald",sans-serif;
+    font-size: 3.8rem;
+    font-weight: 100;
+}
+
 
 .noResultsToShow {
     background: #e3e3da;
