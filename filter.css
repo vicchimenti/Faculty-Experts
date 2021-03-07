@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+#filterField .row {
+    padding-top: 0.5rem;
+}
+
 #filterField.standardContent h1 {
     color: #aa0000;
     font-family: "Oswald",sans-serif;
@@ -53,6 +57,12 @@
     font-weight: 500;
     line-height: 1.5;
 }
+
+#filterField .form-group .form-control {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
 
 .noResultsToShow {
     background: #e3e3da;
