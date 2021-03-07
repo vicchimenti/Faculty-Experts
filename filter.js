@@ -1,13 +1,14 @@
 <script type="text/javascript">
 /***
 *   @author Victor Chimenti, MSCS-SE '20
-*   @file article-filter.js
+*   @file filter.js
+*   @see Seattle University Newsroom https://www.seattleu.edu/testing123/vic-test/grid-hero/
 *
 *   jQuery
-*   This script searches the Gadget Finder Article content items for matches to the
+*   This script searches the Newsroom Experts Application content items for matches to the
 *   user selected search parameters in the filter field dropdown menu
 *
-*   @version 3.3
+*   @version 4.0
 */
 
 
