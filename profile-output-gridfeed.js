@@ -153,7 +153,7 @@ try {
     if (biography == "") {
         titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
     } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
+        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     }
 
 
@@ -211,11 +211,12 @@ try {
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
+    document.write('<div class="card-subtitle mb-2 fst-italic">' + degreeOne + '</div>');
     document.write('<p class="card-text">' + summary + '</p>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, listOfDisciplines));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardBody));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardFooter));
-    document.write('<p class="footerText">' + degreeOne + '</p>');
+    document.write('<p class="footerText">' + college + '</p>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardFooter));
     document.write(endingHTML);
 
