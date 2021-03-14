@@ -153,7 +153,7 @@ try {
     if (biography == "") {
         titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
     } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + firstName + ' ' + lastName + '</a></h3>';
+        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     }
 
 
@@ -208,7 +208,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
     document.write('<p class="card-text">' + summary + '</p>');
