@@ -35,7 +35,6 @@
     var summary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' modifiers='striptags,htmlentities' />");
     var biography = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Biography' output='normal' display_field='value' />");
     var primaryImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='path/*' />");
-    // var rollOverImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Rollover Photo' output='normal' formatter='path/*' />");
     var cv = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='CV' output='normal' formatter='path/*' />");
     var phone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Phone' output='normal' modifiers='striptags,htmlentities' />");
     var emailAddress = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Email Address' output='normal' display_field='name' />");
@@ -117,7 +116,7 @@
     if (disciplines != "") {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
-        let arrayOfSchools =[];
+        // let arrayOfSchools =[];
 
         // trim whitespace on all disciplines and process for unordered list
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
@@ -126,16 +125,8 @@
             // Check to see if existing discipline is a top level school
             if (!disciplineString.includes(disciplineItem)) {
 
-                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
-                // let schoolString = arrayOfSchools.toString();
-
-                // If a school then only display once
-                // if (!schoolString.includes(disciplineItem)) {
-                //     arrayOfSchools.push(disciplineItem);
-                //     listItems += '<li class="list-group-item itemParent visibly-hidden hidden">' + disciplineItem + '</li>';
-                // }
-
-            // If not a school then process as a discipline
+                // If not a school then process as a discipline
+                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';            
             }
         }
 
@@ -208,7 +199,6 @@
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
     document.write('<div class="card-subtitle mb-2 fst-italic font-italic">' + degreeOne + '</div>');
