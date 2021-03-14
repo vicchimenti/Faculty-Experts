@@ -136,8 +136,6 @@
                 // }
 
             // If not a school then process as a discipline
-            } else {
-                // listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
             }
         }
 
