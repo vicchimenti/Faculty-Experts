@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.24
+ *     @version 2.25
  */
 
 
@@ -124,18 +124,20 @@
             let disciplineItem = arrayOfDisciplines[i].trim();
 
             // Check to see if existing discipline is a top level school
-            if (disciplineString.includes(disciplineItem)) {
-                let schoolString = arrayOfSchools.toString();
+            if (!disciplineString.includes(disciplineItem)) {
+
+                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
+                // let schoolString = arrayOfSchools.toString();
 
                 // If a school then only display once
-                if (!schoolString.includes(disciplineItem)) {
-                    arrayOfSchools.push(disciplineItem);
-                    listItems += '<li class="list-group-item itemParent">' + disciplineItem + '</li>';
-                }
+                // if (!schoolString.includes(disciplineItem)) {
+                //     arrayOfSchools.push(disciplineItem);
+                //     listItems += '<li class="list-group-item itemParent visibly-hidden hidden">' + disciplineItem + '</li>';
+                // }
 
             // If not a school then process as a discipline
             } else {
-                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
+                // listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
             }
         }
 
