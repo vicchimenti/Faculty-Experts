@@ -6,9 +6,13 @@
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    
+
     .facultyProfilePicture {
         max-width: fit-content;
+        text-align: left;
+    }
+
+    .facultyProfileTitles {
         text-align: left;
     }
 }
