@@ -3,6 +3,14 @@
     padding-top: 5rem;
 }
 
+h1.card-title {
+    color: #aa0000;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
@@ -12,9 +20,9 @@
         text-align: left;
     }
 
-    .facultyProfileTitles {
-        text-align: left;
-    }
+    /* .facultyProfileTitles {
+        margin-left: 2rem
+    } */
 
     .facultyProfileCV {
         padding-left: 0;
