@@ -1,6 +1,6 @@
 <t4 type="meta" meta="html_anchor" />
 <div class="facultyProfileWrapper card border-0 col-8 offset-2" id="id<t4 type='meta' meta='content_id' />-fulltext" aria-label="<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
-    <div class="facultyProfileTop card-header">
+    <div class="facultyProfileTop">
         <div class="standardContent">
             <div class="facultyProfilePicture col-xs-12 col-md-4">
 
@@ -15,31 +15,21 @@
 
             <!-- Profile header text -->
             <div class="facultyProfileInfo col-xs-12 col-md-8">
-                <h1>
-                    <t4 type="content" name="First Name" output="normal" />
-                    <t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />
-                </h1>
-
-                <div class="facultyProfileTitles">
+                <div class="facultyProfileName card-title">
+                    <h1>
+                        <t4 type="content" name="First Name" output="normal" />
+                        <t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />
+                    </h1>
+                </div>
+                <div class="facultyProfileTitles card-subtitle">
                     <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<p class='Title'>$value</p>" />
                 </div>
 
-                <div class="facultyProfileContactInfo">
 
-                    <t4 type="content" name="Building/Room Number" output="selective-output" process-format="true"
-                    format='<p class="facultyProfileRoom col-xs-12 col-sm-4 col-md-4 col-lg-3"><span class="fas fa-map-marker"></span>&nbsp;$value </p>' />
 
-                    <t4 type="content" name="Phone" output="selective-output" process-format="true"
-                    format='<p class="facultyProfilePhone col-xs-12 col-sm-3 col-md-3 col-lg-3"><span class="fas fa-phone-alt"></span>&nbsp;$value </p>' />
 
-                    <p class="facultyProfileEmail col-xs-12 col-sm-5 col-md-5 col-lg-6">
-                        <span class="fas fa-envelope"></span>
-                        <a href="mailto:<t4 type='content' name='Email' output='normal' modifiers='striptags' />">
-                            <t4 type="content" name="Email Address" output="normal" modifiers="striptags" />
-                        </a>
-                    </p>
 
-                </div><!-- end .facultyProfileContactInfo -->
+
 
                 <div class="clearfix"></div>
 
@@ -90,5 +80,23 @@
             <t4 type="content" name="Biography" output="normal" />
         </div><!-- end .facultyProfileBiography -->
     </div><!-- end .primaryProfileContent -->
+
+
+    <div class="facultyProfileContactInfo card-footer border-0">
+
+        <t4 type="content" name="Building/Room Number" output="selective-output" process-format="true"
+        format='<span class="facultyProfileRoom col-xs-12 col-sm-4 col-md-4 col-lg-3"><span class="fas fa-map-marker"></span>&nbsp;$value </span>' />
+
+        <t4 type="content" name="Phone" output="selective-output" process-format="true"
+        format='<span class="facultyProfilePhone col-xs-12 col-sm-3 col-md-3 col-lg-3"><span class="fas fa-phone-alt"></span>&nbsp;$value </span>' />
+
+        <span class="facultyProfileEmail col-xs-12 col-sm-5 col-md-5 col-lg-6">
+            <span class="fas fa-envelope"></span>
+            <a href="mailto:<t4 type='content' name='Email' output='normal' modifiers='striptags' />">
+                <t4 type="content" name="Email Address" output="normal" modifiers="striptags" />
+            </a>
+        </span>
+
+    </div><!-- end .facultyProfileContactInfo -->
 
 </div><!-- end .facultyProfileWrapper  -->
