@@ -15,14 +15,14 @@
             <!-- Profile header text -->
             <div class="facultyProfileInfo col-12">
 
-                <div class="facultyProfileName col-12 card-title">
-                    <h1>
+                <div class="facultyProfileName card-title">
+                    <h1 class="card-text">
                         <t4 type="content" name="First Name" output="normal" />
                         <t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />
                     </h1>
                 </div>
-                <div class="facultyProfileTitles col-12 card-subtitle">
-                    <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<p class='Title'>$value</p>" />
+                <div class="facultyProfileTitles card-subtitle">
+                    <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<p class='card-text text-muted'>$value</p>" />
                 </div>
 
             </div><!-- facultyProfileInfo --> 
@@ -31,30 +31,29 @@
 
     <div class="card-body">
         <div class="facultyProfileMiddle standardContent">
-
             <div class="col-12">
                 
                 <t4 type="content" name="Disciplines" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
-                    format="<div class=&quot;col-12&quot;>
-                        <h3>AREAS OF EXPERTISE</h3>
-                        <t4 type=&quot;content&quot; name=&quot;Disciplines&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; process-format=&quot;true&quot; 
+                    format="<div class=''>
+                        <h2>AREAS OF EXPERTISE</h2>
+                        <t4 type='content' name='Disciplines' output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; process-format=&quot;true&quot; 
                         format=&quot;<t4 type=&quot;content&quot; name=&quot;Disciplines&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />&quot;  />
                     </div>"
                 />
                 <!-- end .primary-profile-sidebar (selective-output) / Areas of Expertise -->
     
     
-            <div class="secondary-profile-sidebar col-12">
-                <t4 type="content" name="Degree(s)" output="selective-output" process-format="true"
-                format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" />
-            </div><!-- end .secondary-profile-sidebar -->
+                <div class="secondary-profile">
+                    <t4 type="content" name="Degree(s)" output="selective-output" process-format="true"
+                    format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" />
+                </div><!-- end .secondary-profile-sidebar -->
     
         </div><!-- end .facultyProfileMiddle -->
     
     
         <div class="primaryProfileContent col-12">
             <div class="facultyProfileBiography">
-                <h2>Biography</h2>
+                <h4>Biography</h4>
                 <t4 type="content" name="Biography" output="normal" />
             </div><!-- end .facultyProfileBiography -->
         </div><!-- end .primaryProfileContent -->
