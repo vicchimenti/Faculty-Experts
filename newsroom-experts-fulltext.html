@@ -6,8 +6,8 @@
         <div class="facultyProfilePicture col-xs-12 col-md-4">
 
             <!-- Media Library Image -->
-            <t4 type="content" name="Profile Pic" output="selective-output" process-format="true"
-                format="<div class=&quot;facultyPhoto&quot;>$value</div>" formatter="image/*"
+            <t4 type="content" name="Photo" output="selective-output" process-format="true"
+                format="<div class='facultyPhoto'>$value</div>" formatter="image/*"
                 alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />            
 
             <div class="clearfix"></div>
@@ -22,16 +22,13 @@
 
 
             <div class="facultyProfileTitles">
-                <p>
-                    <t4 type="content" name="Primary Title" output="selective-output" format="$value<br>" />
-                    <t4 type="content" name="Secondary Title" output="selective-output" format="$value<br>" />
-                </p>
+                <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities,nl2br" format="<p class='Title'>$value</p>" />"
             </div>
 
 
             <div class="facultyProfileContactInfo">
 
-                <t4 type="content" name="Room" output="selective-output" process-format="true"
+                <t4 type="content" name="Building/Room Number" output="selective-output" process-format="true"
                     format='<p class="facultyProfileRoom col-xs-12 col-sm-4 col-md-4 col-lg-3"><span class="fas fa-map-marker"></span>&nbsp;$value </p>' />
 
                 <t4 type="content" name="Phone" output="selective-output" process-format="true"
@@ -40,7 +37,7 @@
                 <p class="facultyProfileEmail col-xs-12 col-sm-5 col-md-5 col-lg-6">
                     <span class="fas fa-envelope"></span>&nbsp;
                     <a href="mailto:<t4 type='content' name='Email' output='normal' modifiers='striptags' />">
-                        <t4 type="content" name="Email" output="normal" modifiers="striptags" />
+                        <t4 type="content" name="Email Address" output="normal" modifiers="striptags" />
                     </a>
                 </p>
 
@@ -48,7 +45,7 @@
             <div class="clearfix"></div>
 
 
-            <t4 type="content" name="Show link to CV" output="selective-output" process-format="true" format="<div class=&quot;facultyProfileCV col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-0&quot;>
+            <t4 type="content" name="CV" output="selective-output" process-format="true" format="<div class='facultyProfileCV col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-0'>
                             <span class=&quot;boxlinkItem&quot;>
                                 <a href=&quot;<t4 type='content' name='CV' output='file' />&quot; title=&quot;Download <t4 type='content' name='First Name' output='normal' modifiers='striptags,htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='striptags,htmlentities' /> Curriculum Vitae&quot;>
                                 <span class=&quot;fas fa-download&quot;></span> Curriculum Vitae</a>
