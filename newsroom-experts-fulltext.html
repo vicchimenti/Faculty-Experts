@@ -15,14 +15,15 @@
             <!-- Profile header text -->
             <div class="facultyProfileInfo col-12">
 
-                <div class="facultyProfileName card-title">
-                    <h1 class="card-text">
+                <div class="facultyProfileName">
+                    <h1 class="card-title">
                         <t4 type="content" name="First Name" output="normal" />
                         <t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />
                     </h1>
                 </div>
                 <div class="facultyProfileTitles card-subtitle">
                     <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<p class='card-text text-muted'>$value</p>" />
+                    <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="<p class='card-text'>$value</p>" />
                 </div>
 
             </div><!-- facultyProfileInfo --> 
@@ -43,10 +44,10 @@
                 <!-- end .primary-profile-sidebar (selective-output) / Areas of Expertise -->
     
     
-                <div class="secondary-profile">
+                <!-- <div class="secondary-profile">
                     <t4 type="content" name="Degree(s)" output="selective-output" process-format="true"
-                    format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" />
-                </div><!-- end .secondary-profile-sidebar -->
+                    format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" /> -->
+             <!--   </div>end .secondary-profile-sidebar -->
     
         </div><!-- end .facultyProfileMiddle -->
     
