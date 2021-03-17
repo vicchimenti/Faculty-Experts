@@ -1,12 +1,12 @@
 <t4 type="meta" meta="html_anchor" />
-<div class="facultyProfileWrapper card border-0" id="id<t4 type='meta' meta='content_id' />-fulltext" aria-label="<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
-    <div class="facultyProfileTop">
+<div class="facultyProfileWrapper card border-0 col-8 offset-2" id="id<t4 type='meta' meta='content_id' />-fulltext" aria-label="<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
+    <div class="facultyProfileTop card-header">
         <div class="standardContent">
             <div class="facultyProfilePicture col-xs-12 col-md-4">
 
                 <!-- Media Library Image -->
                 <t4 type="content" name="Photo" output="selective-output" process-format="true"
-                format="<div class='facultyPhoto'>$value</div>" formatter="image/*"
+                format="<div class='facultyPhoto card-img-top'>$value</div>" formatter="image/*"
                 alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />            
 
                 <div class="clearfix"></div>
@@ -39,7 +39,8 @@
                         </a>
                     </p>
 
-                </div>
+                </div><!-- end .facultyProfileContactInfo -->
+
                 <div class="clearfix"></div>
 
                 <t4 type="content" name="CV" output="selective-output" process-format="true" format="<div class='facultyProfileCV col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-0'>
@@ -64,39 +65,31 @@
 
     <div class="facultyProfileMiddle standardContent">
 
-    <div class="facultyProfileSidebar col-xs-12 col-md-4 col-md-push-8">
-    <!-- start .primary-profile-sidebar (entire div is selective-output) / Areas of Expertise -->
-    <t4 type="content" name="Disciplines" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
-    format="<div class=&quot;primary-profile-sidebar&quot;>
-    <h3>AREAS OF EXPERTISE</h3>
-    <t4 type=&quot;content&quot; name=&quot;Disciplines&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; process-format=&quot;true&quot; 
-    format=&quot;<t4 type=&quot;content&quot; name=&quot;Disciplines&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />&quot;  />
-    </div> <!-- end .primary-profile-sidebar -->" />
-    <!-- end .primary-profile-sidebar (selective-output) / Areas of Expertise -->
+        <div class="facultyProfileSidebar col-xs-12 col-md-4 col-md-push-8">
+            
+            <t4 type="content" name="Disciplines" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
+                format="<div class=&quot;primary-profile-sidebar&quot;>
+                    <h3>AREAS OF EXPERTISE</h3>
+                    <t4 type=&quot;content&quot; name=&quot;Disciplines&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; process-format=&quot;true&quot; 
+                    format=&quot;<t4 type=&quot;content&quot; name=&quot;Disciplines&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />&quot;  />
+                </div>"
+            />
+            <!-- end .primary-profile-sidebar (selective-output) / Areas of Expertise -->
+        </div><!-- end .facultyProfileSidebar -->
 
-    <div class="secondary-profile-sidebar">
-    <t4 type="content" name="Degree(s)" output="selective-output" process-format="true"
-    format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" />
+        <div class="secondary-profile-sidebar">
+            <t4 type="content" name="Degree(s)" output="selective-output" process-format="true"
+            format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" />
+        </div><!-- end .secondary-profile-sidebar -->
 
+    </div><!-- end .facultyProfileMiddle -->
 
-    </div> <!-- end .secondary-profile-sidebar -->
-
-    </div> <!-- end .facultyProfileSidebar -->
 
     <div class="primaryProfileContent col-xs-12 col-md-8 col-md-pull-4">
-    <div class="facultyProfileBiography">
-    <h2>Biography</h2>
-    <t4 type="content" name="Biography" output="normal" />
-    </div> <!-- end .facultyProfileBiography -->
-
-
-
+        <div class="facultyProfileBiography">
+            <h2>Biography</h2>
+            <t4 type="content" name="Biography" output="normal" />
+        </div> <!-- end .facultyProfileBiography -->
     </div> <!-- end .primaryProfileContent -->
 
 </div><!-- end .facultyProfileWrapper  -->
-
-<!-- end .facultyProfileMiddle -->
-
-<!-- </div> end #MainZone (closes in footer) -->
-<!-- </div> end #pageContent (closes in footer) --> 
-<!-- </div> end #pageContentWrapper (closes in footer) -->
