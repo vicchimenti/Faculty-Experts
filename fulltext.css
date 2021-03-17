@@ -15,5 +15,18 @@
     .facultyProfileTitles {
         text-align: left;
     }
+
+    .facultyProfileCV {
+        padding-left: 0;
+        margin: 0;
+    }
+
+}
+
+@media screen and (min-width: 767.999px) {
+
+    .facultyProfileCV {
+        width: 50%;
+    }
 }
 
