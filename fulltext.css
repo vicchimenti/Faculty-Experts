@@ -2,3 +2,14 @@
     background-color: #f7f7f7;
     padding: 50px 0 50px 0;
 }
+
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    
+    .facultyProfilePicture {
+        max-width: fit-content;
+        text-align: left;
+    }
+}
+
