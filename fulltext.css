@@ -26,16 +26,29 @@ h1.card-title {
     padding-left: 3rem;
 }
 
+.facultyDisciplines {
+    padding-left: 3rem;
+}
+
+.facultyProfileBiography {
+    padding-left: 3rem;
+}
+
 .standardContent h2 {
     color: #aa0000;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
+    padding-top: 2rem;
 }
 
 .standardContent h3 {
     color: #aa0000;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
+}
+
+.standardContent p {
+    padding-top: 1rem;
 }
 
 
