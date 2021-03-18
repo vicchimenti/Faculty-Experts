@@ -7,3 +7,4 @@ Version 10 Upgrade compliant
 - [] implement section content link in footer
 - [] migrate degree one to subtitle
 - [] change name to Faculty Experts
+- [] ud standard content selectors to profile card for stylesheet
