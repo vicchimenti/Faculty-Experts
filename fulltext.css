@@ -51,6 +51,12 @@ h1.card-title {
     padding-top: 1rem;
 }
 
+.standardContent p.card-text {
+    font-weight: 500;
+    padding-top: 0.25rem;
+}
+
+
 
 
 
