@@ -22,8 +22,8 @@
                     </h1>
                 </div>
                 <div class="facultyProfileTitles">
-                    <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle mb-1 ml-2 ms-2 text-muted'>$value</div>" />
-                    <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitlem ml-2 ms-2 fst-italic font-italic'>$value</div>" />
+                    <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle mb-1 ml-2 ms-2 text-muted'><p class='card-text'>$value</p></div>" />
+                    <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitlem ml-2 ms-2 fst-italic font-italic'><p class='card-text'>$value</p></div>" />
                 </div>
 
             </div><!-- facultyProfileInfo --> 
@@ -37,8 +37,10 @@
                 <t4 type="content" name="Disciplines" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
                     format="<div class='facultyDisciplines'>
                         <h2>Areas of Expertise</h2>
+                        <p class='card-text'>
                         <t4 type='content' name='Disciplines' output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; process-format=&quot;true&quot; 
                         format=&quot;<t4 type=&quot;content&quot; name=&quot;Disciplines&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />&quot;  />
+                        </p>
                     </div>"
                 />
                 <!-- end .primary-profile-sidebar (selective-output) / Areas of Expertise -->
