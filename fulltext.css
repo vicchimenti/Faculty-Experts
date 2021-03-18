@@ -7,11 +7,38 @@
     margin: unset;
 }
 
+/* .standardContent img {
+    padding-left: unset;
+    padding-right: unset;
+} */
+
 h1.card-title {
     color: #aa0000;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
 }
+
+.facultyProfileTitles {
+    padding-left: 3rem;
+}
+
+.facultyProfileName {
+    padding-left: 3rem;
+}
+
+.standardContent h2 {
+    color: #aa0000;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+}
+
+.standardContent h3 {
+    color: #aa0000;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+}
+
+
 
 
 
