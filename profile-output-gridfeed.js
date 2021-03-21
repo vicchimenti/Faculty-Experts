@@ -139,11 +139,11 @@
      *  determine if the article contains full text content
      * 
      * */
-    if (biography == "") {
-        titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
-    } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
-    }
+    // if (biography == "") {
+    //     titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
+    // } else {
+    //     titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
+    // }
 
 
 
