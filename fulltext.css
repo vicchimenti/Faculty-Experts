@@ -89,5 +89,20 @@ h1.card-title {
     .facultyProfileTwitter {
         width: 50%;
     }
+
+}
+
+
+@media screen and (max-width: 767.98px) {
+
+    .facultyProfilePicture.col-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .facultyProfileInfo.col-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
