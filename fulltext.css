@@ -1,4 +1,8 @@
-
+/*********************
+*
+*   Fulltext Profile Styles
+*
+**/
 
 .facultyProfileWrapper {
     background-color: #f7f7f7;
@@ -30,7 +34,7 @@
     padding: 0 0 2rem 0;
 }
 
-.standardContent h1 {
+.facultyProfileWrapper .standardContent h1 {
     margin: unset;
 }
 
@@ -38,30 +42,30 @@
     padding: 0;
 }
 
-h1.card-title {
+.facultyProfileWrapper h1.card-title {
     color: #aa0000;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
 }
 
-.standardContent h2 {
+.facultyProfileWrapper .standardContent h2 {
     color: #aa0000;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
     padding-top: 2rem;
 }
 
-.standardContent h3 {
+.facultyProfileWrapper .standardContent h3 {
     color: #aa0000;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
 }
 
-.standardContent p {
+.facultyProfileWrapper .standardContent p {
     padding-top: 1rem;
 }
 
-.standardContent p.card-text {
+.facultyProfileWrapper .standardContent p.card-text {
     font-weight: 500;
     padding-top: 0.25rem;
 }
@@ -122,6 +126,18 @@ h1.card-title {
     .facultyProfileWrapper.offset-2 {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+
+    .facultyProfileWrapper h1.card-title {
+        font-size: 2rem;
+    }
+    
+    .facultyProfileWrapper .standardContent h2 {
+        font-size: 2rem;
+    }
+    
+    .facultyProfileWrapper .standardContent h3 {
+        font-size: 2rem;
     }
 }
 
