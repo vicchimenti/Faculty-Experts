@@ -95,6 +95,15 @@ h1.card-title {
 
 @media screen and (max-width: 767.98px) {
 
+    .facultyProfileWrapper.col-8 {
+        max-width: fit-content;
+    }
+
+    .facultyProfileWrapper.offset-2 {
+        margin-left: 2rem;
+        margin-right:2rem;
+    }
+
     .facultyProfilePicture.col-12 {
         padding-left: 0;
         padding-right: 0;
