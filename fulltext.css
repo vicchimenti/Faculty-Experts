@@ -4,7 +4,7 @@
 }
 
 .standardContent .facultyPhoto img {
-    padding: 2rem 0 2rem 0;
+    padding: 0 0 2rem 0;
 }
 
 .standardContent h1 {
@@ -113,7 +113,7 @@ h1.card-title {
 
     .facultyProfileWrapper.offset-2 {
         margin-left: 2rem;
-        margin-right:2rem;
+        margin-right: 2rem;
     }
 
     .facultyProfilePicture.col-12 {
@@ -124,6 +124,20 @@ h1.card-title {
     .facultyProfileInfo.col-12 {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {
+
+    .facultyProfileWrapper {
+        padding: 1rem;
+    }
+
+    .facultyProfileWrapper.offset-2 {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
