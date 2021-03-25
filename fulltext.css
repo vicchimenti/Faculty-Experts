@@ -129,15 +129,14 @@
     }
 
     .facultyProfileWrapper h1.card-title {
-        font-size: 2rem;
+        font-size: 4rem;
     }
     
     .facultyProfileWrapper .standardContent h2 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     
     .facultyProfileWrapper .standardContent h3 {
         font-size: 2rem;
     }
 }
-
