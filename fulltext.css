@@ -21,6 +21,10 @@
     margin: unset;
 }
 
+.facultyProfileWrapper .card-body {
+    padding: 0;
+}
+
 /* .standardContent img {
     padding-left: unset;
     padding-right: unset;
