@@ -132,17 +132,13 @@
         padding: 1rem;
     }
 
-    .facultyProfileWrapper .standardContent p {
-        font-size: 1.4rem;
-    }
-
     .facultyProfileWrapper.offset-2 {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 
     .facultyProfileWrapper .card-img-overlay h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     
     .facultyProfileWrapper .standardContent h2 {
@@ -151,6 +147,10 @@
     
     .facultyProfileWrapper .standardContent h3 {
         font-size: 2rem;
+    }
+
+    .facultyProfileWrapper .standardContent p {
+        font-size: 1.4rem;
     }
 }
 
@@ -170,6 +170,10 @@
     .facultyProfileWrapper .standardContent h3 {
         font-size: 1.5rem;
     }
+
+    .facultyProfileWrapper .standardContent p {
+        font-size: 1.3rem;
+    }
 }
 
 
@@ -187,5 +191,9 @@
     
     .facultyProfileWrapper .standardContent h3 {
         font-size: 1rem;
+    }
+
+    .facultyProfileWrapper .standardContent p {
+        font-size: 1.2rem;
     }
 }
