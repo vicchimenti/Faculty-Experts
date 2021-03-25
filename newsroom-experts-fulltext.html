@@ -18,7 +18,7 @@
                 format="<div class='facultyPhoto card-img'>$value</div>" formatter="image/*"
                 alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />            
 
-                <div class="facultyProfileTitles card-img-overlay">
+                <div class="facultyProfileTitles card-img-overlay d-flex justify-content-end">
                     <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle mb-1'><p class='card-text ml-2 ms-2'>$value</p></div>" />
                     <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle fst-italic font-italic'><p class='card-text ml-2 ms-2'>$value</p></div>" />
                 </div>
