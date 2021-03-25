@@ -4,24 +4,31 @@
 
         <div class="standardContent">
 
-            <div class="facultyProfileName card-header">
+            <!-- <div class="facultyProfileName card-header">
                 <h1 class="card-title mb-2">
                     <t4 type="content" name="First Name" output="normal" />
                     <t4 type="content" name="Last Name" output="normal" />
                 </h1>
-            </div>
+            </div> -->
 
             <div class="facultyProfilePicture col-12">
 
                 <!-- Media Library Image -->
                 <t4 type="content" name="Photo" output="selective-output" process-format="true"
                 format="<div class='facultyPhoto card-img'>$value</div>" formatter="image/*"
-                alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />            
-
-                <div class="facultyProfileTitles card-img-overlay d-flex align-items-end align-items-md-start">
-                    <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle mb-1'><p class='card-text ml-2 ms-2'>$value</p></div>" />
-                    <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle fst-italic font-italic'><p class='card-text ml-2 ms-2'>$value</p></div>" />
+                alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />  
+                
+                <div class="facultyProfileName card-img-overlay">
+                    <h1 class="card-title mb-2">
+                        <t4 type="content" name="First Name" output="normal" />
+                        <t4 type="content" name="Last Name" output="normal" />
+                    </h1>
                 </div>
+
+                <!-- <div class="facultyProfileTitles card-img-overlay d-flex align-items-end align-items-md-start">
+                    <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="$value<span>, </span>" />
+                    <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="$value" />
+                </div> -->
             </div><!-- end .facultyProfilePicture -->
 
 
@@ -34,10 +41,10 @@
                         <t4 type="content" name="Last Name" output="normal" />
                     </h1>
                 </div> -->
-                <!-- <div class="facultyProfileTitles card-img-overlay">
+                <div class="facultyProfileTitles">
                     <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle mb-1 text-muted'><p class='card-text ml-2 ms-2'>$value</p></div>" />
                     <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle fst-italic font-italic'><p class='card-text ml-2 ms-2'>$value</p></div>" />
-                </div> -->
+                </div>
 
             </div><!-- facultyProfileInfo --> 
         </div><!-- end .standardContent -->
