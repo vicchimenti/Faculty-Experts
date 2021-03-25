@@ -137,7 +137,7 @@
         margin-right: 1.5rem;
     }
 
-    .facultyProfileWrapper h1.card-title {
+    .facultyProfileWrapper .card-img-overlay h1 {
         font-size: 4rem;
     }
     
