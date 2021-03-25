@@ -149,3 +149,21 @@
         font-size: 2rem;
     }
 }
+
+
+
+/* iPhone X (less than 376px) */
+@media only screen and (max-width: 376px) {
+
+    .facultyProfileWrapper .card-img-overlay h1 {
+        font-size: 3rem;
+    }
+
+    .facultyProfileWrapper .standardContent h2 {
+        font-size: 2.5rem;
+    }
+    
+    .facultyProfileWrapper .standardContent h3 {
+        font-size: 1.5rem;
+    }
+}
