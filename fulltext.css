@@ -13,6 +13,17 @@
     padding-right: 0;
 }
 
+
+.facultyProfileMiddle .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.primaryProfileContent.col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .standardContent .facultyPhoto img {
     padding: 0 0 2rem 0;
 }
@@ -25,6 +36,7 @@
     padding: 0;
 }
 
+
 /* .standardContent img {
     padding-left: unset;
     padding-right: unset;
@@ -36,21 +48,21 @@ h1.card-title {
     font-weight: 500;
 }
 
-.facultyProfileTitles {
+/* .facultyProfileTitles {
     padding-left: 3rem;
 }
 
 .facultyProfileName {
     padding-left: 3rem;
-}
+} */
 
-.facultyDisciplines {
+/* .facultyDisciplines {
     padding-left: 3rem;
 }
 
 .facultyProfileBiography {
     padding-left: 3rem;
-}
+} */
 
 .standardContent h2 {
     color: #aa0000;
