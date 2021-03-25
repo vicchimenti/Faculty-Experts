@@ -1,3 +1,5 @@
+
+
 .facultyProfileWrapper {
     background-color: #f7f7f7;
     padding: 2rem;
@@ -36,33 +38,11 @@
     padding: 0;
 }
 
-
-/* .standardContent img {
-    padding-left: unset;
-    padding-right: unset;
-} */
-
 h1.card-title {
     color: #aa0000;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
 }
-
-/* .facultyProfileTitles {
-    padding-left: 3rem;
-}
-
-.facultyProfileName {
-    padding-left: 3rem;
-} */
-
-/* .facultyDisciplines {
-    padding-left: 3rem;
-}
-
-.facultyProfileBiography {
-    padding-left: 3rem;
-} */
 
 .standardContent h2 {
     color: #aa0000;
@@ -99,10 +79,6 @@ h1.card-title {
         text-align: left;
     }
 
-    /* .facultyProfileTitles {
-        margin-left: 2rem
-    } */
-
     .facultyProfileCV {
         padding-left: 0;
         margin: 0;
@@ -124,14 +100,6 @@ h1.card-title {
 
 
 @media screen and (max-width: 767.98px) {
-
-    /* .facultyProfileWrapper {
-        padding-top: 0;
-    } */
-
-    /* .standardContent .facultyPhoto img {
-        padding: 2rem 0 2rem 0;
-    } */
 
     .facultyProfileWrapper.col-8 {
         max-width: fit-content;
