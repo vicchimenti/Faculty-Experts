@@ -1,7 +1,16 @@
 <t4 type="meta" meta="html_anchor" />
 <div class="facultyProfileWrapper card border-0 col-8 offset-2 shadow" id="id<t4 type='meta' meta='content_id' />-fulltext" aria-label="<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
     <div class="facultyProfileTop">
+
         <div class="standardContent">
+
+            <div class="facultyProfileName card-header">
+                <h1 class="card-title mb-2">
+                    <t4 type="content" name="First Name" output="normal" />
+                    <t4 type="content" name="Last Name" output="normal" />
+                </h1>
+            </div>
+
             <div class="facultyProfilePicture col-12">
 
                 <!-- Media Library Image -->
@@ -9,22 +18,26 @@
                 format="<div class='facultyPhoto card-img'>$value</div>" formatter="image/*"
                 alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />            
 
+                <div class="facultyProfileTitles card-img-overlay">
+                    <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle mb-1 text-muted'><p class='card-text ml-2 ms-2'>$value</p></div>" />
+                    <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle fst-italic font-italic'><p class='card-text ml-2 ms-2'>$value</p></div>" />
+                </div>
             </div><!-- end .facultyProfilePicture -->
 
 
             <!-- Profile header text -->
             <div class="facultyProfileInfo col-12">
 
-                <div class="facultyProfileName">
+                <!-- <div class="facultyProfileName">
                     <h1 class="card-title mb-2">
                         <t4 type="content" name="First Name" output="normal" />
                         <t4 type="content" name="Last Name" output="normal" />
                     </h1>
-                </div>
-                <div class="facultyProfileTitles">
+                </div> -->
+                <!-- <div class="facultyProfileTitles card-img-overlay">
                     <t4 type="content" name="Position Title(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle mb-1 text-muted'><p class='card-text ml-2 ms-2'>$value</p></div>" />
                     <t4 type="content" name="Degree(s)" output="selective-output" modifiers="striptags,htmlentities" format="<div class='card-subtitle fst-italic font-italic'><p class='card-text ml-2 ms-2'>$value</p></div>" />
-                </div>
+                </div> -->
 
             </div><!-- facultyProfileInfo --> 
         </div><!-- end .standardContent -->
@@ -53,14 +66,6 @@
                 <t4 type="content" name="Biography" output="selective-output" modifiers="medialibrary,nav_sections" format="<h3>Biography</h3><div class='card-text ml-2 ms-2'>$value</div>" />
             </div><!-- end .facultyProfileBiography -->
         </div><!-- end .primaryProfileContent -->
-    </div>
+    </div><!-- end .card.body -->
 
-    <div class="profileFooter card-footer">
-        <div class="facultyProfileBiography">
-            <t4 type="content" name="Biography" output="selective-output" modifiers="medialibrary,nav_sections" format="<h3>Biography</h3><div class='card-text ml-2 ms-2'>$value</div>" />
-        </div><!-- end .facultyProfileBiography -->
-    </div><!-- end .profileFooter -->
-
-
-    
 </div><!-- end .facultyProfileWrapper  -->
