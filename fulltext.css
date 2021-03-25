@@ -1,6 +1,10 @@
 .facultyProfileWrapper {
     background-color: #f7f7f7;
-    padding-top: 5rem;
+    padding: 2rem;
+}
+
+.standardContent .facultyPhoto img {
+    padding: 2rem 0 2rem 0;
 }
 
 .standardContent h1 {
@@ -94,6 +98,14 @@ h1.card-title {
 
 
 @media screen and (max-width: 767.98px) {
+
+    /* .facultyProfileWrapper {
+        padding-top: 0;
+    } */
+
+    /* .standardContent .facultyPhoto img {
+        padding: 2rem 0 2rem 0;
+    } */
 
     .facultyProfileWrapper.col-8 {
         max-width: fit-content;
