@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.28
+ *     @version 2.29
  */
 
 
@@ -165,11 +165,11 @@
             height: 0
         };
 
-        dimensions.width = primaryImageObj.width;
-        dimensions.height = primaryImageObj.height;
+        dimensions.width = primaryImage.ImageWidth;
+        dimensions.height = primaryImage.ImageLength;
 
         // var primaryImageDimensions = getImageDimensions(primaryImage);
-        if (dimensions.width < dimensions.height) {
+        if (dimensions.width > dimensions.height) {
             titleLink = '<h3 class="card-title horizon"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
         }
 
