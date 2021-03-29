@@ -160,6 +160,7 @@
 
         thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
 
+        var docImage = document.getElementsByClassName("card-img-top");
         // if (primaryImage.naturalWidth < primaryImage.naturalHeight) {
         //     titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
         // }
