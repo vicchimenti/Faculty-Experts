@@ -45,8 +45,29 @@
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />");
     var contentID = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
 
-    
- 
+
+
+
+    /**
+     * Gets the dimensions of a media object (picture)
+     * @function media.getImageDimensions
+     * @param {object} mediaObj - this.getMediaObect
+     * @returns {object} an object that has two properties; width and height
+     * @example
+     * T4Utils.media.getImageDimensions(object);
+     */
+    T4Utils.media.getImageDimensions = function (mediaObj) {
+        var dimensions = {
+            width: 0,
+            height: 0
+        };
+        dimensions.width = MediaUtils.getImageDimensions(mediaObj)[0];
+        dimensions.height = MediaUtils.getImageDimensions(mediaObj)[1];
+        return dimensions;
+    };
+
+
+
 
     /***
      *  Declare/Assign local variables with base formatting
@@ -160,11 +181,11 @@
 
         thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
 
-        var docImage = document.getElementsByClassName("card-img-top");
-        // if (primaryImage.naturalWidth < primaryImage.naturalHeight) {
-        //     titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
-        // }
-        
+        var primaryImageDimensions = getImageDimensions(primaryImage);
+        if (primaryImageDimensions.width > primaryImageDimensions.height) {
+            titleLink = '<h3 class="card-title horizon"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
+        }
+
     }
 
 
