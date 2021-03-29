@@ -17,6 +17,20 @@
  */
 
 
+//  function readMedia(mediaID) {
+//     var oMM = com.terminalfour.media.MediaManager.getManager();
+//     var oMedia = oMM.get(dbStatement, mediaID, language);
+//     var oMediaStream = oMedia.getMedia();
+//     var oScanner = new java.util.Scanner(oMediaStream).useDelimiter("\\A");
+//     var sMedia = "";
+//     while (oScanner.hasNext()) {
+//         sMedia += oScanner.next();
+//     }
+//     return sMedia;
+// }
+
+
+
 
 
  try {
@@ -35,7 +49,7 @@
     var summary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' modifiers='striptags,htmlentities' />");
     var biography = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Biography' output='normal' display_field='value' />");
     var primaryImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='path/*' />");
-    var primaryImageObj = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='javascript/*' />");
+    var primaryImageObj = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='<t4 type=\'meta\' meta=\'content_id\' />' formatter='path/*' />");
     var cv = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='CV' output='normal' formatter='path/*' />");
     var phone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Phone' output='normal' modifiers='striptags,htmlentities' />");
     var emailAddress = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Email Address' output='normal' display_field='name' />");
@@ -165,8 +179,8 @@
             height: 0
         };
 
-        dimensions.width = primaryImage.ImageWidth;
-        dimensions.height = primaryImage.ImageLength;
+        dimensions.width = com.terminalfour.media.scaler.ImageDimensions.primaryImage.getWidth();
+        dimensions.height = com.terminalfour.media.scaler.ImageDimensions.primaryImage.getHeight();
 
         // var primaryImageDimensions = getImageDimensions(primaryImage);
         if (dimensions.width > dimensions.height) {
