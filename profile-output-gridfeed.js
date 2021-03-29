@@ -35,6 +35,7 @@
     var summary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' modifiers='striptags,htmlentities' />");
     var biography = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Biography' output='normal' display_field='value' />");
     var primaryImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='path/*' />");
+    var primaryImageObj = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='javascript/*' />");
     var cv = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='CV' output='normal' formatter='path/*' />");
     var phone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Phone' output='normal' modifiers='striptags,htmlentities' />");
     var emailAddress = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Email Address' output='normal' display_field='name' />");
@@ -44,27 +45,6 @@
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />");
     var contentID = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
-
-
-
-
-    /**
-     * Gets the dimensions of a media object (picture)
-     * @function media.getImageDimensions
-     * @param {object} mediaObj - this.getMediaObect
-     * @returns {object} an object that has two properties; width and height
-     * @example
-     * T4Utils.media.getImageDimensions(object);
-     */
-    T4Utils.media.getImageDimensions = function (mediaObj) {
-        var dimensions = {
-            width: 0,
-            height: 0
-        };
-        dimensions.width = MediaUtils.getImageDimensions(mediaObj)[0];
-        dimensions.height = MediaUtils.getImageDimensions(mediaObj)[1];
-        return dimensions;
-    };
 
 
 
@@ -180,9 +160,16 @@
     } else {
 
         thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
+        var dimensions = {
+            width: 0,
+            height: 0
+        };
 
-        var primaryImageDimensions = getImageDimensions(primaryImage);
-        if (primaryImageDimensions.width > primaryImageDimensions.height) {
+        dimensions.width = primaryImageObj.width;
+        dimensions.height = primaryImageObj.height;
+
+        // var primaryImageDimensions = getImageDimensions(primaryImage);
+        if (dimensions.width < dimensions.height) {
             titleLink = '<h3 class="card-title horizon"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
         }
 
