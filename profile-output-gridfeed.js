@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.29
+ *     @version 2.30
  */
 
 
@@ -39,6 +39,7 @@
      *  Assign local variables from the content type's fields
      * 
      * */
+    //  content.get("Instructions")
     var contentName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='normal' modifiers='striptags,htmlentities' />");
     var lastName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Last Name' output='normal' modifiers='striptags,htmlentities' />");
     var firstName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='First Name' output='normal' modifiers='striptags,htmlentities' />");
@@ -49,7 +50,7 @@
     var summary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' modifiers='striptags,htmlentities' />");
     var biography = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Biography' output='normal' display_field='value' />");
     var primaryImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='path/*' />");
-    var primaryImageObj = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='<t4 type=\'meta\' meta=\'content_id\' />' formatter='path/*' />");
+    // var primaryImageObj = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='<t4 type=\'meta\' meta=\'content_id\' />' formatter='path/*' />");
     var cv = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='CV' output='normal' formatter='path/*' />");
     var phone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Phone' output='normal' modifiers='striptags,htmlentities' />");
     var emailAddress = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Email Address' output='normal' display_field='name' />");
@@ -174,21 +175,22 @@
     } else {
 
         thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
-        var dimensions = {
-            width: 0,
-            height: 0
-        };
+        // var dimensions = {
+        //     width: 0,
+        //     height: 0
+        // };
 
+        // var mediaId = primaryImage.getID();
 
-        dimensions.width = com.terminalfour.media.Media.MediaUtils.getImageDimensions​(primaryImage)[0];
-        dimensions.height = com.terminalfour.media.Media.MediaUtils.getImageDimensions​(primaryImage)[1];
+        // dimensions.width = com.terminalfour.media.Media.MediaUtils.getImageDimensions​(primaryImage)[0];
+        // dimensions.height = com.terminalfour.media.Media.MediaUtils.getImageDimensions​(primaryImage)[1];
         // dimensions.width = com.terminalfour.media.scaler.ImageDimensions.primaryImage.getWidth();
         // dimensions.height = com.terminalfour.media.scaler.ImageDimensions.getHeight();
 
         // var primaryImageDimensions = getImageDimensions(primaryImage);
-        if (dimensions.width > dimensions.height) {
-            titleLink = '<h3 class="card-title horizon"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
-        }
+        // if (primaryImageObj) {
+        //     titleLink = '<h3 class="card-title horizon" id="' + primaryImageObj + '"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
+        // }
 
     }
 
