@@ -179,8 +179,11 @@
             height: 0
         };
 
-        dimensions.width = com.terminalfour.media.scaler.ImageDimensions.primaryImage.getWidth();
-        dimensions.height = com.terminalfour.media.scaler.ImageDimensions.primaryImage.getHeight();
+
+        dimensions.width = com.terminalfour.media.Media.MediaUtils.getImageDimensions​(primaryImage)[0];
+        dimensions.height = com.terminalfour.media.Media.MediaUtils.getImageDimensions​(primaryImage)[1];
+        // dimensions.width = com.terminalfour.media.scaler.ImageDimensions.primaryImage.getWidth();
+        // dimensions.height = com.terminalfour.media.scaler.ImageDimensions.getHeight();
 
         // var primaryImageDimensions = getImageDimensions(primaryImage);
         if (dimensions.width > dimensions.height) {
