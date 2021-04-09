@@ -59,9 +59,9 @@ try {
     var contactEmail = "";
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
-    var openCardFooter = '<div class="card-footer">';
-    var closeCardFooter = '</div>';
-    var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
+    // var openCardFooter = '<div class="card-footer">';
+    // var closeCardFooter = '</div>';
+    // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
     var openTop = '<div class="facultyProfileTop"><div class="standardContent">S';
     var closeTop = '</div></div>';
@@ -239,15 +239,15 @@ try {
 
 
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
     document.write('<p class="card-text">' + summary + '</p>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, listOfDisciplines));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardFooter));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardFooter));
 
 
     document.write('<p class="footerText">' + degreeOne + '</p>');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardFooter));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardFooter));
 
     document.write(endingHTML);
 
