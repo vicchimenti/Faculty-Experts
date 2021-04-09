@@ -67,6 +67,12 @@ try {
     var closeTop = '</div></div>';
     var openImg = '<div class="facultyProfilePicture col-12">';
     var closeImg = '</div>';
+    var openProfile = '<div class="facultyProfileInfo col-12">';
+    var closeProfile = '</div>';
+    var openMiddle = '<div class="facultyProfileMiddle standardContent"><div class="col-12">';
+    var closeMiddle = '</div></div>';
+    var openBio = '<div class="primaryProfileContent col-12"><div class="facultyProfileBiography">';
+    var closeBio = '</div>';
     var beginningHTML = '<div class="facultyProfileWrapper card border-0 col-8 offset-2 shadow" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '-fulltext">';
     var endingHTML = '</div>';
 
@@ -209,13 +215,23 @@ try {
 
 
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeImg));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openProfile));
 
+
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeProfile));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeTop));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openMiddle));
 
 
 
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardBody));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeMiddle));
+    document.write(openBio);
+
+
+
+    document.write(closeBio);
+    document.write(closeCardBody);
     document.write(endingHTML);
 
 
