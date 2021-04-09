@@ -1,7 +1,7 @@
 /***
  *     @author Victor Chimenti, MSCS-SE '20
  *     @file profile-output-gridfeed.js
- *     @see Seattle University Experts Application at https://www.seattleu.edu/newsroom/for-the-media/
+ *     @see Seattle University Experts Application at https://www.seattleu.edu/newsroom/experts/
  * 
  *
  *     This new content type layout is a smart layout for news items that must obey
@@ -33,7 +33,7 @@
 
 
 
- try {
+try {
 
     /***
      *  Assign local variables from the content type's fields
@@ -140,7 +140,7 @@
             if (!disciplineString.includes(disciplineItem)) {
 
                 // If not a school then process as a discipline
-                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';            
+                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
             }
         }
 
@@ -224,7 +224,7 @@
 
 
 
-    
+
     /***
      *  Write the document once
      * 
