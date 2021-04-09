@@ -1,0 +1,200 @@
+/*********************
+*
+*   Fulltext Profile Styles
+*
+**/
+
+.facultyProfileWrapper {
+    background-color: #f7f7f7;
+    padding: 2rem;
+}
+
+.facultyProfilePicture.col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.facultyProfileInfo.col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.facultyProfileMiddle .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.primaryProfileContent.col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.standardContent .facultyPhoto img {
+    padding: 0 0 0 0;
+    /* padding: 0 0 2rem 0; */
+}
+
+.facultyProfileWrapper .standardContent h1 {
+    line-height: 1;
+    margin: unset;
+}
+
+.facultyProfileWrapper .card-body {
+    padding: 0;
+}
+
+.facultyProfileWrapper h1.card-title {
+    color: #aa0000;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+}
+
+.facultyProfileWrapper .standardContent h2 {
+    color: #aa0000;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+    padding-top: 2rem;
+}
+
+.facultyProfileWrapper .standardContent h3 {
+    color: #aa0000;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+}
+
+.facultyProfileWrapper .standardContent p {
+    padding-top: 1rem;
+}
+
+.facultyProfileWrapper .standardContent p.card-text {
+    font-weight: 500;
+    padding-top: 0.25rem;
+}
+
+.facultyProfileBiography .card-text {
+    font-weight: 500;
+}
+
+.facultyProfileWrapper .card-img-overlay h1 {
+    color: #f7f7f7;
+}
+
+
+
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+    .facultyProfilePicture {
+        max-width: fit-content;
+        text-align: left;
+    }
+
+    .facultyProfileCV {
+        padding-left: 0;
+        margin: 0;
+    }
+
+}
+
+@media screen and (min-width: 767.999px) {
+
+    .facultyProfileCV {
+        width: 50%;
+    }
+
+    .facultyProfileTwitter {
+        width: 50%;
+    }
+
+}
+
+
+@media screen and (max-width: 767.98px) {
+
+    .facultyProfileWrapper.col-8 {
+        max-width: fit-content;
+    }
+
+    .facultyProfileWrapper.offset-2 {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {
+
+    .facultyProfileWrapper {
+        padding: 1rem;
+    }
+
+    .facultyProfileWrapper.offset-2 {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .facultyProfileWrapper .card-img-overlay h1 {
+        font-size: 3rem;
+    }
+    
+    .facultyProfileWrapper .standardContent h2 {
+        font-size: 2.75rem;
+    }
+    
+    .facultyProfileWrapper .standardContent h3 {
+        font-size: 2rem;
+    }
+
+    .facultyProfileWrapper .standardContent p {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+/* iPhone X (less than 376px) */
+@media only screen and (max-width: 376px) {
+
+    .facultyProfileWrapper .card-img-overlay h1 {
+        font-size: 2.75rem;
+    }
+
+    .facultyProfileWrapper .standardContent h2 {
+        font-size: 2.5rem;
+    }
+    
+    .facultyProfileWrapper .standardContent h3 {
+        font-size: 1.5rem;
+    }
+
+    .facultyProfileWrapper .standardContent p {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* Galaxy Fold (less than 280px) */
+@media only screen and (max-width: 280px) {
+
+    .facultyProfileWrapper .card-img-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .facultyProfileWrapper .standardContent h2 {
+        font-size: 2rem;
+    }
+    
+    .facultyProfileWrapper .standardContent h3 {
+        font-size: 1rem;
+    }
+
+    .facultyProfileWrapper .standardContent p {
+        font-size: 1.2rem;
+    }
+}

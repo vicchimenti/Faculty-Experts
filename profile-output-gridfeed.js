@@ -13,18 +13,33 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.22
+ *     @version 2.30
  */
 
 
+//  function readMedia(mediaID) {
+//     var oMM = com.terminalfour.media.MediaManager.getManager();
+//     var oMedia = oMM.get(dbStatement, mediaID, language);
+//     var oMediaStream = oMedia.getMedia();
+//     var oScanner = new java.util.Scanner(oMediaStream).useDelimiter("\\A");
+//     var sMedia = "";
+//     while (oScanner.hasNext()) {
+//         sMedia += oScanner.next();
+//     }
+//     return sMedia;
+// }
 
 
-try {
+
+
+
+ try {
 
     /***
      *  Assign local variables from the content type's fields
      * 
      * */
+    //  content.get("Instructions")
     var contentName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='normal' modifiers='striptags,htmlentities' />");
     var lastName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Last Name' output='normal' modifiers='striptags,htmlentities' />");
     var firstName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='First Name' output='normal' modifiers='striptags,htmlentities' />");
@@ -35,7 +50,7 @@ try {
     var summary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' modifiers='striptags,htmlentities' />");
     var biography = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Biography' output='normal' display_field='value' />");
     var primaryImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='path/*' />");
-    // var rollOverImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Rollover Photo' output='normal' formatter='path/*' />");
+    // var primaryImageObj = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='<t4 type=\'meta\' meta=\'content_id\' />' formatter='path/*' />");
     var cv = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='CV' output='normal' formatter='path/*' />");
     var phone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Phone' output='normal' modifiers='striptags,htmlentities' />");
     var emailAddress = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Email Address' output='normal' display_field='name' />");
@@ -46,8 +61,8 @@ try {
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />");
     var contentID = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
 
-    
- 
+
+
 
     /***
      *  Declare/Assign local variables with base formatting
@@ -55,7 +70,6 @@ try {
      * */
     var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
     var matchKey = -1;
-    var titleLink = "";
     var listOfDegrees = "";
     var listOfTitles = "";
     var listOfDisciplines = "";
@@ -68,8 +82,8 @@ try {
     var closeCardBody = '</div>';
     var openCardFooter = '<div class="card-footer">';
     var closeCardFooter = '</div>';
-    var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
+    var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     var beginningHTML = '<div class="gridFeedItem profileItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
     var endingHTML = '</div>';
 
@@ -117,25 +131,16 @@ try {
     if (disciplines != "") {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
-        let arrayOfSchools =[];
 
         // trim whitespace on all disciplines and process for unordered list
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
             let disciplineItem = arrayOfDisciplines[i].trim();
 
             // Check to see if existing discipline is a top level school
-            if (disciplineString.includes(disciplineItem)) {
-                let schoolString = arrayOfSchools.toString();
+            if (!disciplineString.includes(disciplineItem)) {
 
-                // If a school then only display once
-                if (!schoolString.includes(disciplineItem)) {
-                    arrayOfSchools.push(disciplineItem);
-                    listItems += '<li class="list-group-item itemParent">' + disciplineItem + '</li>';
-                }
-
-            // If not a school then process as a discipline
-            } else {
-                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
+                // If not a school then process as a discipline
+                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';            
             }
         }
 
@@ -150,11 +155,11 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (biography == "") {
-        titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
-    } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + firstName + ' ' + lastName + '</a></h3>';
-    }
+    // if (biography == "") {
+    //     titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
+    // } else {
+    //     titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
+    // }
 
 
 
@@ -164,10 +169,29 @@ try {
      * 
      * */
     if (primaryImage == "") {
-        thumbNailString = '<span class="hidden">No Image Provided</span>';
+
+        thumbNailString = '<span class="hidden visually-hidden">No Image Provided</span>';
 
     } else {
+
         thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
+        // var dimensions = {
+        //     width: 0,
+        //     height: 0
+        // };
+
+        // var mediaId = primaryImage.getID();
+
+        // dimensions.width = com.terminalfour.media.Media.MediaUtils.getImageDimensions​(primaryImage)[0];
+        // dimensions.height = com.terminalfour.media.Media.MediaUtils.getImageDimensions​(primaryImage)[1];
+        // dimensions.width = com.terminalfour.media.scaler.ImageDimensions.primaryImage.getWidth();
+        // dimensions.height = com.terminalfour.media.scaler.ImageDimensions.getHeight();
+
+        // var primaryImageDimensions = getImageDimensions(primaryImage);
+        // if (primaryImageObj) {
+        //     titleLink = '<h3 class="card-title horizon" id="' + primaryImageObj + '"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
+        // }
+
     }
 
 
@@ -208,14 +232,14 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
+    document.write('<div class="card-subtitle mb-2 fst-italic font-italic">' + degreeOne + '</div>');
     document.write('<p class="card-text">' + summary + '</p>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, listOfDisciplines));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardBody));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardFooter));
-    document.write('<p class="footerText">' + degreeOne + '</p>');
+    document.write('<p class="footerText">' + college + '</p>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardFooter));
     document.write(endingHTML);
 
