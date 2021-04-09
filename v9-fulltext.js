@@ -1,19 +1,13 @@
 /***
  *     @author Victor Chimenti, MSCS-SE '20
  *     @file v9-fulltext.js
- *     @see Seattle University Experts Application at https://www.seattleu.edu/newsroom/experts/
- * 
+ *     @see Seattle University Newsroom Experts Application at https://www.seattleu.edu/newsroom/experts/
  *
- *     This new content type layout is a smart layout for news items that must obey
- *     a masonry grid layout. In this iteration this layout will be dedicated
- *     to the profile content type which is being developed for the faculty experts app.
- *
- *     This content layout will be the organizer layout and will link to the
- *     full text layout to reveal the full article.
+ *     This content layout will display an individual profile on it's own fulltext URL.
  *
  *     Document will write once when the page loads
  *
- *     @version 2.22
+ *     @version 3.1
  */
 
 
