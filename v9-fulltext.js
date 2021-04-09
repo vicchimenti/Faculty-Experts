@@ -1,7 +1,7 @@
 /***
  *     @author Victor Chimenti, MSCS-SE '20
- *     @file profile-output-gridfeed.js
- *     @see Seattle University Experts Application at https://www.seattleu.edu/newsroom/for-the-media/
+ *     @file v9-fulltext.js
+ *     @see Seattle University Experts Application at https://www.seattleu.edu/newsroom/experts/
  * 
  *
  *     This new content type layout is a smart layout for news items that must obey
