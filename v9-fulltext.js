@@ -63,7 +63,7 @@ try {
     var closeCardFooter = '</div>';
     var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
-    var beginningHTML = '<div class="gridFeedItem profileItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
+    var beginningHTML = '<div class="facultyProfileWrapper card border-0 col-8 offset-2 shadow" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '-fulltext">';
     var endingHTML = '</div>';
 
 
@@ -198,10 +198,11 @@ try {
      *  Write the document once
      * 
      * */
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
+
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
     document.write('<p class="card-text">' + summary + '</p>');
