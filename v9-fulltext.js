@@ -62,6 +62,7 @@ try {
     // var openCardFooter = '<div class="card-footer">';
     // var closeCardFooter = '</div>';
     // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
+    var titleWrapper = '<div class="card-subtitle mb-1 text-muted hidden visually-hidden"><p class="card-text ml-2 ms-2">No title entered</p></div>';
     var disciplineWrapper = '<div class="facultyDisciplines hidden visually-hidden"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2"></p></div>';
     var bioString = '<h3 class="hidden visually-hidden">Biography</h3><div class="card-text ml-2 ms-2 hidden visually-hidden">No Bio Entered</div>';
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
@@ -110,6 +111,7 @@ try {
         }
         listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
         titleOne = arrayOfTitles[0];
+        titleWrapper = '<div class="card-subtitle mb-1 text-muted"><p class="card-text ml-2 ms-2">' + titleOne + '</p></div>'
     }
 
 
@@ -217,6 +219,10 @@ try {
 
     document.write(closeImg);
     document.write(openProfile);
+
+    document.write(titleWrapper);
+    document.write(titleWrapper);
+
 
 
     document.write(closeProfile);
