@@ -62,6 +62,7 @@ try {
     // var openCardFooter = '<div class="card-footer">';
     // var closeCardFooter = '</div>';
     // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
+    var bioString = '<h3 class="hidden visually-hidden">Biography</h3><div class="card-text ml-2 ms-2 hidden visually-hidden">No Bio Entered</div>';
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
     var openTop = '<div class="facultyProfileTop"><div class="standardContent">S';
     var closeTop = '</div></div>';
@@ -150,13 +151,11 @@ try {
 
 
     /***
-     *  determine if the article contains full text content
+     *  determine if the article contains full biography
      * 
      * */
-    if (biography == "") {
-        titleLink = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
-    } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + firstName + ' ' + lastName + '</a></h3>';
+    if (biography != "") {
+        bioString = '<h3 class="bioHeader">Biography</h3><div class="card-text ml-2 ms-2">' + biography + '</div>';
     }
 
 
@@ -227,9 +226,7 @@ try {
 
     document.write(closeMiddle);
     document.write(openBio);
-
-
-
+    document.write(bioString);
     document.write(closeBio);
     document.write(closeCardBody);
     document.write(endingHTML);
