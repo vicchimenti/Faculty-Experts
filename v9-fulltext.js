@@ -55,8 +55,8 @@ try {
     var thumbNailString = "";
     var titleOne = "";
     var degreeOne = "";
-    var contactPhone = "";
-    var contactEmail = "";
+    // var contactPhone = "";
+    // var contactEmail = "";
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
     // var openCardFooter = '<div class="card-footer">';
