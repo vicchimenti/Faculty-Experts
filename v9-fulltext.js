@@ -144,7 +144,7 @@ try {
         }
 
         // load all list items into an list group
-        listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
+        listOfDisciplines = '<ul class="list-group d-flex flex-row">' + listItems + '</ul>';
     }
 
 
