@@ -62,7 +62,7 @@ try {
     // var openCardFooter = '<div class="card-footer">';
     // var closeCardFooter = '</div>';
     // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
-    var disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2">';
+    var disciplineWrapper = '<div class="facultyDisciplines hidden visually-hidden"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2"></p></div>';
     var bioString = '<h3 class="hidden visually-hidden">Biography</h3><div class="card-text ml-2 ms-2 hidden visually-hidden">No Bio Entered</div>';
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
     var openTop = '<div class="facultyProfileTop"><div class="standardContent">S';
