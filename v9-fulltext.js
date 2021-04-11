@@ -146,6 +146,7 @@ try {
 
         // load all list items into an list group
         listOfDisciplines = '<ul class="list-group d-flex flex-row justify-content-around">' + listItems + '</ul>';
+        disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2">' + listOfDisciplines + '</p></div>';
     }
 
 
@@ -222,9 +223,7 @@ try {
     document.write(closeTop);
     document.write(openCardBody);
     document.write(openMiddle);
-
-
-
+    document.write(disciplineWrapper);
     document.write(closeMiddle);
     document.write(openBio);
     document.write(bioString);
@@ -236,18 +235,18 @@ try {
 
 
 
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
-    document.write('<p class="card-text">' + summary + '</p>');
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, listOfDisciplines));
+    // document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
+    // document.write('<p class="card-text">' + summary + '</p>');
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, listOfDisciplines));
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardFooter));
 
 
-    document.write('<p class="footerText">' + degreeOne + '</p>');
+    // document.write('<p class="footerText">' + degreeOne + '</p>');
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardFooter));
 
-    document.write(endingHTML);
+    // document.write(endingHTML);
 
 
 
