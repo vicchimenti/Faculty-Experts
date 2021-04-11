@@ -62,6 +62,7 @@ try {
     // var openCardFooter = '<div class="card-footer">';
     // var closeCardFooter = '</div>';
     // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
+    var degreeWrapper = '<div class="card-subtitle fst-italic font-italic hidden visually-hidden"><p class="card-text ml-2 ms-2">No degree entered</p></div>';
     var titleWrapper = '<div class="card-subtitle mb-1 text-muted hidden visually-hidden"><p class="card-text ml-2 ms-2">No title entered</p></div>';
     var disciplineWrapper = '<div class="facultyDisciplines hidden visually-hidden"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2"></p></div>';
     var bioString = '<h3 class="hidden visually-hidden">Biography</h3><div class="card-text ml-2 ms-2 hidden visually-hidden">No Bio Entered</div>';
@@ -94,6 +95,7 @@ try {
         }
         listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
         degreeOne = arrayOfDegrees[0];
+        degreeWrapper = '<div class="card-subtitle fst-italic font-italic"><p class="card-text ml-2 ms-2">' + degreeOne + '</p></div>';
     }
 
 
@@ -219,12 +221,8 @@ try {
 
     document.write(closeImg);
     document.write(openProfile);
-
     document.write(titleWrapper);
-    document.write(titleWrapper);
-
-
-
+    document.write(degreeWrapper);
     document.write(closeProfile);
     document.write(closeTop);
     document.write(openCardBody);
