@@ -135,12 +135,12 @@ try {
                 // If a school then only display once
                 if (!schoolString.includes(disciplineItem)) {
                     arrayOfSchools.push(disciplineItem);
-                    listItems += '<li class="list-group-item itemParent">' + disciplineItem + '</li>';
+                    // listItems += '<li class="list-group-item itemParent">' + disciplineItem + '</li>';
                 }
 
                 // If not a school then process as a discipline
             } else {
-                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
+                listItems += '<li class="list-group-item border-0">' + disciplineItem + '</li>';
             }
         }
 
