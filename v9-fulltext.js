@@ -189,34 +189,6 @@ try {
 
 
     /***
-     *  verify Phone
-     * 
-     * */
-    // if (phone == "") {
-    //     contactPhone = '<span class="hidden">No Phone Provided</span>';
-
-    // } else {
-    //     contactPhone = '<p class="contactInfo phone">Phone: ' + phone + '</p>';
-    // }
-
-
-
-
-    /***
-     *  verify email
-     * 
-     * */
-    // if (emailAddress == "") {
-    //     contactEmail = '<span class="hidden">No Phone Provided</span>';
-
-    // } else {
-    //     contactEmail = '<p class="contactInfo">Email: ' + emailAddress + '</p>';
-    // }
-
-
-
-
-    /***
      *  Write the document once
      * 
      * */
