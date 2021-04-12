@@ -62,6 +62,8 @@ try {
     // var openCardFooter = '<div class="card-footer">';
     // var closeCardFooter = '</div>';
     // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
+    var openImg = '<div class="facultyProfilePicture col-12 hidden visually-hidden">';
+    var closeImg = '</div>';
     var primaryImageString = '<img src="" class="hidden visually-hidden" alt="" />';
     var openPrimaryImage = '<div class="facultyPhoto card-img hidden visually-hidden">';
     var closePrimaryImage = '</div>';
@@ -73,10 +75,8 @@ try {
     var disciplineWrapper = '<div class="facultyDisciplines hidden visually-hidden"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2"></p></div>';
     var bioString = '<h3 class="hidden visually-hidden">Biography</h3><div class="card-text ml-2 ms-2 hidden visually-hidden">No Bio Entered</div>';
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
-    var openTop = '<div class="facultyProfileTop"><div class="standardContent">S';
+    var openTop = '<div class="facultyProfileTop"><div class="standardContent">';
     var closeTop = '</div></div>';
-    var openImg = '<div class="facultyProfilePicture col-12 hidden visually-hidden">';
-    var closeImg = '</div>';
     var openProfile = '<div class="facultyProfileInfo col-12">';
     var closeProfile = '</div>';
     var openMiddle = '<div class="facultyProfileMiddle standardContent"><div class="col-12">';
@@ -174,12 +174,13 @@ try {
 
 
     /***
-     *  verify Main image and photo credits
+     *  verify Primary image and set overlay
      * 
      * */
     if (primaryImage != "") {
-        primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + '" />';
+        openImg = '<div class="facultyProfilePicture col-12">';
         openPrimaryImage = '<div class="facultyPhoto card-img">';
+        primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + '" />';
         openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start">';
         overlayHeader = '<h1 class="card-title mb-2">' + firstName + ' ' + lastName + '</h1>';
     }
