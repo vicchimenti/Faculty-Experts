@@ -157,7 +157,7 @@ try {
      * 
      * */
     if (biography != "") {
-        bioString = '<h3 class="bioHeader">Biography</h3><div class="card-text ml-2 ms-2">' + biography + '</div>';
+        bioString = '<h3>Biography</h3><div class="card-text ml-2 ms-2">' + biography + '</div>';
     }
 
 
