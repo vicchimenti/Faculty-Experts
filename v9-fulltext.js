@@ -65,6 +65,7 @@ try {
     var primaryImageString = '<div class="facultyPhoto card-img hidden visually-hidden"></div>';
     var openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start">';
     var closeImageOverlay = '</div>';
+    var overlayHeader = '<h1 class="card-title mb-2">' + firstName + ' ' + lastName + '</h1>';
     var degreeWrapper = '<div class="card-subtitle fst-italic font-italic hidden visually-hidden"><p class="card-text ml-2 ms-2">No degree entered</p></div>';
     var titleWrapper = '<div class="card-subtitle mb-1 text-muted hidden visually-hidden"><p class="card-text ml-2 ms-2">No title entered</p></div>';
     var disciplineWrapper = '<div class="facultyDisciplines hidden visually-hidden"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2"></p></div>';
@@ -218,11 +219,10 @@ try {
     document.write(openTop);
     document.write(openImg);
 
-
-
-    document.write(openImageOverlay);
     
 
+    document.write(openImageOverlay);
+    document.write(overlayHeader);
     document.write(closeImageOverlay);
     document.write(closeImg);
     document.write(openProfile);
