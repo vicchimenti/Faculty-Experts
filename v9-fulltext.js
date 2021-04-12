@@ -201,10 +201,10 @@ try {
     document.write(openCardBody);
     document.write(openMiddle);
     document.write(disciplineWrapper);
-    document.write(closeMiddle);
     document.write(openBio);
     document.write(bioString);
     document.write(closeBio);
+    document.write(closeMiddle);
     document.write(closeCardBody);
     document.write(endingHTML);
 
