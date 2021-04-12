@@ -46,9 +46,9 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
-    var matchKey = -1;
-    var titleLink = "";
+    // var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
+    // var matchKey = -1;
+    // var titleLink = "";
     var listOfDegrees = "";
     var listOfTitles = "";
     var listOfDisciplines = "";
