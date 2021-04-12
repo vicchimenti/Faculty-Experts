@@ -62,8 +62,10 @@ try {
     // var openCardFooter = '<div class="card-footer">';
     // var closeCardFooter = '</div>';
     // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
-    var primaryImageString = '<div class="facultyPhoto card-img hidden visually-hidden"></div>';
-    var openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start">';
+    var primaryImageString = '<img src="" class="hidden visually-hidden" alt="" />';
+    var openPrimaryImage = '<div class="facultyPhoto card-img hidden visually-hidden">';
+    var closePrimaryImage = '</div>';
+    var openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start hidden visually-hidden">';
     var closeImageOverlay = '</div>';
     var overlayHeader = '<h1 class="card-title mb-2">' + firstName + ' ' + lastName + '</h1>';
     var degreeWrapper = '<div class="card-subtitle fst-italic font-italic hidden visually-hidden"><p class="card-text ml-2 ms-2">No degree entered</p></div>';
@@ -73,7 +75,7 @@ try {
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
     var openTop = '<div class="facultyProfileTop"><div class="standardContent">S';
     var closeTop = '</div></div>';
-    var openImg = '<div class="facultyProfilePicture col-12">';
+    var openImg = '<div class="facultyProfilePicture col-12 hidden visually-hidden">';
     var closeImg = '</div>';
     var openProfile = '<div class="facultyProfileInfo col-12">';
     var closeProfile = '</div>';
@@ -176,7 +178,8 @@ try {
      * 
      * */
     if (primaryImage != "") {
-        primaryImageString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
+        primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + '" />';
+        openPrimaryImage = '<div class="facultyPhoto card-img">';
     }
 
 
@@ -218,9 +221,9 @@ try {
     document.write(beginningHTML);
     document.write(openTop);
     document.write(openImg);
-
-    
-
+    document.write(openPrimaryImage);
+    document.write(primaryImageString);
+    document.write(closePrimaryImage);
     document.write(openImageOverlay);
     document.write(overlayHeader);
     document.write(closeImageOverlay);
