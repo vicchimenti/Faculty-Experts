@@ -46,22 +46,13 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    // var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
-    // var matchKey = -1;
-    // var titleLink = "";
     var listOfDegrees = "";
     var listOfTitles = "";
     var listOfDisciplines = "";
-    // var thumbNailString = "";
     var titleOne = "";
     var degreeOne = "";
-    // var contactPhone = "";
-    // var contactEmail = "";
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
-    // var openCardFooter = '<div class="card-footer">';
-    // var closeCardFooter = '</div>';
-    // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
     var openImg = '<div class="facultyProfilePicture col-12 hidden visually-hidden">';
     var closeImg = '</div>';
     var primaryImageString = '<img src="" class="hidden visually-hidden" alt="" />';
