@@ -52,7 +52,7 @@ try {
     var listOfDegrees = "";
     var listOfTitles = "";
     var listOfDisciplines = "";
-    var thumbNailString = "";
+    // var thumbNailString = "";
     var titleOne = "";
     var degreeOne = "";
     // var contactPhone = "";
@@ -62,7 +62,9 @@ try {
     // var openCardFooter = '<div class="card-footer">';
     // var closeCardFooter = '</div>';
     // var anchorWrap = '<div class="visually-hidden hidden">' + anchorTag + '</div>';
-    var primaryImageString = '<div class="facultyPhoto card-img" alt="' + firstName + ' ' + lastName + '"><img' + primaryImage + '</div>';
+    var primaryImageString = '<div class="facultyPhoto card-img hidden visually-hidden"></div>';
+    var openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start">';
+    var closeImageOverlay = '</div>';
     var degreeWrapper = '<div class="card-subtitle fst-italic font-italic hidden visually-hidden"><p class="card-text ml-2 ms-2">No degree entered</p></div>';
     var titleWrapper = '<div class="card-subtitle mb-1 text-muted hidden visually-hidden"><p class="card-text ml-2 ms-2">No title entered</p></div>';
     var disciplineWrapper = '<div class="facultyDisciplines hidden visually-hidden"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2"></p></div>';
@@ -172,11 +174,8 @@ try {
      *  verify Main image and photo credits
      * 
      * */
-    if (primaryImage == "") {
-        thumbNailString = '<span class="hidden">No Image Provided</span>';
-
-    } else {
-        thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
+    if (primaryImage != "") {
+        primaryImageString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
     }
 
 
