@@ -85,6 +85,15 @@
     font-weight: 500;
 }
 
+.standardContent .facultyDisciplines li {
+    font-size: unset;
+    margin-left: unset;
+}
+
+.facultyDisciplines .list-group-item {
+    background-color: unset;
+}
+
 
 
 
