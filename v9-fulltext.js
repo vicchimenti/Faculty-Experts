@@ -219,6 +219,11 @@ try {
     document.write(openImg);
 
 
+
+    document.write(openImageOverlay);
+    
+
+    document.write(closeImageOverlay);
     document.write(closeImg);
     document.write(openProfile);
     document.write(titleWrapper);
