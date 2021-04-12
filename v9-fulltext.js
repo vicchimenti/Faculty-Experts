@@ -249,23 +249,6 @@ try {
 
 
 
-
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    // document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
-    // document.write('<p class="card-text">' + summary + '</p>');
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, listOfDisciplines));
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardFooter));
-
-
-    // document.write('<p class="footerText">' + degreeOne + '</p>');
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardFooter));
-
-    // document.write(endingHTML);
-
-
-
-
 } catch (err) {
     document.write(err.message);
 }
