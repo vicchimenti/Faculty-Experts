@@ -67,7 +67,7 @@ try {
     var closePrimaryImage = '</div>';
     var openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start hidden visually-hidden">';
     var closeImageOverlay = '</div>';
-    var overlayHeader = '<h1 class="card-title mb-2">' + firstName + ' ' + lastName + '</h1>';
+    var overlayHeader = '<h1 class="card-title mb-2 hidden visually-hidden">No image provided</h1>';
     var degreeWrapper = '<div class="card-subtitle fst-italic font-italic hidden visually-hidden"><p class="card-text ml-2 ms-2">No degree entered</p></div>';
     var titleWrapper = '<div class="card-subtitle mb-1 text-muted hidden visually-hidden"><p class="card-text ml-2 ms-2">No title entered</p></div>';
     var disciplineWrapper = '<div class="facultyDisciplines hidden visually-hidden"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2"></p></div>';
@@ -180,6 +180,8 @@ try {
     if (primaryImage != "") {
         primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + '" />';
         openPrimaryImage = '<div class="facultyPhoto card-img">';
+        openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start">';
+        overlayHeader = '<h1 class="card-title mb-2">' + firstName + ' ' + lastName + '</h1>';
     }
 
 
