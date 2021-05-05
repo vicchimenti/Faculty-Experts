@@ -44,7 +44,7 @@ try {
     var degreeOne = "";
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
-    var openImg = '<div class="facultyProfilePicture col-12 hidden visually-hidden">';
+    var openImg = '<div class="facultyProfilePicture col-12 mx-auto d-block hidden visually-hidden">';
     var closeImg = '</div>';
     var primaryImageString = '<img src="" class="hidden visually-hidden" alt="" />';
     var openPrimaryImage = '<div class="facultyPhoto card-img hidden visually-hidden">';
@@ -159,7 +159,7 @@ try {
      * 
      * */
     if (primaryImage != "") {
-        openImg = '<div class="facultyProfilePicture col-12">';
+        openImg = '<div class="facultyProfilePicture col-12 mx-auto d-block">';
         openPrimaryImage = '<div class="facultyPhoto card-img">';
         primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + '" />';
         openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start">';
