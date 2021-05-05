@@ -131,12 +131,15 @@ try {
 
             // If not a school then process as a discipline
             } else {
+                if (i < arrayOfDisciplines.length - 1) {
+                    listItems += '<li class="list-group-item border-0">' + disciplineItem + ', </li>';
+                }
                 listItems += '<li class="list-group-item border-0">' + disciplineItem + '</li>';
             }
         }
 
         // load all list items into an list group
-        listOfDisciplines = '<ul class="list-group d-flex flex-row justify-content-around">' + listItems + '</ul>';
+        listOfDisciplines = '<ul class="list-group d-flex flex-row justify-content-start">' + listItems + '</ul>';
         disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2">' + listOfDisciplines + '</p></div>';
     }
 
