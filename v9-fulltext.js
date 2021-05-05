@@ -141,7 +141,7 @@ try {
 
         // load all list items into an list group
         listOfDisciplines = '<span>' + listItems + '</span>';
-        disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text ml-2 ms-2">' + listOfDisciplines + '</p></div>';
+        disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text">' + listOfDisciplines + '</p></div>';
     }
 
 
