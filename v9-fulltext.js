@@ -132,9 +132,9 @@ try {
             // If not a school then process as a discipline
             } else {
                 if (i < (arrayOfDisciplines.length - 1)) {
-                    listItems += '<span class="list-group-item border-0">' + disciplineItem + ', </span>';
+                    listItems += '<span>' + disciplineItem + ', </span>';
                 } else {
-                    listItems += '<span class="list-group-item border-0">' + disciplineItem + '</span>';
+                    listItems += '<span>' + disciplineItem + '</span>';
                 }
             }
         }
