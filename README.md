@@ -8,3 +8,4 @@ Version 10 Upgrade compliant
 - [] migrate degree one to subtitle
 - [] change name to Faculty Experts
 - [] ud standard content selectors to profile card for stylesheet
+- [] adjust fulltext for smaller images
