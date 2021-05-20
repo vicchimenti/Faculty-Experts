@@ -2,7 +2,8 @@
 /***
 *   @author Victor Chimenti, MSCS-SE '20
 *   @file filter.js
-*   @see Seattle University Newsroom https://www.seattleu.edu/testing123/vic-test/grid-hero/
+*   @see https://www.seattleu.edu/newsroom/experts/
+*        Seattle University Newsroom Experts Application
 *
 *   jQuery
 *   This script searches the Newsroom Experts Application content items for matches to the
