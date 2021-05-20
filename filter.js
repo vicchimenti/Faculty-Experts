@@ -37,7 +37,7 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function() {
                     // assign array of currently visible content items
-                    visibleItems = $('.profileItem').not('.hideByDropdownCategories');
+                    visibleItems = $('.profileItem').not('.hideByDropdownCategories, hideByText');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
@@ -63,7 +63,7 @@ $(function () {
                     $(function () {
                         $('.profileItem').filter(function () {
                             // when the search key is not present in the item then hide the item
-                            $(this).toggleClass('hideByDropdownCategories', !($(this).text().toLowerCase().indexOf(keyword) > -1));
+                            $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
                     });
                     // parse out unselected content items and limit display to user selected items
