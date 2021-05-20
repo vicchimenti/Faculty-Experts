@@ -77,7 +77,7 @@
     margin: 15px;
 }
 
-.hideByDropdownCategories, .hideResultsMessage { 
+.hideByDropdownCategories, .hideByText, .hideResultsMessage { 
     display: none !important;
 }
 
