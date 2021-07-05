@@ -177,8 +177,8 @@ try {
      *  Write the document once
      * 
      * */
-    document.write(anchorTag);
     document.write(beginningHTML);
+    document.write(anchorTag);
     document.write(openTop);
     document.write(openImg);
     document.write(openPrimaryImage);
