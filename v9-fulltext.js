@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.11
+ *     @version 3.12
  */
 
 
@@ -65,7 +65,7 @@ try {
     var closeMiddle = '</div></div>';
     var openBio = '<div class="primaryProfileContent col-12"><div class="facultyProfileBiography">';
     var closeBio = '</div></div>';
-    var beginningHTML = '<div class="facultyProfileWrapper card border-0 col-8 offset-2 shadow" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '-fulltext">';
+    var beginningHTML = '<div class="facultyProfileWrapper contentItem card border-0 col-8 offset-2 shadow" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '-fulltext">';
     var endingHTML = '</div>';
 
 
