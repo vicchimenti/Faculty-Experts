@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.14
+ *     @version 3.15
  */
 
 
@@ -165,8 +165,8 @@ try {
      * */
     if (primaryImage != "") {
         openImg = '<div class="facultyProfilePicture col-12 mx-auto d-block">';
-        openPrimaryImage = '<div class="facultyPhoto card-img">';
-        primaryImageString = '<img src="' + primaryImage + '" title="' + firstName + ' ' + lastName + '" alt="' + contentName + '" />';
+        openPrimaryImage = '<div class="facultyPhoto">';
+        primaryImageString = '<img src="' + primaryImage + '" class="card-img" title="' + firstName + ' ' + lastName + '" alt="' + contentName + '" />';
         openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start">';
         overlayHeader = '<h1 class="card-title mb-2">' + firstName + ' ' + lastName + '</h1>';
     }
