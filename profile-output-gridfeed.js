@@ -146,7 +146,7 @@ try {
 
     } else {
 
-        thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" alt="' + contentName + '" /></span>';
+        thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" title="' + firstName + lastName + '" alt="' + contentName + '" /></span>';
 
     }
 
