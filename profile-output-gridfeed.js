@@ -125,7 +125,8 @@ try {
             let disciplineItem = arrayOfDisciplines[i].trim();
 
             // Check to see if existing discipline is a top level school
-            if (!disciplineString.includes(disciplineItem)) {
+            // if (!disciplineString.includes(disciplineItem)) {
+                if (schoolArray.indexOf(disciplineItem) == -1)
 
                 // If not a school then process as a discipline
                 listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
