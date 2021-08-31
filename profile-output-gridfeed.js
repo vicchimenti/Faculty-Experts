@@ -136,7 +136,11 @@ try {
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
 
-
+    // if (yourArray.indexOf("someString") > -1) {
+    //     //In the array!
+    // } else {
+    //     //Not in the array
+    // }
 
 
     /***
