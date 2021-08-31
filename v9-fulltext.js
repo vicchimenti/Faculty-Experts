@@ -165,7 +165,7 @@ try {
     if (primaryImage != "") {
         openImg = '<div class="facultyProfilePicture col-12 mx-auto d-block">';
         openPrimaryImage = '<div class="facultyPhoto card-img">';
-        primaryImageString = '<img src="' + primaryImage + '" title="' + firstName + ' ' + lastName + '" />';
+        primaryImageString = '<img src="' + primaryImage + '" title="' + firstName + ' ' + lastName + '" alt="' + contentName + '" />';
         openImageOverlay = '<div class="facultyProfileName card-img-overlay d-flex align-items-end align-items-md-start">';
         overlayHeader = '<h1 class="card-title mb-2">' + firstName + ' ' + lastName + '</h1>';
     }
