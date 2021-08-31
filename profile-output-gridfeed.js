@@ -67,8 +67,8 @@ try {
     var closeCardBody = '</div>';
     var openCardFooter = '<div class="card-footer">';
     var closeCardFooter = '</div>';
-    // var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
-    var schoolArray = ['Athletics', 'Arts & Sciences', 'Business and Economics', 'Education', 'Law', 'Nursing', 'School of Theology and Ministry', 'Science and Engineering'];
+    var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
+    var schoolArray = ['Athletics','Arts & Sciences','Business and Economics','Education','Law','Nursing','School of Theology and Ministry','Science and Engineering'];
 
     var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     var beginningHTML = '<div class="gridFeedItem profileItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
@@ -122,11 +122,15 @@ try {
         // trim whitespace on all disciplines and process for unordered list
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
             let disciplineItem = arrayOfDisciplines[i].trim();
-
+            // console.log('Hello, Console!');
             // Check to see if existing discipline is a top level school
-            // if (!disciplineString.includes(disciplineItem)) {
-                if (schoolArray.indexOf(disciplineItem) == -1)
+            if (!disciplineString.includes(disciplineItem)) {
+                // if (schoolArray.indexOf(disciplineItem) === -1) {
+                    // console.log("discipline item: " + disciplineItem);
+                    // for (let j = 0; j < schoolArray.length; j++) {
+                    //     console.log("school array item: " + j + ' ' + schoolArray[j]);
 
+                    // }
                 // If not a school then process as a discipline
                 listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
             }
@@ -136,11 +140,6 @@ try {
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
 
-    // if (yourArray.indexOf("someString") > -1) {
-    //     //In the array!
-    // } else {
-    //     //Not in the array
-    // }
 
 
     /***
