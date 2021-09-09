@@ -1,10 +1,14 @@
 /* Newsroom Experts Page Custom Styles */
 
-#newsroom-experts #header-2 {
+#newsroom-faculty-experts #header-2 {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
 
-#newsroom-experts #pageContentWrapper {
+#newsroom-faculty-experts #pageContentWrapper {
     margin-top: 1rem;
 }
+
+/* #pageContentWrapper {
+    margin-top: 7rem;
+} */
