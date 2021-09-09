@@ -21,6 +21,7 @@
     margin: 0;
     max-width: unset;
     padding-bottom: 1rem;
+    padding-top: 0;
 }
 
 #filterField.standardContent p {
