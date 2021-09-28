@@ -58,7 +58,7 @@ div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
 
-.gridOrganizer .standardContent h2.organizerTitle {
+.gridOrganizer.standardContent h2.organizerTitle {
     width: 100%;
 }
 
