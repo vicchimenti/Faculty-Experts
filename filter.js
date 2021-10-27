@@ -77,7 +77,7 @@ $(function () {
             //   ***   Category Filter   ***   //
             $(function () {
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
-                $('#selectboxCategories').change(function () {
+                $('#selectboxCategorieOptions').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
