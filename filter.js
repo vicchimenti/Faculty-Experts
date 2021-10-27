@@ -9,7 +9,7 @@
 *   This script searches the Newsroom Experts Application content items for matches to the
 *   user selected search parameters in the filter field dropdown menu
 *
-*   @version 4.1
+*   @version 4.2
 */
 
 
