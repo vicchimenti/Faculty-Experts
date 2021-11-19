@@ -20,12 +20,13 @@
     padding-top: unset;
 }
 
-.profileItem p.footerText {
+
+/* .profileItem p.footerText {
     font-size: 1.25rem;
     font-weight: 450;
     line-height: 1.5;
     padding: 0;
-}
+} */
 
 .profileItem ul.list-group {
     font-size: unset;
@@ -51,6 +52,10 @@
 
 .profileItem .card-footer .footerText {
     color: #fff;
+    font-size: 1.25rem;
+    font-weight: 450;
+    line-height: 1.5;
+    padding: 0;
 }
 
 
