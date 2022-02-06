@@ -19,7 +19,7 @@
 
 /* *****  Hero Organizer customizations  **** */
 
-div.heroOrganizer.card-deck {
+div.heroOrganizer.card-group {
     flex-flow: column;
 }
 
@@ -62,11 +62,11 @@ div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
 
-div.card-deck div.gridFeedItem.card {
+div.card-group div.gridFeedItem.card {
     display: flex;
     flex: 1 0 calc(20% - 10px);
     margin: 15px;
-    max-width: 260px;
+    max-width: 320px;
     padding: 0;
 }
 
@@ -154,7 +154,7 @@ img.card-img-top {
 @media screen and (max-width: 1200px) {}
 
 @media only screen and (max-width: 992px) {
-    div.card-deck div.gridFeedItem.card {
+    div.card-group div.gridFeedItem.card {
         display: flex;
         flex: 1 0 calc(35% - 10px);
         margin: 15px;
@@ -173,7 +173,7 @@ img.card-img-top {
     div.gridOrganizerWrapper {
         padding: 0 15px 15px 15px;
     }
-    div.gridOrganizer.card-deck {
+    div.gridOrganizer.card-group {
         margin-left: 0;
         margin-right: 30px;
     }
@@ -185,7 +185,7 @@ img.card-img-top {
         font-weight: 400;
         max-width: 100%;
     }
-    div.card-deck div.gridFeedItem.card {
+    div.card-group div.gridFeedItem.card {
         flex: auto;
         max-width: 100%;
     }
