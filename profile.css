@@ -1,15 +1,15 @@
 /* Profile Content Type Customizations */
 
-.card-deck .gridFeedItem.profileItem.card {
+/* .card-deck .gridFeedItem.profileItem.card {
     display: flex;
     flex: 1 0 calc(23% - 10px);
     margin: 15px;
     max-width: 360px;
     padding: 0;
-}
+} */
 
 .profileItem .card-subtitle.font-italic {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
@@ -36,7 +36,7 @@
 
 .profileItem .list-group-item {
     background-color: #f7f7f7;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
     list-style: unset;
     margin-left: unset;
