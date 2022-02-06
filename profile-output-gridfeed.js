@@ -1,5 +1,5 @@
 /***
- *     @author Victor Chimenti, MSCS-SE '20
+ *     @author Victor Chimenti, MSCS
  *     @file profile-output-gridfeed.js
  *     @see Seattle University Experts Application at https://www.seattleu.edu/newsroom/experts/
  * 
@@ -13,7 +13,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.36
+ *     @version 2.37
  */
 
 
