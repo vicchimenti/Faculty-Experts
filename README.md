@@ -1,4 +1,4 @@
-# profile-content-type
+# Experts Profile Content Type
 
 Version 10 Upgrade compliant
 
@@ -9,3 +9,4 @@ Version 10 Upgrade compliant
 - [] change name to Faculty Experts
 - [] ud standard content selectors to profile card for stylesheet
 - [] adjust fulltext for smaller images
+- [] add updated image logic
