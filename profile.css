@@ -20,12 +20,13 @@
     padding-top: unset;
 }
 
-.profileItem p.footerText {
+
+/* .profileItem p.footerText {
     font-size: 1.25rem;
     font-weight: 450;
     line-height: 1.5;
     padding: 0;
-}
+} */
 
 .profileItem ul.list-group {
     font-size: unset;
@@ -46,21 +47,30 @@
 }
 
 .profileItem .card-footer {
-    background-color: #f7f7f7;
+    background-color: #807060;
+}
+
+.profileItem .card-footer .footerText {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 450;
+    line-height: 1.5;
+    padding: 0;
 }
 
 
 /* Large devices (desktops, 992px to 1200) */
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
 
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
     .card-deck .gridFeedItem.profileItem.card {
         flex: 1 0 calc(30% - 10px);
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
 
+/* Medium devices (tablets, 768px and up) */
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
     .card-deck .gridFeedItem.profileItem.card {
         flex: 1 0 calc(40% - 10px);
     }
@@ -68,12 +78,13 @@
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media screen and (max-width: 767.98px) {
 
+@media screen and (max-width: 767.98px) {
     .card-deck .gridFeedItem.profileItem.card {
         max-width: unset;
     }
 }
+
 
 /*********************
 *
@@ -81,49 +92,79 @@
 *
 **/
 
+
 /* Galaxy Fold (less than 280px) */
+
 @media only screen and (max-width: 280px) {}
 
+
 /* iPhone X (less than 376px) */
+
 @media only screen and (max-width: 376px) {}
 
+
 /* Surface Duo (less than 540px) */
+
 @media only screen and (max-width: 540px) {}
 
+
 /* Extra small devices (portrait phones, less than 576px) */
+
 @media only screen and (max-width: 575.98px) {}
 
+
 /* Larger devices (full screens, less than 1199.98px) */
+
 @media only screen and (max-width: 1199.98px) {}
 
+
 /* Small devices (landscape phones, 576px and up) */
+
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {}
 
+
 /* Medium devices (tablets, 768px and up) */
+
 @media screen and (min-width: 768px) and (max-width: 991.98px) {}
 
+
 /* iPad Pro (iPad Pro, 1024px to 1200) */
+
 @media screen and (min-width: 1024px) and (max-width: 1199.98px) {}
 
+
 /* Large devices (desktops, 992px and up) */
+
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {}
 
+
 /* Large devices (large desktops, 1200px and up) */
+
 @media screen and (min-width: 1200px) {}
 
+
 /* X Large devices (large desktops, 1200px and up) */
+
 @media screen and (min-width: 1366px) {}
 
+
 /* XX Large devices (large desktops, 1200px and up) */
+
 @media screen and (min-width: 1920px) {}
 
+
 /* XXX Large devices (large desktops, 1200px and up) */
+
 @media screen and (min-width: 2560px) {}
 
+
 /* ***** Mobile Up ***** */
+
 @media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 767.999px) {}
 
+
 /* ***** Desktop down ***** */
+
 @media screen and (max-width: 1200px) {}
