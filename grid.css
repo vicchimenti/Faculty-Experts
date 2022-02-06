@@ -67,6 +67,7 @@ div.card-group div.gridFeedItem.card {
     flex: 1 0 calc(20% - 10px);
     margin: 15px;
     max-width: 320px;
+    min-width: 300px;
     padding: 0;
 }
 
@@ -155,10 +156,8 @@ img.card-img-top {
 
 @media only screen and (max-width: 992px) {
     div.card-group div.gridFeedItem.card {
-        display: flex;
-        flex: 1 0 calc(35% - 10px);
-        margin: 15px;
-        padding: 0;
+        flex: auto;
+        max-width: 100%;
     }
 }
 
