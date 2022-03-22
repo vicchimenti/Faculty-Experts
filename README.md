@@ -1,6 +1,6 @@
 # Experts Profile Content Type
 
-Version 10 Upgrade compliant
+Version 10 Upgrade compliant with bootstrap 5
 
 ## Todo
 
