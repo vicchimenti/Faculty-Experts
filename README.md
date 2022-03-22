@@ -10,3 +10,4 @@ Version 10 Upgrade compliant with bootstrap 5
 - [] ud standard content selectors to profile card for stylesheet
 - [] adjust fulltext for smaller images
 - [] add updated image logic
+- [] verify aria and roles
