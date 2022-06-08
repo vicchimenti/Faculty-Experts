@@ -254,8 +254,9 @@ form {
 
 
 /* *********************************************************
-   top nav bar
-   Last revised 06/6/19 by ab
+    top nav bar
+    revised 06/6/19 by ab
+    last revised 06/09/22 by vic
 ************************************************************ */
 
 .navbar {
@@ -380,6 +381,28 @@ form {
     display: inline-block;
     float: left;
     width: auto;
+}
+
+
+/* added to accomodate SU Today banner link */
+
+#newsroomNav .nav-item .nav-link {
+    font-size: 1.8rem;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1;
+    padding: 2rem 3rem;
+    margin: 0;
+}
+
+
+/* added to accomodate SU Today banner link */
+
+#newsroomNav a#navbarSuToday:focus,
+#newsroomNav a#navbarSuToday:hover {
+    background: #000;
 }
 
 .dropdown-item:focus,
