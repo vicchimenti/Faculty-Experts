@@ -8,3 +8,15 @@
     padding: 2rem 3rem;
     margin: 0;
 }
+
+#newsroomNav .nav-item .nav-link:focus,
+#newsroomNav .nav-item .nav-link:hover {
+    background: #000;
+    /* color: #088099; */
+}
+
+#newsroomNav a#navbarsuToday:focus,
+#newsroomNav a#navbarsuToday:hover {
+    background: #000;
+    /* color: #088099; */
+}
