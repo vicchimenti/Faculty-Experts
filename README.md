@@ -9,6 +9,6 @@ Version 10 Upgrade compliant with bootstrap 5
 - [x] change name to Faculty Experts
 - [] ud standard content selectors to profile card for stylesheet
 - [] adjust fulltext for smaller images
-- [] add updated image logic
+- [x] add updated image logic
 - [] verify aria and roles
 - [] update html natives
