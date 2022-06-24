@@ -1,25 +1,4 @@
 /***
- *     @author Victor Chimenti, MSCS
- *     @file profile-output-gridfeed.js
- *     @see Seattle University Experts Application at https://www.seattleu.edu/newsroom/experts/
- * 
- *
- *     This new content type layout is a smart layout for news items that must obey
- *     a masonry grid layout. In this iteration this layout will be dedicated
- *     to the profile content type which is being developed for the faculty experts app.
- *
- *     This content layout will be the organizer layout and will link to the
- *     full text layout to reveal the full article.
- *
- *     Document will write once when the page loads
- *
- *     @version 2.37
- */
-
-
-
-
-/***
  *      @author  Victor Chimenti, MSCS
  *      @file    output-gridfeed.js
  *                  output/gridfeed
