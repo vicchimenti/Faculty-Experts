@@ -41,12 +41,12 @@ function getContentValues(tag) {
         return {
             isError: false,
             content: _tag == '' ? null : _tag
-        }
+        };
     } catch (error) {
         return {
             isError: true,
             message: error.message
-        }
+        };
     }
 }
 
