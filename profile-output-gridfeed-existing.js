@@ -19,6 +19,178 @@
 
 
 
+/***
+ *      @author  Victor Chimenti, MSCS
+ *      @file    output-gridfeed.js
+ *                  output/gridfeed
+ *                  id:5522
+ *      @see Seattle University Experts Application at https://www.seattleu.edu/newsroom/experts/
+ *
+ *      This layout works with the Grid Organizer and will display a faculty expert.
+ *
+ *      Document will write once when the page loads
+ * 
+ *      @version 3.0
+ * 
+ * */
+
+
+
+
+
+
+
+
+/***
+ *      Import T4 Utilities
+ */
+importClass(com.terminalfour.media.IMediaManager);
+importClass(com.terminalfour.spring.ApplicationContextProvider);
+importClass(com.terminalfour.publish.utils.BrokerUtils);
+importClass(com.terminalfour.media.utils.ImageInfo);
+
+
+
+
+/***
+ *      Extract values from T4 element tags
+ *      and confirm valid existing content item field
+ */
+function getContentValues(tag) {
+    try {
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
+        return {
+            isError: false,
+            content: _tag == '' ? null : _tag
+        }
+    } catch (error) {
+        return {
+            isError: true,
+            message: error.message
+        }
+    }
+}
+
+
+
+
+/***
+ *      Parses array values for null
+ */
+function parseArray(rawValues) {
+
+    let results = [];
+    for (let value in rawValues) {
+
+        if (rawValues[value]) results.push(rawValues[value]);
+    }
+
+    return results;
+}
+
+    
+
+
+/***
+ *      Returns an array of list items
+ */
+function assignList(arrayOfValues) {
+
+    let listValues = '';
+
+    for (let i = 0; i < arrayOfValues.length; i++) {
+
+    if (arrayOfValues[i]) {
+
+        listValues += '<li class="list-group-item d-inline deptBioli p-0 pe-md-4">' + arrayOfValues[i].trim() + '</li>';
+    }
+    }
+
+    return listValues;
+}
+
+
+
+
+/***
+ *      Returns a media object
+ */
+function getMediaInfo(mediaID) {
+
+    let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+    let media = mediaManager.get(mediaID, language);
+
+    return media;
+}
+
+
+
+
+/***
+ *      Returns a media stream object
+ */
+function readMedia(mediaID) {
+
+    let mediaObj = getMediaInfo(mediaID);
+    let oMediaStream = mediaObj.getMedia();
+
+    return oMediaStream;
+}
+
+
+
+
+/***
+ *      Write the document
+ */
+function writeDocument(array) {
+
+    for (let i = 0; i < array.length; i++) {
+
+        document.write(array[i]);
+    }
+}
+
+
+
+
+
+
+
+
+/***
+ *  Main
+ */
+try {
+
+
+    /***
+     *      Dictionary of content
+     * */
+    let expertsDict = {
+
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        fullName: getContentValues('<t4 type="content" name="Name of Faculty or Staff Member" output="normal" modifiers="striptags,htmlentities" />'),
+        lastName: getContentValues('<t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />'),
+        firstName: getContentValues('<t4 type="content" name="First Name" output="normal" modifiers="striptags,htmlentities" />'),
+        pronouns: getContentValues('<t4 type="content" name="Pronouns" output="normal" modifiers="striptags,htmlentities" />'),
+        positionTitle: getContentValues('<t4 type="content" name="Position Title(s)" output="normal" modifiers="striptags,htmlentities" />'),
+        college: getContentValues('<t4 type="content" name="College" output="normal" modifiers="striptags,htmlentities" />'),
+        description: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="striptags,htmlentities" />'),
+        officePhone: getContentValues('<t4 type="content" name="Phone" output="normal" modifiers="striptags,htmlentities" />'),
+        emailAddress: getContentValues('<t4 type="content" name="Email Address" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),
+        bldgRoom: getContentValues('<t4 type="content" name="Building/Room Number" output="normal" modifiers="striptags,htmlentities" />'),
+        departments: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        primaryImagePath: getContentValues('<t4 type="content" name="Photo" output="normal" formatter="path/*" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="striptags,htmlentities" />'),
+        contentId: getContentValues('<t4 type="meta" meta="content_id" />')
+
+    };
+}
+
+
+
+
 
 try {
 
