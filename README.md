@@ -2,7 +2,7 @@
 
 Version 10 Upgrade compliant with bootstrap 5
 
-## Todo
+## TODO
 
 - [] implement section content link in footer
 - [] migrate degree one to subtitle
@@ -12,3 +12,5 @@ Version 10 Upgrade compliant with bootstrap 5
 - [x] add updated image logic
 - [] verify aria and roles
 - [] update html natives
+- [] continue dictonary migration
+- [x] phase one media attr done
