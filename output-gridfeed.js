@@ -323,6 +323,24 @@ try {
 
     }
 
+    /***
+     *  Parse for image
+     * 
+     * */
+            if (departmentBioDict.primaryImagePath.content) {
+
+            let imageID = content.get('Photo').getID();
+            let mediaInfo = getMediaInfo(imageID);
+            let media = readMedia(imageID);
+            let info = new ImageInfo;
+            info.setInput(media);
+
+            imageString =
+                (info.check())
+                ? '<figure class="figure p-0 m-0"><img src="' + departmentBioDict.primaryImagePath.content + '" class="deptBioImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure><figcaption class="figure-caption visually-hidden hidden">' + mediaInfo.getName() + '</figcaption>'
+                : '<span class="deptBioImage visually-hidden hidden">Invalid Image ID</span>';
+        }
+
 
 
 
