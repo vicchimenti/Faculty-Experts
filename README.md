@@ -11,3 +11,4 @@ Version 10 Upgrade compliant with bootstrap 5
 - [] adjust fulltext for smaller images
 - [] add updated image logic
 - [] verify aria and roles
+- [] update html natives
