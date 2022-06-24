@@ -213,6 +213,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
+    
     var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
     var matchKey = -1;
     var listOfDegrees = "";
@@ -306,61 +307,42 @@ try {
      *  verify Main image and photo credits
      * 
      * */
-    if (primaryImage == "") {
+    // if (primaryImage == "") {
 
-        thumbNailString = '<span class="hidden visually-hidden">No Image Provided</span>';
+    //     thumbNailString = '<span class="hidden visually-hidden">No Image Provided</span>';
 
-    } else {
+    // } else {
 
-        thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" title="' + firstName + ' ' + lastName + '" alt="' + contentName + '" loading="lazy" /></span>';
+    //     thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" title="' + firstName + ' ' + lastName + '" alt="' + contentName + '" loading="lazy" /></span>';
 
-    }
+    // }
 
     /***
      *  Parse for image
+     *  and process valid media id
      * 
      * */
-            if (departmentBioDict.primaryImagePath.content) {
+     let imageString = (expertsDict.primaryImage.content) ?
+        '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" loading="auto" /></span>' :
+        '<span class="expertsImage hidden visually-hidden">No Image Provided</span>';
 
-            let imageID = content.get('Photo').getID();
-            let mediaInfo = getMediaInfo(imageID);
-            let media = readMedia(imageID);
-            let info = new ImageInfo;
-            info.setInput(media);
+    if (expertsDict.primaryImage.content) {
 
-            imageString =
-                (info.check())
-                ? '<figure class="figure p-0 m-0"><img src="' + departmentBioDict.primaryImagePath.content + '" class="deptBioImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure><figcaption class="figure-caption visually-hidden hidden">' + mediaInfo.getName() + '</figcaption>'
-                : '<span class="deptBioImage visually-hidden hidden">Invalid Image ID</span>';
-        }
+        let imageID = content.get('Photo').getID();
+        let mediaInfo = getMediaInfo(imageID);
+        let media = readMedia(imageID);
+        let info = new ImageInfo;
+        info.setInput(media);
 
-
-
-
-    /***
-     *  verify Phone
-     * 
-     * */
-    if (phone == "") {
-        contactPhone = '<span class="hidden">No Phone Provided</span>';
-
-    } else {
-        contactPhone = '<p class="contactInfo phone">Phone: ' + phone + '</p>';
+        imageString = (info.check()) ?
+            '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
+            '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage noMediaId card-img-top p-0 m-0" loading="auto" /></span>';
     }
 
 
 
 
-    /***
-     *  verify email
-     * 
-     * */
-    if (emailAddress == "") {
-        contactEmail = '<span class="hidden">No Phone Provided</span>';
 
-    } else {
-        contactEmail = '<p class="contactInfo">Email: ' + emailAddress + '</p>';
-    }
 
 
 
@@ -382,6 +364,33 @@ try {
     document.write('<p class="footerText">' + college + '</p>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardFooter));
     document.write(endingHTML);
+
+
+
+
+    /***
+     *  write document once
+     * 
+     * */
+    writeDocument(
+        [
+            beginningHTML,
+            openRow,
+            openImageWrapper,
+            imageString,
+            closeImageWrapper,
+            openBodyWrapper,
+            openBody,
+            titleLink,
+            titleString,
+            subtitleString,
+            summaryBioString,
+            closeBody,
+            closeBodyWrapper,
+            closeRow,
+            endingHTML
+        ]
+    );
 
 
 
