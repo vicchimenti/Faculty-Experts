@@ -12,22 +12,22 @@
 /* ****** Wraps Overflow within container ****** */
 
 
-/* div#MainZone div.container {
+/* div#MainZone .container {
     display: contents;
 } */
 
 
 /* *****  Hero Organizer customizations  **** */
 
-div.heroOrganizer.card-group {
+.heroOrganizer.card-group {
     flex-flow: column;
 }
 
-div.heroOrganizer h2.organizerTitle {
+.heroOrganizer h2.organizerTitle {
     padding-bottom: 4rem;
 }
 
-div.heroOrganizer h3.card-title {
+.heroOrganizer h3.card-title {
     color: #aa0000;
     font-family: Montserrat, sans-serif;
     font-size: 2.4rem;
@@ -35,7 +35,7 @@ div.heroOrganizer h3.card-title {
     padding: 0;
 }
 
-div.heroOrganizer h3.card-title a {
+.heroOrganizer h3.card-title a {
     color: #aa0000;
     font-family: Montserrat, sans-serif;
     font-size: 2.4rem;
@@ -46,7 +46,7 @@ div.heroOrganizer h3.card-title a {
 
 /* *****  Grid Organizer customizations  **** */
 
-div.gridOrganizerWrapper {
+.gridOrganizerWrapper {
     background-color: #f7f7f7;
     /* background-color: #e6efff; */
     /* opacity: 90%; */
@@ -54,7 +54,7 @@ div.gridOrganizerWrapper {
     padding-top: 50px;
 }
 
-div.gridOrganizer div.titleWrapper {
+.gridOrganizer .titleWrapper {
     width: 100%;
 }
 
@@ -62,7 +62,7 @@ div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
 
-div.card-group div.gridFeedItem.card {
+.card-group .gridFeedItem.card {
     display: flex;
     flex: 1 0 calc(20% - 10px);
     margin: 15px;
@@ -71,7 +71,7 @@ div.card-group div.gridFeedItem.card {
     padding: 0;
 }
 
-div.gridFeedItem h3.card-title {
+.gridFeedItem h3.card-title {
     color: #aa0000;
     font-family: Montserrat, sans-serif;
     font-size: 2rem;
@@ -79,23 +79,23 @@ div.gridFeedItem h3.card-title {
     padding: 0;
 }
 
-div.gridFeedItem h3.card-title a {
+.gridFeedItem h3.card-title a {
     color: #aa0000;
     font-size: 2rem;
     font-weight: 450;
     padding: 0;
 }
 
-div.gridFeedItem .card-subtitle {
+.gridFeedItem .card-subtitle {
     font-size: 1.5rem;
     line-height: 1.5;
 }
 
-div.gridFeedItem .card-text {
+.gridFeedItem .card-text {
     font-weight: 500;
 }
 
-div.gridFeedItem ul li.tag {
+.gridFeedItem ul li.tag {
     font-size: 1.5rem;
     line-height: 1.5;
     list-style-type: none;
@@ -144,7 +144,7 @@ img.card-img-top {
 
 @media screen and (min-width: 767.999px) {
     /* If Bootstrap 4 only */
-    div.gridOrganizerWrapper {
+    .gridOrganizerWrapper {
         padding: 0 50px 50px 50px;
     }
 }
@@ -153,13 +153,13 @@ img.card-img-top {
 /* ***** Desktop down ***** */
 
 @media screen and (max-width: 1200px) {
-    div.card-group div.gridFeedItem.card {
+    .card-group .gridFeedItem.card {
         max-width: unset;
     }
 }
 
 @media only screen and (max-width: 992px) {
-    div.card-group div.gridFeedItem.card {
+    .card-group .gridFeedItem.card {
         flex: auto;
         max-width: 100%;
     }
@@ -173,37 +173,37 @@ img.card-img-top {
         padding-left: 15px;
         padding-right: 10px;
     }
-    div.gridOrganizerWrapper {
+    .gridOrganizerWrapper {
         padding: 0 15px 15px 15px;
     }
-    div.gridOrganizer.card-group {
+    .gridOrganizer.card-group {
         margin-left: 0;
         margin-right: 30px;
     }
-    div.gridOrganizerWrapper h2.organizerTitle {
+    .gridOrganizerWrapper h2.organizerTitle {
         padding-left: 5px;
     }
-    div.gridFeedItem {
+    .gridFeedItem {
         font-size: 1rem;
         font-weight: 400;
         max-width: 100%;
     }
-    div.card-group div.gridFeedItem.card {
+    .card-group .gridFeedItem.card {
         flex: auto;
         max-width: 100%;
     }
-    div.gridFeedItem h3 {
+    .gridFeedItem h3 {
         font-size: 1rem;
         font-weight: 400;
     }
-    div.heroOrganizer h3.card-title {
+    .heroOrganizer h3.card-title {
         color: #aa0000;
         font-family: Montserrat, sans-serif;
         font-size: 2rem;
         font-weight: 450;
         padding: 0;
     }
-    div.heroOrganizer h3.card-title a {
+    .heroOrganizer h3.card-title a {
         font-size: 2rem;
         color: #aa0000;
         font-family: Montserrat, sans-serif;
