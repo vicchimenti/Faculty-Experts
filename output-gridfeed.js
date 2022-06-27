@@ -302,15 +302,13 @@ try {
 
 
 
-
-
-
-
-
     /***
      *  parse the list of disciplines, add <li> tags
      * 
      * */
+    let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
+
+
     if (disciplines != "") {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
