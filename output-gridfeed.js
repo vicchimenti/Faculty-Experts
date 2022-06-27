@@ -177,7 +177,7 @@ try {
      * 
      * */
     
-    var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
+    // var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
     var matchKey = -1;
     var listOfDegrees = "";
     var listOfTitles = "";
@@ -197,6 +197,18 @@ try {
     var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     var beginningHTML = '<div class="gridFeedItem profileItem card shadow" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
     var endingHTML = '</div>';
+
+
+
+
+    /***
+     *  validate summary
+     * 
+     * */
+    let cardText = (expertsDict.summary.content) ?
+        '<span class="card-text summary"><p>' + expertsDict.summary.content + '</p></span>' :
+        "<span class='card-text summary hidden visually-hidden'>No valid summary provided</span>";
+
 
 
 
