@@ -180,10 +180,14 @@ try {
     // var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
     var matchKey = -1;
     var listOfDegrees = "";
-    var listOfTitles = "";
+
+    // var listOfTitles = "";
+
     var listOfDisciplines = "";
-    var thumbNailString = "";
-    var titleOne = "";
+    // var thumbNailString = "";
+
+    // var titleOne = "";
+
     var degreeOne = "";
     var contactPhone = "";
     var contactEmail = "";
@@ -237,9 +241,9 @@ try {
      *  validate summary
      * 
      * */
-    let cardText = (expertsDict.summary.content) ?
-    '<p class="card-text summary">' + expertsDict.summary.content + '</p>' :
-    '<span class="card-text summary hidden visually-hidden">No valid summary provided</span>';
+     let cardText = (expertsDict.summary.content) ?
+        '<p class="card-text summary">' + expertsDict.summary.content + '</p>' :
+        '<span class="card-text summary hidden visually-hidden">No valid summary provided</span>';
 
 
 
@@ -263,9 +267,19 @@ try {
 
 
     /***
-     *  parse the list of titles, add <li> tags
+     *  parse for primary title
      * 
      * */
+    let arrayOfTitles = (expertsDict.titles.content) ? expertsDict.titles.content.split('\n') : null;
+    let titleOne = arrayOfTitles[0] || null;
+    let titleString = (titleOne) ?
+        '<div class="primaryTitle card-subtitle mb-2 text-muted">' + titleOne + '</div>' :
+        '<span class="primaryTitle card-subtitle mb-2 text-muted hidden visually-hidden">No valid title provided</span>';
+
+
+
+
+     '<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>'
     if (titles != "") {
         var arrayOfTitles = titles.split('\n');
         let listItems = "";
@@ -385,6 +399,7 @@ try {
             imageString,
             openCardBody,
             titleLink,
+            titleString,
 
             cardText,
 
