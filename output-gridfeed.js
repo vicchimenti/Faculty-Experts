@@ -91,12 +91,6 @@ function assignList(arrayOfValues, disciplineValidator) {
 }
 
 
-// for (let i = 0; i < arrayOfDisciplines.length; i++) {
-//     let disciplineItem = arrayOfDisciplines[i].trim();
-//     if (!disciplineString.includes(disciplineItem)) {
-//         listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
-//     }
-// }
 
 
 /***
