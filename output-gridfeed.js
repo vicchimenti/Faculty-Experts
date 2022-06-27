@@ -315,9 +315,9 @@ try {
      * 
      * */
     let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
-    let listOfDisciplines = (arrayOfDisciplines) ?
-        :
-        null;
+    let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
+    let validDisciplines = (listOfDisciplines) ?
+        '<ul class="list-group">' + listOfDisciplines + '</ul>' :
         '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
 
 
@@ -417,12 +417,7 @@ try {
             titleString,
             degreeString,
             cardText,
-
-
-
-            
-            
-            
+            validDisciplines, 
             closeCardBody,
             openCardFooter,
 
