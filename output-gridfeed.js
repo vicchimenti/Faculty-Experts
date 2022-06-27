@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  * 
- *      @version 3.1
+ *      @version 3.2
  * 
  * */
 
@@ -196,7 +196,7 @@ try {
 
     var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     // var beginningHTML = '<div class="gridFeedItem profileItem card shadow" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
-    var endingHTML = '</div>';
+    var endingHTML = '</article>';
 
 
 
@@ -206,10 +206,10 @@ try {
      * 
      * */
      let beginningHTML = (expertsDict.fullName.content) ?
-        '<div class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.fullName.content + '">' :
+        '<article class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.fullName.content + '">' :
         (expertsDict.firstName.content && expertsDict.lastName.content) ?
-        '<div class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.firstName.content + ' ' + expertsDict.lastName.content + '">' :
-        '<div class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.contentName.content + '">' ;
+        '<article class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.firstName.content + ' ' + expertsDict.lastName.content + '">' :
+        '<article class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.contentName.content + '">' ;
 
 
 
