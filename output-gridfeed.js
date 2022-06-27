@@ -179,18 +179,18 @@ try {
     
     // var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
     var matchKey = -1;
-    var listOfDegrees = "";
+    // var listOfDegrees = "";
 
     // var listOfTitles = "";
 
-    var listOfDisciplines = "";
+    // var listOfDisciplines = "";
     // var thumbNailString = "";
 
     // var titleOne = "";
 
-    var degreeOne = "";
-    var contactPhone = "";
-    var contactEmail = "";
+    // var degreeOne = "";
+    // var contactPhone = "";
+    // var contactEmail = "";
 
     let openCardBody = '<div class="card-body">';
     let closeCardBody = '</div>';
@@ -250,9 +250,20 @@ try {
 
 
     /***
-     *  parse the list of degrees, add <li> tags
+     *  parse the list of degrees
      * 
      * */
+     let arrayOfDegrees = (expertsDict.degrees.content) ? expertsDict.degrees.content.split('\n') : null;
+     let degreeOne = arrayOfDegrees[0] || null;
+     let degreeString = (degreeOne) ?
+        '<div class="terminalDegree card-subtitle mb-2 fst-italic font-italic">' + degreeOne + '</div>' :
+        '<span class="terminalDegree card-subtitle hidden visually-hidden">No valid degree entered</span>';
+
+
+
+
+
+     '<div class="card-subtitle mb-2 fst-italic font-italic">' + degreeOne + '</div>'
     if (degrees != "") {
         var arrayOfDegrees = degrees.split('\n');
         let listItems = "";
@@ -270,25 +281,25 @@ try {
      *  parse for primary title
      * 
      * */
-    let arrayOfTitles = (expertsDict.titles.content) ? expertsDict.titles.content.split('\n') : null;
-    let titleOne = arrayOfTitles[0] || null;
-    let titleString = (titleOne) ?
+     let arrayOfTitles = (expertsDict.titles.content) ? expertsDict.titles.content.split('\n') : null;
+     let titleOne = arrayOfTitles[0] || null;
+     let titleString = (titleOne) ?
         '<div class="primaryTitle card-subtitle mb-2 text-muted">' + titleOne + '</div>' :
         '<span class="primaryTitle card-subtitle mb-2 text-muted hidden visually-hidden">No valid title provided</span>';
 
 
 
 
-     '<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>'
-    if (titles != "") {
-        var arrayOfTitles = titles.split('\n');
-        let listItems = "";
-        for (let i = 0; i < arrayOfTitles.length; i++) {
-            listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
-        }
-        listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
-        titleOne = arrayOfTitles[0];
-    }
+    //  '<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>'
+    // if (titles != "") {
+    //     var arrayOfTitles = titles.split('\n');
+    //     let listItems = "";
+    //     for (let i = 0; i < arrayOfTitles.length; i++) {
+    //         listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
+    //     }
+    //     listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
+    //     titleOne = arrayOfTitles[0];
+    // }
 
 
 
@@ -400,7 +411,7 @@ try {
             openCardBody,
             titleLink,
             titleString,
-
+            degreeString,
             cardText,
 
 
