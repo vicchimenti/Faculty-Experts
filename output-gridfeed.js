@@ -326,6 +326,19 @@ try {
 
 
 
+    /***
+     *  parse for college
+     * 
+     * */
+     let collegeString = (expertsDict.college.content) ?
+        '<p class="college footerText">' + college + '</p>' :
+        '<span class="college footerText hidden visually-hidden">No college provided</span>';
+
+        
+
+
+
+
     // if (disciplines != "") {
     //     var arrayOfDisciplines = disciplines.split(',');
     //     let listItems = "";
@@ -423,8 +436,7 @@ try {
             validDisciplines, 
             closeCardBody,
             openCardFooter,
-
-
+            collegeString,
             closeCardFooter,
             endingHTML
         ]
