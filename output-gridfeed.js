@@ -178,7 +178,7 @@ try {
      * */
     
     // var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
-    var matchKey = -1;
+    // var matchKey = -1;
     // var listOfDegrees = "";
 
     // var listOfTitles = "";
@@ -275,6 +275,18 @@ try {
     // }
 
 
+        //  '<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>'
+    // if (titles != "") {
+    //     var arrayOfTitles = titles.split('\n');
+    //     let listItems = "";
+    //     for (let i = 0; i < arrayOfTitles.length; i++) {
+    //         listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
+    //     }
+    //     listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
+    //     titleOne = arrayOfTitles[0];
+    // }
+
+
 
 
     /***
@@ -290,16 +302,7 @@ try {
 
 
 
-    //  '<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>'
-    // if (titles != "") {
-    //     var arrayOfTitles = titles.split('\n');
-    //     let listItems = "";
-    //     for (let i = 0; i < arrayOfTitles.length; i++) {
-    //         listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
-    //     }
-    //     listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
-    //     titleOne = arrayOfTitles[0];
-    // }
+
 
 
 
@@ -312,24 +315,13 @@ try {
         var arrayOfDisciplines = disciplines.split(',');
         let listItems = "";
 
-        // trim whitespace on all disciplines and process for unordered list
         for (let i = 0; i < arrayOfDisciplines.length; i++) {
             let disciplineItem = arrayOfDisciplines[i].trim();
-            // console.log('Hello, Console!');
-            // Check to see if existing discipline is a top level school
             if (!disciplineString.includes(disciplineItem)) {
-                // if (schoolArray.indexOf(disciplineItem) === -1) {
-                    // console.log("discipline item: " + disciplineItem);
-                    // for (let j = 0; j < schoolArray.length; j++) {
-                    //     console.log("school array item: " + j + ' ' + schoolArray[j]);
-
-                    // }
-                // If not a school then process as a discipline
                 listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
             }
         }
 
-        // load all list items into an list group
         listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
     }
 
