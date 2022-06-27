@@ -194,7 +194,7 @@ try {
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
     var schoolArray = ['Athletics','Arts & Sciences','Business and Economics','Education','Law','Nursing','School of Theology and Ministry','Science and Engineering'];
 
-    var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
+    // var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     // var beginningHTML = '<div class="gridFeedItem profileItem card shadow" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
     
     let endingHTML = '</article>';
@@ -216,12 +216,27 @@ try {
 
 
     /***
+     *  validate title link
+     * 
+     * */
+     let titleLink = (expertsDict.fullTextLink.content && expertsDict.firstName.content && expertsDict.lastName.content) ?
+        '<h3 class="card-title"><a href="' + expertsDict.fullTextLink.content + '" title="Link to full bio of ' + expertsDict.firstName.content + ' ' + expertsDict.lastName.content + '">' + expertsDict.firstName.content + ' ' + expertsDict.lastName.content + '</a></h3>' :
+        (expertsDict.fullTextLink.content && expertsDict.fullName.content) ?
+        '<h3 class="card-title"><a href="' + expertsDict.fullTextLink.content + '" title="Link to full bio of ' + expertsDict.fullName.content + '">' + expertsDict.fullName.content + '</a></h3>' :
+        (expertsDict.fullTextLink.content) ?
+        '<h3 class="card-title"><a href="' + expertsDict.fullTextLink.content + '" title="Link to full bio of ' + expertsDict.contentName.content + '">' + expertsDict.contentName.content + '</a></h3>' :
+        '<h3 class="card-title">' + expertsDict.contentName.content + '</h3>';
+        
+
+
+
+    /***
      *  validate summary
      * 
      * */
     let cardText = (expertsDict.summary.content) ?
-        '<p class="card-text summary">' + expertsDict.summary.content + '</p>' :
-        '<span class="card-text summary hidden visually-hidden">No valid summary provided</span>';
+    '<p class="card-text summary">' + expertsDict.summary.content + '</p>' :
+    '<span class="card-text summary hidden visually-hidden">No valid summary provided</span>';
 
 
 
