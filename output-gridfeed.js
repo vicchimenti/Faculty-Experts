@@ -218,7 +218,7 @@ try {
      *  validate summary
      * 
      * */
-     let cardText = (expertsDict.summary.content) ?
+     let summaryString = (expertsDict.summary.content) ?
         '<p class="card-text summary">' + expertsDict.summary.content + '</p>' :
         '<span class="card-text summary hidden visually-hidden">No valid summary provided</span>';
 
@@ -341,7 +341,7 @@ try {
             titleLink,
             titleString,
             degreeString,
-            cardText,
+            summaryString,
             validDisciplines, 
             closeCardBody,
             openCardFooter,
