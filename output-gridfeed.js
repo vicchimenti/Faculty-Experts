@@ -385,7 +385,10 @@ try {
             imageString,
             closeImageWrapper,
             openBodyWrapper,
+
             openBody,
+            
+            titleLink,
 
             cardText,
 
