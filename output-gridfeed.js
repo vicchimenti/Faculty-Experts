@@ -195,8 +195,21 @@ try {
     var schoolArray = ['Athletics','Arts & Sciences','Business and Economics','Education','Law','Nursing','School of Theology and Ministry','Science and Engineering'];
 
     var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
-    var beginningHTML = '<div class="gridFeedItem profileItem card shadow" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
+    // var beginningHTML = '<div class="gridFeedItem profileItem card shadow" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
     var endingHTML = '</div>';
+
+
+
+
+    /***
+     *  define beginning html wrapper
+     * 
+     * */
+     let beginningHTML = (expertsDict.fullName.content) ?
+        '<div class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.fullName.content + '">' :
+        (expertsDict.firstName.content && expertsDict.lastName.content) ?
+        '<div class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.firstName.content + ' ' + expertsDict.lastName.content + '">' :
+        '<div class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.contentName.content + '">' ;
 
 
 
@@ -206,8 +219,8 @@ try {
      * 
      * */
     let cardText = (expertsDict.summary.content) ?
-        '<span class="card-text summary"><p>' + expertsDict.summary.content + '</p></span>' :
-        "<span class='card-text summary hidden visually-hidden'>No valid summary provided</span>";
+        '<p class="card-text summary">' + expertsDict.summary.content + '</p>' :
+        '<span class="card-text summary hidden visually-hidden">No valid summary provided</span>';
 
 
 
@@ -356,6 +369,10 @@ try {
             closeImageWrapper,
             openBodyWrapper,
             openBody,
+
+            cardText,
+
+
             titleLink,
             titleString,
             subtitleString,
