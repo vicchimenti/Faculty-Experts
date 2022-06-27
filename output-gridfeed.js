@@ -187,10 +187,13 @@ try {
     var degreeOne = "";
     var contactPhone = "";
     var contactEmail = "";
-    var openCardBody = '<div class="card-body">';
-    var closeCardBody = '</div>';
-    var openCardFooter = '<div class="card-footer">';
-    var closeCardFooter = '</div>';
+
+    let openCardBody = '<div class="card-body">';
+    let closeCardBody = '</div>';
+    let openCardFooter = '<div class="card-footer">';
+    let closeCardFooter = '</div>';
+
+
     var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
     var schoolArray = ['Athletics','Arts & Sciences','Business and Economics','Education','Law','Nursing','School of Theology and Ministry','Science and Engineering'];
 
@@ -379,28 +382,24 @@ try {
     writeDocument(
         [
             beginningHTML,
-
-            openRow,
-            openImageWrapper,
             imageString,
-            closeImageWrapper,
-            openBodyWrapper,
-
-            openBody,
-            
+            openCardBody,
             titleLink,
 
             cardText,
 
 
-            titleLink,
             titleString,
             subtitleString,
             summaryBioString,
-            closeBody,
-            closeBodyWrapper,
-            closeRow,
+            
+            
+            
+            closeCardBody,
+            openCardFooter,
 
+
+            closeCardFooter,
             endingHTML
         ]
     );
