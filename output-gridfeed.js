@@ -389,9 +389,7 @@ try {
             cardText,
 
 
-            titleString,
-            subtitleString,
-            summaryBioString,
+
             
             
             
