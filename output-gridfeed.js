@@ -173,7 +173,6 @@ try {
 
 
 
-
     /***
      *  Declare/Assign local variables with base formatting
      * 
@@ -226,7 +225,6 @@ try {
 
 
 
-
     /***
      *  parse the list of degrees
      * 
@@ -238,31 +236,6 @@ try {
         '<span class="terminalDegree card-subtitle hidden visually-hidden">No valid degree entered</span>';
 
 
-
-
-
-    //  '<div class="card-subtitle mb-2 fst-italic font-italic">' + degreeOne + '</div>'
-    // if (degrees != "") {
-    //     var arrayOfDegrees = degrees.split('\n');
-    //     let listItems = "";
-    //     for (let i = 0; i < arrayOfDegrees.length; i++) {
-    //         listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
-    //     }
-    //     listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
-    //     degreeOne = arrayOfDegrees[0];
-    // }
-
-
-        //  '<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>'
-    // if (titles != "") {
-    //     var arrayOfTitles = titles.split('\n');
-    //     let listItems = "";
-    //     for (let i = 0; i < arrayOfTitles.length; i++) {
-    //         listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
-    //     }
-    //     listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
-    //     titleOne = arrayOfTitles[0];
-    // }
 
 
 
