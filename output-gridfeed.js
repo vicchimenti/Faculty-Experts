@@ -307,12 +307,6 @@ try {
 
 
 
-
-
-
-
-
-
     /***
      *  write document once
      * 
