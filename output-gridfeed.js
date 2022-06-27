@@ -254,25 +254,25 @@ try {
      * 
      * */
      let arrayOfDegrees = (expertsDict.degrees.content) ? expertsDict.degrees.content.split('\n') : null;
-     let degreeOne = arrayOfDegrees[0] || null;
-     let degreeString = (degreeOne) ?
-        '<div class="terminalDegree card-subtitle mb-2 fst-italic font-italic">' + degreeOne + '</div>' :
+     let terminalDegree = arrayOfDegrees[0] || null;
+     let degreeString = (terminalDegree) ?
+        '<div class="terminalDegree card-subtitle mb-2 fst-italic font-italic">' + terminalDegree + '</div>' :
         '<span class="terminalDegree card-subtitle hidden visually-hidden">No valid degree entered</span>';
 
 
 
 
 
-     '<div class="card-subtitle mb-2 fst-italic font-italic">' + degreeOne + '</div>'
-    if (degrees != "") {
-        var arrayOfDegrees = degrees.split('\n');
-        let listItems = "";
-        for (let i = 0; i < arrayOfDegrees.length; i++) {
-            listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
-        }
-        listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
-        degreeOne = arrayOfDegrees[0];
-    }
+    //  '<div class="card-subtitle mb-2 fst-italic font-italic">' + degreeOne + '</div>'
+    // if (degrees != "") {
+    //     var arrayOfDegrees = degrees.split('\n');
+    //     let listItems = "";
+    //     for (let i = 0; i < arrayOfDegrees.length; i++) {
+    //         listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
+    //     }
+    //     listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
+    //     degreeOne = arrayOfDegrees[0];
+    // }
 
 
 
