@@ -73,22 +73,30 @@ function parseArray(rawValues) {
 /***
  *      Returns an array of list items
  */
-function assignList(arrayOfValues) {
+function assignList(arrayOfValues, disciplineValidator) {
 
     let listValues = '';
 
     for (let i = 0; i < arrayOfValues.length; i++) {
 
-    if (arrayOfValues[i]) {
+        let disciplineItem = arrayOfValues[i].trim() || null;
+        let validItem = (!disciplineValidator.includes(disciplineItem)) ? disciplineItem : null;
 
-        listValues += '<li class="list-group-item d-inline deptBioli p-0 pe-md-4">' + arrayOfValues[i].trim() + '</li>';
-    }
+        if (validItem) {
+            listValues += '<li class="list-group-item">' + validItem + '</li>'
+        }
     }
 
     return listValues;
 }
 
 
+// for (let i = 0; i < arrayOfDisciplines.length; i++) {
+//     let disciplineItem = arrayOfDisciplines[i].trim();
+//     if (!disciplineString.includes(disciplineItem)) {
+//         listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
+//     }
+// }
 
 
 /***
@@ -307,6 +315,12 @@ try {
      * 
      * */
     let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
+    let listOfDisciplines = (arrayOfDisciplines) ?
+        :
+        null;
+        '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
+
+
 
 
     if (disciplines != "") {
