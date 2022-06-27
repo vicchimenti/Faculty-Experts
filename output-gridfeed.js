@@ -196,7 +196,8 @@ try {
 
     var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     // var beginningHTML = '<div class="gridFeedItem profileItem card shadow" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
-    var endingHTML = '</article>';
+    
+    let endingHTML = '</article>';
 
 
 
@@ -363,6 +364,7 @@ try {
     writeDocument(
         [
             beginningHTML,
+
             openRow,
             openImageWrapper,
             imageString,
@@ -380,6 +382,7 @@ try {
             closeBody,
             closeBodyWrapper,
             closeRow,
+
             endingHTML
         ]
     );
