@@ -278,38 +278,6 @@ try {
         
 
 
-
-
-    // if (disciplines != "") {
-    //     var arrayOfDisciplines = disciplines.split(',');
-    //     let listItems = "";
-
-    //     for (let i = 0; i < arrayOfDisciplines.length; i++) {
-    //         let disciplineItem = arrayOfDisciplines[i].trim();
-    //         if (!disciplineString.includes(disciplineItem)) {
-    //             listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
-    //         }
-    //     }
-
-    //     listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
-    // }
-
-
-
-    /***
-     *  verify Main image and photo credits
-     * 
-     * */
-    // if (primaryImage == "") {
-
-    //     thumbNailString = '<span class="hidden visually-hidden">No Image Provided</span>';
-
-    // } else {
-
-    //     thumbNailString = '<span class="cardImageWrapper"><img src="' + primaryImage + '" class="card-img-top" title="' + firstName + ' ' + lastName + '" alt="' + contentName + '" loading="lazy" /></span>';
-
-    // }
-
     /***
      *  Parse for image
      *  and process valid media id
