@@ -178,34 +178,10 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    
-    // var cardText = "<span class='card-text summary'><p>" + summary + "</p></span>";
-    // var matchKey = -1;
-    // var listOfDegrees = "";
-
-    // var listOfTitles = "";
-
-    // var listOfDisciplines = "";
-    // var thumbNailString = "";
-
-    // var titleOne = "";
-
-    // var degreeOne = "";
-    // var contactPhone = "";
-    // var contactEmail = "";
-
     let openCardBody = '<div class="card-body">';
     let closeCardBody = '</div>';
     let openCardFooter = '<div class="card-footer">';
-    let closeCardFooter = '</div>';
-
-
-    // var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
-    // var schoolArray = ['Athletics','Arts & Sciences','Business and Economics','Education','Law','Nursing','School of Theology and Ministry','Science and Engineering'];
-
-    // var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
-    // var beginningHTML = '<div class="gridFeedItem profileItem card shadow" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
-    
+    let closeCardFooter = '</div>';    
     let endingHTML = '</article>';
 
 
