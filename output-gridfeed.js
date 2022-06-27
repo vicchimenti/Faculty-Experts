@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  * 
- *      @version 3.2.2
+ *      @version 3.2.3
  * 
  * */
 
@@ -207,7 +207,7 @@ try {
 
 
     // var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
-    var schoolArray = ['Athletics','Arts & Sciences','Business and Economics','Education','Law','Nursing','School of Theology and Ministry','Science and Engineering'];
+    // var schoolArray = ['Athletics','Arts & Sciences','Business and Economics','Education','Law','Nursing','School of Theology and Ministry','Science and Engineering'];
 
     // var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
     // var beginningHTML = '<div class="gridFeedItem profileItem card shadow" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
@@ -311,7 +311,7 @@ try {
 
 
     /***
-     *  parse the list of disciplines, add <li> tags
+     *  parse the list of disciplines
      *  currently using nested t4 lists which generate an item for the college name
      *  we need to parse this out of this list of disciplines until this content item field is replaced
      * 
