@@ -355,7 +355,7 @@ try {
      * 
      * */
      let imageString = (expertsDict.primaryImage.content) ?
-        '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" loading="auto" /></span>' :
+        '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" alt="' + expertsDict.contentName.content + '" loading="auto" /></span>' :
         '<span class="expertsImage hidden visually-hidden">No Image Provided</span>';
 
     if (expertsDict.primaryImage.content) {
