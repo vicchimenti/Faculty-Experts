@@ -238,8 +238,6 @@ try {
 
 
 
-
-
     /***
      *  parse for primary title
      * 
@@ -274,7 +272,7 @@ try {
      * 
      * */
      let collegeString = (expertsDict.college.content) ?
-        '<p class="college footerText">' + college + '</p>' :
+        '<p class="college footerText">' + expertsDict.college.content + '</p>' :
         '<span class="college footerText hidden visually-hidden">No college provided</span>';
 
         
