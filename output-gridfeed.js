@@ -206,7 +206,7 @@ try {
     let closeCardFooter = '</div>';
 
 
-    var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
+    // var disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
     var schoolArray = ['Athletics','Arts & Sciences','Business and Economics','Education','Law','Nursing','School of Theology and Ministry','Science and Engineering'];
 
     // var titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="Link to full bio of ' + firstName + ' ' + lastName + '">' + firstName + ' ' + lastName + '</a></h3>';
@@ -312,30 +312,33 @@ try {
 
     /***
      *  parse the list of disciplines, add <li> tags
+     *  currently using nested t4 lists which generate an item for the college name
+     *  we need to parse this out of this list of disciplines until this content item field is replaced
      * 
      * */
-    let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
-    let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
-    let validDisciplines = (listOfDisciplines) ?
+     let disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
+     let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
+     let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
+     let validDisciplines = (listOfDisciplines) ?
         '<ul class="list-group">' + listOfDisciplines + '</ul>' :
         '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
 
 
 
 
-    if (disciplines != "") {
-        var arrayOfDisciplines = disciplines.split(',');
-        let listItems = "";
+    // if (disciplines != "") {
+    //     var arrayOfDisciplines = disciplines.split(',');
+    //     let listItems = "";
 
-        for (let i = 0; i < arrayOfDisciplines.length; i++) {
-            let disciplineItem = arrayOfDisciplines[i].trim();
-            if (!disciplineString.includes(disciplineItem)) {
-                listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
-            }
-        }
+    //     for (let i = 0; i < arrayOfDisciplines.length; i++) {
+    //         let disciplineItem = arrayOfDisciplines[i].trim();
+    //         if (!disciplineString.includes(disciplineItem)) {
+    //             listItems += '<li class="list-group-item">' + disciplineItem + '</li>';
+    //         }
+    //     }
 
-        listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
-    }
+    //     listOfDisciplines = '<ul class="list-group">' + listItems + '</ul>';
+    // }
 
 
 
