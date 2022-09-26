@@ -47,7 +47,7 @@ for (const item of listItemsNode) {
 console.log(...listItemsArr);
 
 let listSet = new Set(listItemsArr);
-let optionArr = Array.From(listSet);
+let optionArr = Array.from(listSet);
 
 optionArr.sort();
 
@@ -84,19 +84,16 @@ console.log(optionArr.length);
 // document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
 
-// var select = document.getElementById("selectNumber");
-// var options = ["1", "2", "3", "4", "5"];
+let select = document.getElementById("categoryOptions");
 
-// for(var i = 0; i < options.length; i++) {
-//     var opt = options[i];
-//     var el = document.createElement("option");
-//     el.textContent = opt;
-//     el.value = opt;
-//     select.appendChild(el);
-// }
-{/* <select id="selectNumber">
-    <option>Choose a number</option>
-</select> */}
+for(var i = 0; i < optionArr.length; i++) {
+    var opt = optionArr[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+}
+
  
 
 
