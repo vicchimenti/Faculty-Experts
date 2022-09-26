@@ -21,7 +21,7 @@ const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
 
 const profiles = document.getElementsByClassName("profileItem");
-categoryKeywordSearch.classList.add("classToBeAdded");
+// categoryKeywordSearch.classList.add("classToBeAdded");
 console.log(profiles);
 
 const experts = document.querySelectorAll(".profileItem");
