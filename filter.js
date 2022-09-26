@@ -19,7 +19,9 @@ console.log(categoryDropdown);
 const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
 const profiles = document.getElementsByClassName("profileItem");
-console.log(...profiles);
+profiles.classList.add("classToBeAdded");
+console.log(profiles);
+
 // document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
  
