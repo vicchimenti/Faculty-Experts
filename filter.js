@@ -21,12 +21,25 @@ console.log(categoryKeywordSearch);
 const profiles = document.getElementsByClassName("profileItem");
 categoryKeywordSearch.classList.add("classToBeAdded");
 console.log(profiles);
-const expertItems = document.querySelectorAll(".profileItem");
-for (const expert of expertItems) {
+const experts = document.querySelectorAll(".profileItem");
+for (const expert of experts) {
     expert.classList.add("gotya");
 }
 console.log(...profiles);
 
+
+const input = document.querySelectorAll('.custom-input');
+
+input.forEach(function(el) {
+  el.addEventListener('input', function(e) {
+    if (e.target.value == "") {
+      e.target.parentNode.classList.remove('form-group-with-value')
+    } else {
+      e.target.parentNode.classList.add('form-group-with-value')
+    }
+
+  });
+});
 
 // document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
