@@ -16,6 +16,10 @@ const categoryDropdown = document.querySelector('#categoryOptions');
 console.log(categoryDropdown);
 const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
+const profiles = document.getElementsByClassName("profileItem");
+console.log(...profiles);
+document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
+
  
 
 
