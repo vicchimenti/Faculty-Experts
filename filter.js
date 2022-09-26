@@ -12,7 +12,7 @@
 
 
 
-const categoryDropdown = document.querySelector('#selectboxCategorieOptions');
+const categoryDropdown = document.querySelector('#categoryOptions');
 console.log(categoryDropdown);
 const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
@@ -87,7 +87,7 @@ $(function () {
 
 
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
-                $('#selectboxCategorieOptions').change(function () {
+                $('#categoryOptions').change(function () {
                     // document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
                     // document.getElementById("div1").classList.add("classToBeAdded");
