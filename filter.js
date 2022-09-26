@@ -5,8 +5,15 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.1
+*   @version 5.2
 */
+
+
+
+
+
+const categoryElement = document.querySelector('#selectboxCategorieOptions');
+console.log(categoryElement);
  
 
 
@@ -69,17 +76,17 @@ $(function () {
 
 
             //   ***   Category Filter   ***   //
-            function selectCategory() {
+            $(function () {
 
-                let selectElement = document.getElementById('selectboxCategorieOptions');
-                selectElement.addEventListener('change', (event) => {
+                // let selectElement = document.getElementById('selectboxCategorieOptions');
+                // selectElement.addEventListener('change', (event) => {
 
-                });
+                // });
 
 
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
                 $('#selectboxCategorieOptions').change(function () {
-                    document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
+                    // document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
                     // document.getElementById("div1").classList.add("classToBeAdded");
                     // Assign Search Key
@@ -99,15 +106,15 @@ $(function () {
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        let elements = document.querySelectorAll(".profileItem");
-                        elements.classList.remove("hideByDropdownCategories");
+                        // let elements = document.querySelectorAll(".profileItem");
+                        // elements.classList.remove("hideByDropdownCategories");
                         // document.getElementsByClassName("profileItem").classList.remove("hideByDropdownCategories");
-                        // $('.profileItem').removeClass('hideByDropdownCategories');
+                        $('.profileItem').removeClass('hideByDropdownCategories');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
                 });
-            };
+            });
 
 
             //   ***   School Filter   ***   //
