@@ -1,11 +1,11 @@
 <script>
 /***
-*   @author Victor Chimenti, MSCS-SE '20
+*   @author Victor Chimenti, MSCS
 *   @file filter.js
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.0
+*   @version 5.1
 */
 
 
