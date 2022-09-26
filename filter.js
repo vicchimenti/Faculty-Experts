@@ -1,4 +1,4 @@
-<script>
+{/* <script> */}
 /***
 *   @author Victor Chimenti, MSCS
 *   @file filter.js
@@ -7,9 +7,7 @@
 *
 *   @version 5.1
 */
-
-
-
+ 
 
 
 
@@ -71,7 +69,14 @@ $(function () {
 
 
             //   ***   Category Filter   ***   //
-            $(function () {
+            function selectCategory() {
+
+                let selectElement = document.getElementById('selectboxCategorieOptions');
+                selectElement.addEventListener('change', (event) => {
+
+                });
+
+
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
                 $('#selectboxCategorieOptions').change(function () {
                     document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
@@ -102,7 +107,7 @@ $(function () {
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
                 });
-            });
+            };
 
 
             //   ***   School Filter   ***   //
@@ -166,4 +171,4 @@ $(function () {
         }, 10);
     });
 });
-</script>
+// </script>
