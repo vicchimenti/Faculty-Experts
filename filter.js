@@ -16,11 +16,14 @@
 
 const categoryDropdown = document.querySelector('#categoryOptions');
 console.log(categoryDropdown);
+
 const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
+
 const profiles = document.getElementsByClassName("profileItem");
 categoryKeywordSearch.classList.add("classToBeAdded");
 console.log(profiles);
+
 const experts = document.querySelectorAll(".profileItem");
 for (const expert of experts) {
     expert.classList.add("gotya");
@@ -28,10 +31,10 @@ for (const expert of experts) {
 console.log(...profiles);
 
 
-const input = document.querySelectorAll('.custom-input');
+const input = document.querySelectorAll('.profileItem');
 
 input.forEach(function(el) {
-  el.addEventListener('input', function(e) {
+  el.addEventListener('categoryKeywordSearch', function(e) {
     if (e.target.value == "") {
       e.target.parentNode.classList.remove('form-group-with-value')
     } else {
