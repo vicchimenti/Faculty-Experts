@@ -30,9 +30,22 @@ for (const expert of experts) {
 }
 console.log(...profiles);
 
-const listItemsArr = document.querySelectorAll('li.list-group-item');
-console.log(listItemsArr);
+const listItemsNode = document.querySelectorAll('li.list-group-item');
+
+
+// console.log(listItemsArr);
+
+let listItemsArr = []
+
+for (const item of listItemsNode) {
+    listItemsArr.push(item.innerHTML);
+
+    // console.log(item.innerText);
+}
+
+
 console.log(...listItemsArr);
+
 
 // const input = document.querySelectorAll('.ul.list-group');
 // let inputArray = [];
