@@ -21,7 +21,7 @@ const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
 
 const profiles = document.getElementsByClassName("profileItem");
-// categoryKeywordSearch.classList.add("classToBeAdded");
+categoryKeywordSearch.classList.add("classToBeAdded");
 console.log(profiles);
 
 const experts = document.querySelectorAll(".profileItem");
@@ -30,9 +30,20 @@ for (const expert of experts) {
 }
 console.log(...profiles);
 
-
+const listItemsArr = document.querySelectorAll('li');
+console.log(listItemsArr);
 // const input = document.querySelectorAll('.ul.list-group');
-// console.log(input[0]);
+// let inputArray = [];
+// for (const i of input) {
+//     inputArray.push(i.input.)
+// }
+// console.log(...input);
+
+
+// let lis = document.getElementsByClassName("profileItem").getElementsByTagName("li");
+// let lis = document.getElementById("navbar").getElementsByTagName("li");
+// console.log(...lis);
+
 
 // input.forEach(function(el) {
 //   el.addEventListener('input', function(e) {
