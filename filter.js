@@ -21,8 +21,9 @@ console.log(categoryKeywordSearch);
 const profiles = document.getElementsByClassName("profileItem");
 categoryKeywordSearch.classList.add("classToBeAdded");
 console.log(profiles);
-for (const profile of profiles) {
-    profile.add("gotya");
+const expertItems = document.querySelectorAll(".profileItem");
+for (const expert of expertItems) {
+    expert.classList.add("gotya");
 }
 console.log(...profiles);
 
