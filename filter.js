@@ -5,7 +5,7 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.2.1
+*   @version 5.2.2
 */
 
 
@@ -14,7 +14,7 @@
 
 const categoryDropdown = document.querySelector('#selectboxCategorieOptions');
 console.log(categoryDropdown);
-const categoryKeywordSearch = document.querySelector('#id_search');
+const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
  
 
@@ -59,7 +59,7 @@ $(function () {
             //   ***   Keyword Search   ***   //
             $(function () {
                 // scan the keyword each character the user inputs
-                $('#id_search').on('keyup', function () {
+                $('#find-experts').on('keyup', function () {
                     // Assign Search Key
                     let keyword = $(this).val().toLowerCase();
                     // filter the items for the input key
