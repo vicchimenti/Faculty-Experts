@@ -32,6 +32,8 @@ console.log(...profiles);
 
 const listItemsArr = document.querySelectorAll('li');
 console.log(listItemsArr);
+console.log(...listItemsArr);
+
 // const input = document.querySelectorAll('.ul.list-group');
 // let inputArray = [];
 // for (const i of input) {
