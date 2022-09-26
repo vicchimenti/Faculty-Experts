@@ -30,7 +30,7 @@ for (const expert of experts) {
 }
 console.log(...profiles);
 
-const listItemsArr = document.querySelectorAll('li');
+const listItemsArr = document.querySelectorAll('li.list-group-item');
 console.log(listItemsArr);
 console.log(...listItemsArr);
 
