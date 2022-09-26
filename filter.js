@@ -47,8 +47,7 @@ for (const item of listItemsNode) {
 console.log(...listItemsArr);
 
 let listSet = new Set(listItemsArr);
-let optionArr = [];
-optionArr.From(listSet);
+let optionArr = Array.From(listSet);
 
 optionArr.sort();
 
