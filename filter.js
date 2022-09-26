@@ -78,6 +78,7 @@ $(function () {
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
+                        document.getElementsByClassName('.profileItem').classList.remove("hideByDropdownCategories");
                         // search tags in each item
                         $('ul.list-group').filter(function (i, e) {
                             var typeValue = $(this).text();
