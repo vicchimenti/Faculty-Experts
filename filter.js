@@ -5,7 +5,7 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.2
+*   @version 5.2.1
 */
 
 
@@ -14,6 +14,8 @@
 
 const categoryDropdown = document.querySelector('#selectboxCategorieOptions');
 console.log(categoryDropdown);
+const categoryKeywordSearch = document.querySelector('#id_search');
+console.log(categoryKeywordSearch);
  
 
 
