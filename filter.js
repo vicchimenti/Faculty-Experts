@@ -91,7 +91,8 @@ $(function () {
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        document.querySelectorAll(".profileItem").classList.remove("hideByDropdownCategories");
+                        let elements = document.querySelectorAll(".profileItem");
+                        elements.classList.remove("hideByDropdownCategories");
                         // document.getElementsByClassName("profileItem").classList.remove("hideByDropdownCategories");
                         // $('.profileItem').removeClass('hideByDropdownCategories');
                     }
