@@ -46,10 +46,16 @@ for (const item of listItemsNode) {
 
 console.log(...listItemsArr);
 
-listItemsArr.sort();
+let listSet = new Set(listItemsArr);
+let optionArr = [];
+optionArr.From(listSet);
 
-console.log(...listItemsArr);
+optionArr.sort();
+
+console.log(...optionArr);
 console.log(listItemsArr.length);
+console.log(optionArr.length);
+
 
 
 // const input = document.querySelectorAll('.ul.list-group');
