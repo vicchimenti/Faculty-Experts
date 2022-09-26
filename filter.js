@@ -46,6 +46,11 @@ for (const item of listItemsNode) {
 
 console.log(...listItemsArr);
 
+listItemsArr.sort();
+
+console.log(...listItemsArr);
+
+
 
 // const input = document.querySelectorAll('.ul.list-group');
 // let inputArray = [];
