@@ -94,7 +94,8 @@ $(function () {
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.profileItem').removeClass('hideByDropdownCategories');
+                        document.getElementsByClassName('.profileItem').classList.remove("hideByDropdownCategories");
+                        // $('.profileItem').removeClass('hideByDropdownCategories');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
