@@ -91,8 +91,8 @@ $(function () {
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        document.getElementsByClassName('.profileItem').classList.remove("hideByDropdownCategories");
-                        // $('.profileItem').removeClass('hideByDropdownCategories');
+                        // document.getElementsByClassName('.profileItem').classList.remove("hideByDropdownCategories");
+                        $('.profileItem').removeClass('hideByDropdownCategories');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
@@ -101,29 +101,29 @@ $(function () {
 
 
             //   ***   School Filter   ***   //
-            $(function () {
-                $('#SelectBox-BySchool input:radio').change(function () {
-                    let typeKey = $(this).val();
-                    let viewAll = "All";
+            // $(function () {
+            //     $('#SelectBox-BySchool input:radio').change(function () {
+            //         let typeKey = $(this).val();
+            //         let viewAll = "All";
 
-                    if (typeKey != viewAll) {
-                        $('.college').filter(function (i, e) {
-                            var typeValue = $(this).text();
+            //         if (typeKey != viewAll) {
+            //             $('.college').filter(function (i, e) {
+            //                 var typeValue = $(this).text();
 
-                            if (typeValue.match(typeKey)) {
-                                $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
-                            } else {
-                                $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
-                            }
+            //                 if (typeValue.match(typeKey)) {
+            //                     $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
+            //                 } else {
+            //                     $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
+            //                 }
 
-                        });
-                    } else {
-                        $('.cejscourseWrapper').removeClass('hideBySchool');
-                    }
+            //             });
+            //         } else {
+            //             $('.cejscourseWrapper').removeClass('hideBySchool');
+            //         }
 
-                    parseItems.process();
-                });
-            });
+            //         parseItems.process();
+            //     });
+            // });
 
             // $(function () {
             //     $('#SelectBox-ByLsap').change(function () {
