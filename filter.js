@@ -12,8 +12,8 @@
 
 
 
-const categoryElement = document.querySelector('#selectboxCategorieOptions');
-console.log(categoryElement);
+const categoryDropdown = document.querySelector('#selectboxCategorieOptions');
+console.log(categoryDropdown);
  
 
 
