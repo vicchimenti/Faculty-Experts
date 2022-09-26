@@ -19,8 +19,13 @@ console.log(categoryDropdown);
 const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
 const profiles = document.getElementsByClassName("profileItem");
-profiles.classList.add("classToBeAdded");
+categoryKeywordSearch.classList.add("classToBeAdded");
 console.log(profiles);
+for (const profile of profiles) {
+    profile.add("gotya");
+}
+console.log(...profiles);
+
 
 // document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
