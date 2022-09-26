@@ -34,7 +34,7 @@ console.log(...profiles);
 const input = document.querySelectorAll('.profileItem');
 
 input.forEach(function(el) {
-  el.addEventListener('categoryKeywordSearch', function(e) {
+  el.addEventListener('input', function(e) {
     if (e.target.value == "") {
       e.target.parentNode.classList.remove('form-group-with-value')
     } else {
@@ -87,22 +87,22 @@ $(function () {
             
             
             //   ***   Keyword Search   ***   //
-            $(function () {
-                // scan the keyword each character the user inputs
-                $('#find-experts').on('keyup', function () {
-                    // Assign Search Key
-                    let keyword = $(this).val().toLowerCase();
-                    // filter the items for the input key
-                    $(function () {
-                        $('.profileItem').filter(function () {
-                            // when the search key is not present in the item then hide the item
-                            $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
-                        });
-                    });
-                    // parse out unselected content items and limit display to user selected items
-                    parseItems.process();
-                });
-            });
+            // $(function () {
+            //     // scan the keyword each character the user inputs
+            //     $('#find-experts').on('keyup', function () {
+            //         // Assign Search Key
+            //         let keyword = $(this).val().toLowerCase();
+            //         // filter the items for the input key
+            //         $(function () {
+            //             $('.profileItem').filter(function () {
+            //                 // when the search key is not present in the item then hide the item
+            //                 $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
+            //             });
+            //         });
+            //         // parse out unselected content items and limit display to user selected items
+            //         parseItems.process();
+            //     });
+            // });
 
 
 
