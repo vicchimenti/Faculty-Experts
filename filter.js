@@ -49,7 +49,7 @@ console.log(...listItemsArr);
 listItemsArr.sort();
 
 console.log(...listItemsArr);
-
+console.log(listItemsArr.length);
 
 
 // const input = document.querySelectorAll('.ul.list-group');
