@@ -5,11 +5,7 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   jQuery
-*   This script searches the Newsroom Experts Application content items for matches to the
-*   user selected search parameters in the filter field dropdown menu
-*
-*   @version 4.2
+*   @version 5.0
 */
 
 
