@@ -31,35 +31,36 @@ for (const expert of experts) {
 console.log(...profiles);
 
 
-const input = document.querySelectorAll('.ul.list-group');
+// const input = document.querySelectorAll('.ul.list-group');
+// console.log(input[0]);
 
-input.forEach(function(el) {
-  el.addEventListener('input', function(e) {
-    if (e.target.value == "") {
-      e.target.profiles.classList.remove('form-group-with-value')
-    } else {
-      e.target.profiles.classList.add('form-group-with-value')
-    }
+// input.forEach(function(el) {
+//   el.addEventListener('input', function(e) {
+//     if (e.target.value == "") {
+//       e.target.profiles.classList.remove('form-group-with-value')
+//     } else {
+//       e.target.profiles.classList.add('form-group-with-value')
+//     }
 
-  });
-});
+//   });
+// });
 
 // document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
 
-var select = document.getElementById("selectNumber");
-var options = ["1", "2", "3", "4", "5"];
+// var select = document.getElementById("selectNumber");
+// var options = ["1", "2", "3", "4", "5"];
 
-for(var i = 0; i < options.length; i++) {
-    var opt = options[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    select.appendChild(el);
-}
-<select id="selectNumber">
+// for(var i = 0; i < options.length; i++) {
+//     var opt = options[i];
+//     var el = document.createElement("option");
+//     el.textContent = opt;
+//     el.value = opt;
+//     select.appendChild(el);
+// }
+{/* <select id="selectNumber">
     <option>Choose a number</option>
-</select>
+</select> */}
  
 
 
