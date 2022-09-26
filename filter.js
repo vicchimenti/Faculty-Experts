@@ -77,7 +77,7 @@ $(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
-                    // document.getElementsByClassName('.profileItem').classList.remove("hideByDropdownCategories");
+                    document.getElementsByClassName('profileItem').classList.remove("hideByDropdownCategories");
                     if (typeKey) {
                         // search tags in each item
                         $('ul.list-group').filter(function (i, e) {
@@ -91,8 +91,8 @@ $(function () {
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        // document.getElementsByClassName('.profileItem').classList.remove("hideByDropdownCategories");
-                        $('.profileItem').removeClass('hideByDropdownCategories');
+                        document.getElementsByClassName("profileItem").classList.remove("hideByDropdownCategories");
+                        // $('.profileItem').removeClass('hideByDropdownCategories');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
