@@ -1,4 +1,6 @@
 {/* <script> */}
+
+
 /***
 *   @author Victor Chimenti, MSCS
 *   @file filter.js
@@ -18,7 +20,7 @@ const categoryKeywordSearch = document.querySelector('#find-experts');
 console.log(categoryKeywordSearch);
 const profiles = document.getElementsByClassName("profileItem");
 console.log(...profiles);
-document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
+// document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
  
 
