@@ -31,14 +31,14 @@ for (const expert of experts) {
 console.log(...profiles);
 
 
-const input = document.querySelectorAll('.profileItem');
+const input = document.querySelectorAll('.ul.list-group');
 
 input.forEach(function(el) {
   el.addEventListener('input', function(e) {
     if (e.target.value == "") {
-      e.target.parentNode.classList.remove('form-group-with-value')
+      e.target.profiles.classList.remove('form-group-with-value')
     } else {
-      e.target.parentNode.classList.add('form-group-with-value')
+      e.target.profiles.classList.add('form-group-with-value')
     }
 
   });
