@@ -92,8 +92,8 @@ for(var i = 0; i < optionArr.length; i++) {
         return '&#'+j.charCodeAt(0)+';';
      });
     var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
+    el.textContent = encodedStr;
+    el.value = encodedStr;
     select.appendChild(el);
 }
 
