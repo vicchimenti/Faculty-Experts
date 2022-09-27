@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  * 
- *      @version 3.3
+ *      @version 3.3.1
  * 
  * */
 
@@ -83,7 +83,7 @@ function assignList(arrayOfValues, disciplineValidator) {
         let validItem = (!disciplineValidator.includes(disciplineItem)) ? disciplineItem : null;
 
         if (validItem) {
-            listValues += '<li class="list-group-item">' + validItem + '</li>'
+            listValues += '<li class="list-group-item">' + validItem + '</li>';
         }
     }
 
@@ -292,7 +292,7 @@ try {
         let imageID = content.get('Photo').getID();
         let mediaInfo = getMediaInfo(imageID);
         let media = readMedia(imageID);
-        let info = new ImageInfo;
+        let info = new ImageInfo();
         info.setInput(media);
 
         imageString = (info.check()) ?
