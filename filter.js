@@ -7,7 +7,7 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.2.5
+*   @version 5.2.6
 */
 
 
@@ -57,7 +57,7 @@ $(function () {
 
 
 
-            noResultsToShow 
+
             //   ***   Process and Parse Visible Items   ***   //
             $(function () {
                 let parseItemsToDisplay = function() {
