@@ -18,7 +18,7 @@
  * Currently using the T4 List Group Element
  * 
  */
-const listItemsNode = document.querySelectorAll('li.list-group-item');
+const listItemsNode = document.querySelectorAll("li.list-group-item");
 let listItemsArr = []
 for (const item of listItemsNode) {
 
@@ -31,7 +31,7 @@ optionArr.sort();
 let select = document.getElementById("categoryOptions");
 for(let i = 0; i < optionArr.length; i++) {
 
-    let encodedStr = optionArr[i].replace(/&amp;/g, '&');
+    let encodedStr = optionArr[i].replace(/&amp;/g, "&");
     let el = document.createElement("option");
     el.textContent = encodedStr;
     el.value = encodedStr;
