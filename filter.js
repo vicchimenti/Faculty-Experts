@@ -13,23 +13,6 @@
 
 
 
-
-// const categoryDropdown = document.querySelector('#categoryOptions');
-// console.log(categoryDropdown);
-
-// const categoryKeywordSearch = document.querySelector('#find-experts');
-// console.log(categoryKeywordSearch);
-
-// const profiles = document.getElementsByClassName("profileItem");
-// categoryKeywordSearch.classList.add("classToBeAdded");
-// console.log(profiles);
-
-// const experts = document.querySelectorAll(".profileItem");
-// for (const expert of experts) {
-//     expert.classList.add("gotya");
-// }
-// console.log(...profiles);
-
 const listItemsNode = document.querySelectorAll('li.list-group-item');
 let listItemsArr = []
 for (const item of listItemsNode) {
@@ -51,39 +34,7 @@ for(let i = 0; i < optionArr.length; i++) {
 }
 
 
-
-// const input = document.querySelectorAll('.ul.list-group');
-// let inputArray = [];
-// for (const i of input) {
-//     inputArray.push(i.input.)
-// }
-// console.log(...input);
-
-
-// let lis = document.getElementsByClassName("profileItem").getElementsByTagName("li");
-// let lis = document.getElementById("navbar").getElementsByTagName("li");
-// console.log(...lis);
-
-
-// input.forEach(function(el) {
-//   el.addEventListener('input', function(e) {
-//     if (e.target.value == "") {
-//       e.target.profiles.classList.remove('form-group-with-value')
-//     } else {
-//       e.target.profiles.classList.add('form-group-with-value')
-//     }
-
-//   });
-// });
-
-// document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
-
-
-
-
  
-
-
 
 $(function () {
     // After the DOM is ready, Wait until the window loads
