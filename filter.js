@@ -7,7 +7,7 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.2.3
+*   @version 5.2.4
 */
 
 
@@ -42,8 +42,8 @@ optionArr.sort();
 
 let select = document.getElementById("categoryOptions");
 for(let i = 0; i < optionArr.length; i++) {
-    let opt = optionArr[i];
-    let encodedStr = opt.replace(/&amp;/g, '&');
+    // let opt = optionArr[i];
+    let encodedStr = optionArr[i].replace(/&amp;/g, '&');
     let el = document.createElement("option");
     el.textContent = encodedStr;
     el.value = encodedStr;
@@ -121,23 +121,23 @@ $(function () {
             
             
             
-            //   ***   Keyword Search   ***   //
-            // $(function () {
-            //     // scan the keyword each character the user inputs
-            //     $('#find-experts').on('keyup', function () {
-            //         // Assign Search Key
-            //         let keyword = $(this).val().toLowerCase();
-            //         // filter the items for the input key
-            //         $(function () {
-            //             $('.profileItem').filter(function () {
-            //                 // when the search key is not present in the item then hide the item
-            //                 $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
-            //             });
-            //         });
-            //         // parse out unselected content items and limit display to user selected items
-            //         parseItems.process();
-            //     });
-            // });
+            //  ***   Keyword Search   ***   //
+            $(function () {
+                // scan the keyword each character the user inputs
+                $('#find-experts').on('keyup', function () {
+                    // Assign Search Key
+                    let keyword = $(this).val().toLowerCase();
+                    // filter the items for the input key
+                    $(function () {
+                        $('.profileItem').filter(function () {
+                            // when the search key is not present in the item then hide the item
+                            $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
+                        });
+                    });
+                    // parse out unselected content items and limit display to user selected items
+                    parseItems.process();
+                });
+            });
 
 
 
