@@ -14,3 +14,4 @@ Version 10 Upgrade compliant with bootstrap 5
 - [x] update html natives
 - [x] continue dictonary migration
 - [x] phase one media attr done
+- [] semicolon seperated list
