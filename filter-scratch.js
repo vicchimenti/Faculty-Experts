@@ -7,7 +7,7 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.3
+*   @version 5.3.1
 */
 
 
