@@ -7,7 +7,7 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.2.6
+*   @version 5.3
 */
 
 
@@ -19,17 +19,16 @@
  * 
  */
 const listItemsNode = document.querySelectorAll('li.list-group-item');
-let select = document.getElementById("categoryOptions");
 let listItemsArr = []
 for (const item of listItemsNode) {
 
     listItemsArr.push(item.innerHTML);
-
 }
 
 const listSet = new Set(listItemsArr);
 let optionArr = Array.from(listSet);
 optionArr.sort();
+let select = document.getElementById("categoryOptions");
 for(let i = 0; i < optionArr.length; i++) {
 
     let encodedStr = optionArr[i].replace(/&amp;/g, '&');
@@ -37,7 +36,6 @@ for(let i = 0; i < optionArr.length; i++) {
     el.textContent = encodedStr;
     el.value = encodedStr;
     select.appendChild(el);
-
 }
 
 
