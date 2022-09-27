@@ -88,9 +88,15 @@ let select = document.getElementById("categoryOptions");
 
 for(var i = 0; i < optionArr.length; i++) {
     var opt = optionArr[i];
-    var encodedStr = opt.replace(/[\u00A0-\u9999<>\&]/g, function(j) {
-        return '&#'+j.charCodeAt(0)+';';
-     });
+    var encodedStr = opt.replace(/&amp;/g, '&');
+
+    // var encodedStr = opt.replace(/<[^>]*>/g, '');
+
+    
+
+    // var encodedStr = opt.replace(/[\u00A0-\u9999<>\&]/g, function(j) {
+    //     return '&#'+j.charCodeAt(0)+';';
+    //  });
     var el = document.createElement("option");
     el.textContent = encodedStr;
     el.value = encodedStr;
