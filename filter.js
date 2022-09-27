@@ -86,10 +86,10 @@ console.log(optionArr.length);
 
 let select = document.getElementById("categoryOptions");
 
-for(var i = 0; i < optionArr.length; i++) {
-    var opt = optionArr[i];
-    var encodedStr = opt.replace(/&amp;/g, '&');
-    var el = document.createElement("option");
+for(let i = 0; i < optionArr.length; i++) {
+    let opt = optionArr[i];
+    let encodedStr = opt.replace(/&amp;/g, '&');
+    let el = document.createElement("option");
     el.textContent = encodedStr;
     el.value = encodedStr;
     select.appendChild(el);
