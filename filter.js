@@ -61,7 +61,7 @@ $(function () {
             //   ***   Process and Parse Visible Items   ***   //
             $(function () {
                 let parseItemsToDisplay = function() {
-                    visibleItems = $('.profileItem').not('.hideByDropdownCategories, hideByText');
+                    visibleItems = $('.profileItem').not('.hideByDropdownCategories, .hideByText');
                     if (!visibleItems.length > 0) {
                         $('.noResultsToShow').removeClass('hideResultsMessage');
                     } else {
@@ -70,7 +70,7 @@ $(function () {
                 };
                 parseItems.process = parseItemsToDisplay;
             });
-            
+
             
             
             
