@@ -20,7 +20,6 @@
  */
 const listItemsNode = document.querySelectorAll('li.list-group-item');
 let select = document.getElementById("categoryOptions");
-
 let listItemsArr = []
 for (const item of listItemsNode) {
 
@@ -31,7 +30,6 @@ for (const item of listItemsNode) {
 const listSet = new Set(listItemsArr);
 let optionArr = Array.from(listSet);
 optionArr.sort();
-
 for(let i = 0; i < optionArr.length; i++) {
 
     let encodedStr = optionArr[i].replace(/&amp;/g, '&');
@@ -54,17 +52,17 @@ $(function () {
 
 
             //** global array holds list of content items that will render after filter selection **//
-            var visibleItems = [];
-            var parseItems = {};
+            let visibleItems = [];
+            let parseItems = {};
 
 
 
-            
+            noResultsToShow 
             //   ***   Process and Parse Visible Items   ***   //
             $(function () {
                 let parseItemsToDisplay = function() {
                     visibleItems = $('.profileItem').not('.hideByDropdownCategories, hideByText');
-                    if (visibleItems.length == 0) {
+                    if (!visibleItems.length > 0) {
                         $('.noResultsToShow').removeClass('hideResultsMessage');
                     } else {
                         $('.noResultsToShow').addClass('hideResultsMessage');
