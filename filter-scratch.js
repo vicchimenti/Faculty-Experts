@@ -14,7 +14,7 @@
 
 
 /***
- * Populate Dropdown Menu Select Option
+ * Populate Dropdown Menu Select Options
  * Currently using the T4 List Group Element
  * 
  */
