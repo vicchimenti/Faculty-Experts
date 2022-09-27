@@ -144,62 +144,6 @@ $(function () {
             });
 
 
-            //   ***   School Filter   ***   //
-            // $(function () {
-            //     $('#SelectBox-BySchool input:radio').change(function () {
-            //         let typeKey = $(this).val();
-            //         let viewAll = "All";
-
-            //         if (typeKey != viewAll) {
-            //             $('.college').filter(function (i, e) {
-            //                 var typeValue = $(this).text();
-
-            //                 if (typeValue.match(typeKey)) {
-            //                     $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
-            //                 } else {
-            //                     $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
-            //                 }
-
-            //             });
-            //         } else {
-            //             $('.cejscourseWrapper').removeClass('hideBySchool');
-            //         }
-
-            //         parseItems.process();
-            //     });
-            // });
-
-            // $(function () {
-            //     $('#SelectBox-ByLsap').change(function () {
-            //         let elementKeys = [];
-            //         elementKeys[0] = 'Any';
-            //         $('input[name=SelectBox-ByLsap]:checked').each(function (item) {
-            //             elementKeys[item] = $(this).val();
-            //         });
-
-            //         if (elementKeys[0] != "Any") {
-            //             $('ul.lsapIconDashboard').filter(function (i, e) {
-            //                 let elementValue = $(this).text() || null;
-            //                 $(this).parents('.cejscourseWrapper').addClass('hideByLsap');
-
-            //                 if (elementValue) {
-
-            //                     for (let index = 0; index < elementKeys.length; index++) {
-            //                         if (elementValue.includes(elementKeys[index])) {
-            //                             $(this).parents('.cejscourseWrapper').removeClass('hideByLsap');
-            //                         }
-            //                     }
-            //                 }
-            //             });
-            //         } else {
-            //             $('.cejscourseWrapper').removeClass('hideByLsap');
-            //         }
-
-            //         parseItems.process();
-            //     });
-            // });
-
-
 
 
         }, 10);
