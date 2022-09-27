@@ -31,30 +31,16 @@
 // console.log(...profiles);
 
 const listItemsNode = document.querySelectorAll('li.list-group-item');
-
-
-// console.log(listItemsArr);
-
 let listItemsArr = []
-
 for (const item of listItemsNode) {
     listItemsArr.push(item.innerHTML);
 }
 
-
-// console.log(...listItemsArr);
-
-let listSet = new Set(listItemsArr);
+const listSet = new Set(listItemsArr);
 let optionArr = Array.from(listSet);
-
 optionArr.sort();
 
-// console.log(...optionArr);
-// console.log(listItemsArr.length);
-// console.log(optionArr.length);
-
 let select = document.getElementById("categoryOptions");
-
 for(let i = 0; i < optionArr.length; i++) {
     let opt = optionArr[i];
     let encodedStr = opt.replace(/&amp;/g, '&');
