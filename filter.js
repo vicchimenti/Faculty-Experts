@@ -13,24 +13,33 @@
 
 
 
+/***
+ * Populate Dropdown Menu Select Option
+ * Currently using the T4 List Group Element
+ * 
+ */
 const listItemsNode = document.querySelectorAll('li.list-group-item');
+let select = document.getElementById("categoryOptions");
+
 let listItemsArr = []
 for (const item of listItemsNode) {
+
     listItemsArr.push(item.innerHTML);
+
 }
 
 const listSet = new Set(listItemsArr);
 let optionArr = Array.from(listSet);
 optionArr.sort();
 
-let select = document.getElementById("categoryOptions");
 for(let i = 0; i < optionArr.length; i++) {
-    // let opt = optionArr[i];
+
     let encodedStr = optionArr[i].replace(/&amp;/g, '&');
     let el = document.createElement("option");
     el.textContent = encodedStr;
     el.value = encodedStr;
     select.appendChild(el);
+
 }
 
 
