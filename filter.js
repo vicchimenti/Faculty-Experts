@@ -14,21 +14,21 @@
 
 
 
-const categoryDropdown = document.querySelector('#categoryOptions');
-console.log(categoryDropdown);
+// const categoryDropdown = document.querySelector('#categoryOptions');
+// console.log(categoryDropdown);
 
-const categoryKeywordSearch = document.querySelector('#find-experts');
-console.log(categoryKeywordSearch);
+// const categoryKeywordSearch = document.querySelector('#find-experts');
+// console.log(categoryKeywordSearch);
 
-const profiles = document.getElementsByClassName("profileItem");
-categoryKeywordSearch.classList.add("classToBeAdded");
-console.log(profiles);
+// const profiles = document.getElementsByClassName("profileItem");
+// categoryKeywordSearch.classList.add("classToBeAdded");
+// console.log(profiles);
 
-const experts = document.querySelectorAll(".profileItem");
-for (const expert of experts) {
-    expert.classList.add("gotya");
-}
-console.log(...profiles);
+// const experts = document.querySelectorAll(".profileItem");
+// for (const expert of experts) {
+//     expert.classList.add("gotya");
+// }
+// console.log(...profiles);
 
 const listItemsNode = document.querySelectorAll('li.list-group-item');
 
@@ -39,21 +39,30 @@ let listItemsArr = []
 
 for (const item of listItemsNode) {
     listItemsArr.push(item.innerHTML);
-
-    // console.log(item.innerText);
 }
 
 
-console.log(...listItemsArr);
+// console.log(...listItemsArr);
 
 let listSet = new Set(listItemsArr);
 let optionArr = Array.from(listSet);
 
 optionArr.sort();
 
-console.log(...optionArr);
-console.log(listItemsArr.length);
-console.log(optionArr.length);
+// console.log(...optionArr);
+// console.log(listItemsArr.length);
+// console.log(optionArr.length);
+
+let select = document.getElementById("categoryOptions");
+
+for(let i = 0; i < optionArr.length; i++) {
+    let opt = optionArr[i];
+    let encodedStr = opt.replace(/&amp;/g, '&');
+    let el = document.createElement("option");
+    el.textContent = encodedStr;
+    el.value = encodedStr;
+    select.appendChild(el);
+}
 
 
 
@@ -84,16 +93,7 @@ console.log(optionArr.length);
 // document.getElementsByClassName('gridOrganizer').classList.add("classToBeAdded");
 
 
-let select = document.getElementById("categoryOptions");
 
-for(let i = 0; i < optionArr.length; i++) {
-    let opt = optionArr[i];
-    let encodedStr = opt.replace(/&amp;/g, '&');
-    let el = document.createElement("option");
-    el.textContent = encodedStr;
-    el.value = encodedStr;
-    select.appendChild(el);
-}
 
  
 
