@@ -57,23 +57,23 @@ for(let i = 0; i < optionArr.length; i++) {
 //  for (const expert of experts) {
 //      expert.classList.add("gotya");
 //  }
- console.log(disciplines);
+//  console.log(disciplines);
  
 //  const listItemsNode = document.querySelectorAll('li.list-group-item');
  
  
  // console.log(listItemsArr);
  
-//  let listItemsArr = []
+ let disciplineItems = [];
  
-//  for (const item of listItemsNode) {
-//      listItemsArr.push(item.innerHTML);
+ for (const item of disciplines) {
+    disciplineItems.push(item.innerHTML);
  
-//      // console.log(item.innerText);
-//  }
+    //  console.log(item.innerText);
+ }
  
  
-//  console.log(...listItemsArr);
+ console.log(...disciplineItems);
  
 //  let listSet = new Set(listItemsArr);
 //  let optionArr = Array.from(listSet);
