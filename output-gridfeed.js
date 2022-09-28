@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  * 
- *      @version 3.3.2
+ *      @version 3.3.3
  * 
  * */
 
@@ -67,7 +67,7 @@ function parseArray(rawValues) {
     return results;
 }
 
-    
+
 
 
 /***
@@ -88,6 +88,28 @@ function assignList(arrayOfValues, disciplineValidator) {
     }
 
     return listValues;
+}
+
+
+
+
+/***
+ *      Returns an formatted list of disciplines
+ */
+function assignDisciplines(arrayOfValues) {
+
+    let disciplineValues = '';
+
+    for (let i = 0; i < arrayOfValues.length; i++) {
+
+        let disciplineItem = arrayOfValues[i].trim() || null;
+
+        if (disciplineItem) {
+            disciplineValues += '<li class="d-none hidden visually-hidden disciplineList">' + disciplineItem + '</li>';
+        }
+    }
+
+    return disciplineValues;
 }
 
 
@@ -181,7 +203,7 @@ try {
     let openCardBody = '<div class="card-body">';
     let closeCardBody = '</div>';
     let openCardFooter = '<div class="card-footer">';
-    let closeCardFooter = '</div>';    
+    let closeCardFooter = '</div>';
     let endingHTML = '</article>';
 
 
@@ -191,11 +213,11 @@ try {
      *  define beginning html wrapper
      * 
      * */
-     let beginningHTML = (expertsDict.fullName.content) ?
+    let beginningHTML = (expertsDict.fullName.content) ?
         '<article class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.fullName.content + '">' :
         (expertsDict.firstName.content && expertsDict.lastName.content) ?
         '<article class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.firstName.content + ' ' + expertsDict.lastName.content + '">' :
-        '<article class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.contentName.content + '">' ;
+        '<article class="gridFeedItem profileItem card shadow" id="expert' + expertsDict.contentId.content + '"  aria-label="' + expertsDict.contentName.content + '">';
 
 
 
@@ -204,14 +226,14 @@ try {
      *  validate title link
      * 
      * */
-     let titleLink = (expertsDict.fullTextLink.content && expertsDict.firstName.content && expertsDict.lastName.content) ?
+    let titleLink = (expertsDict.fullTextLink.content && expertsDict.firstName.content && expertsDict.lastName.content) ?
         '<h3 class="card-title"><a href="' + expertsDict.fullTextLink.content + '" title="Link to full bio of ' + expertsDict.firstName.content + ' ' + expertsDict.lastName.content + '">' + expertsDict.firstName.content + ' ' + expertsDict.lastName.content + '</a></h3>' :
         (expertsDict.fullTextLink.content && expertsDict.fullName.content) ?
         '<h3 class="card-title"><a href="' + expertsDict.fullTextLink.content + '" title="Link to full bio of ' + expertsDict.fullName.content + '">' + expertsDict.fullName.content + '</a></h3>' :
         (expertsDict.fullTextLink.content) ?
         '<h3 class="card-title"><a href="' + expertsDict.fullTextLink.content + '" title="Link to full bio of ' + expertsDict.contentName.content + '">' + expertsDict.contentName.content + '</a></h3>' :
         '<h3 class="card-title">' + expertsDict.contentName.content + '</h3>';
-        
+
 
 
 
@@ -219,7 +241,7 @@ try {
      *  validate summary
      * 
      * */
-     let summaryString = (expertsDict.summary.content) ?
+    let summaryString = (expertsDict.summary.content) ?
         '<p class="card-text summary">' + expertsDict.summary.content + '</p>' :
         '<span class="card-text summary hidden visually-hidden">No valid summary provided</span>';
 
@@ -230,9 +252,9 @@ try {
      *  parse the list of degrees
      * 
      * */
-     let arrayOfDegrees = (expertsDict.degrees.content) ? expertsDict.degrees.content.split('\n') : null;
-     let terminalDegree = arrayOfDegrees[0] || null;
-     let degreeString = (terminalDegree) ?
+    let arrayOfDegrees = (expertsDict.degrees.content) ? expertsDict.degrees.content.split('\n') : null;
+    let terminalDegree = arrayOfDegrees[0] || null;
+    let degreeString = (terminalDegree) ?
         '<div class="terminalDegree card-subtitle mb-2 fst-italic font-italic">' + terminalDegree + '</div>' :
         '<span class="terminalDegree card-subtitle hidden visually-hidden">No valid degree entered</span>';
 
@@ -243,9 +265,9 @@ try {
      *  parse for primary title
      * 
      * */
-     let arrayOfTitles = (expertsDict.titles.content) ? expertsDict.titles.content.split('\n') : null;
-     let titleOne = arrayOfTitles[0] || null;
-     let titleString = (titleOne) ?
+    let arrayOfTitles = (expertsDict.titles.content) ? expertsDict.titles.content.split('\n') : null;
+    let titleOne = arrayOfTitles[0] || null;
+    let titleString = (titleOne) ?
         '<div class="primaryTitle card-subtitle mb-2 text-muted">' + titleOne + '</div>' :
         '<span class="primaryTitle card-subtitle mb-2 text-muted hidden visually-hidden">No valid title provided</span>';
 
@@ -258,10 +280,10 @@ try {
      *  we need to parse this out of this list of disciplines until this content item field is replaced
      * 
      * */
-     let disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
-     let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
-     let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
-     let validDisciplines = (listOfDisciplines) ?
+    let disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
+    let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
+    let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
+    let validDisciplines = (listOfDisciplines) ?
         '<ul class="list-group">' + listOfDisciplines + '</ul>' :
         '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
 
@@ -273,7 +295,9 @@ try {
      *  this field in in development 20220928
      * 
      * */
-     let disciplineListStr = (expertsDict.disciplineList.content) ?
+    // let disciplinArr = (expertsDict.disciplineList.content) ? expertsDict.disciplineList.content.split(':') : null;
+    // let disciplineListStr = (expertsDict.disciplineList.content) ? assignDisciplines(disciplinArr) : null;
+    let disciplineListStr = (expertsDict.disciplineList.content) ?
         '<span class="disciplineList d-none hidden visually-hidden">' + expertsDict.disciplineList.content + '</span>' :
         '<span class="disciplineList d-none hidden visually-hidden">No List Provided</span>';
 
@@ -285,11 +309,11 @@ try {
      *  parse for college
      * 
      * */
-     let collegeString = (expertsDict.college.content) ?
+    let collegeString = (expertsDict.college.content) ?
         '<p class="college footerText">' + expertsDict.college.content + '</p>' :
         '<span class="college footerText hidden visually-hidden">No college provided</span>';
 
-        
+
 
 
     /***
@@ -297,7 +321,7 @@ try {
      *  and process valid media id
      * 
      * */
-     let imageString = (expertsDict.primaryImage.content) ?
+    let imageString = (expertsDict.primaryImage.content) ?
         '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" alt="' + expertsDict.contentName.content + '" loading="auto" /></span>' :
         '<span class="expertsImage hidden visually-hidden">No Image Provided</span>';
 
