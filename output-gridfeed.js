@@ -269,6 +269,19 @@ try {
 
 
     /***
+     *  test current content for semi-colon seperated list of disciplines
+     *  this field in in development 20220928
+     * 
+     * */
+     let disciplineListStr = (expertsDict.disciplineList.content) ?
+        '<span class="disciplineList d-none hidden visually-hidden">' + expertsDict.disciplineList.content + '</span>' :
+        '<span class="disciplineList d-none hidden visually-hidden">No List Provided</span>';
+
+
+
+
+
+    /***
      *  parse for college
      * 
      * */
