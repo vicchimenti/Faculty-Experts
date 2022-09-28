@@ -40,6 +40,66 @@ for(let i = 0; i < optionArr.length; i++) {
 
 
 
+/***
+ * scratch items for semicolon list debugging
+ */
+//  const categoryDropdown = document.querySelector('#categoryOptions');
+//  console.log(categoryDropdown);
+ 
+//  const categoryKeywordSearch = document.querySelector('#find-experts');
+//  console.log(categoryKeywordSearch);
+ 
+//  const profiles = document.getElementsByClassName("profileItem");
+//  categoryKeywordSearch.classList.add("classToBeAdded");
+//  console.log(profiles);
+ 
+ const disciplines = document.querySelectorAll(".disciplineList");
+//  for (const expert of experts) {
+//      expert.classList.add("gotya");
+//  }
+ console.log(disciplines);
+ 
+//  const listItemsNode = document.querySelectorAll('li.list-group-item');
+ 
+ 
+ // console.log(listItemsArr);
+ 
+//  let listItemsArr = []
+ 
+//  for (const item of listItemsNode) {
+//      listItemsArr.push(item.innerHTML);
+ 
+//      // console.log(item.innerText);
+//  }
+ 
+ 
+//  console.log(...listItemsArr);
+ 
+//  let listSet = new Set(listItemsArr);
+//  let optionArr = Array.from(listSet);
+ 
+//  optionArr.sort();
+ 
+//  console.log(...optionArr);
+//  console.log(listItemsArr.length);
+//  console.log(optionArr.length);
+ 
+ 
+ 
+ // const input = document.querySelectorAll('.ul.list-group');
+ // let inputArray = [];
+ // for (const i of input) {
+ //     inputArray.push(i.input.)
+ // }
+ // console.log(...input);
+ 
+ 
+ // let lis = document.getElementsByClassName("profileItem").getElementsByTagName("li");
+ // let lis = document.getElementById("navbar").getElementsByTagName("li");
+ // console.log(...lis);
+ 
+ 
+
 
 
 
