@@ -7,7 +7,7 @@
 *   @see https://www.seattleu.edu/newsroom/experts/
 *        Seattle University Newsroom Experts Application
 *
-*   @version 5.2.6
+*   @version 5.2.7
 */
 
 
@@ -32,12 +32,11 @@ let optionArr = Array.from(listSet);
 optionArr.sort();
 for(let i = 0; i < optionArr.length; i++) {
 
-    let encodedStr = optionArr[i].replace(/&amp;/g, '&');
+    let encodedStr = optionArr[i].replace(/&amp;/g, "&");
     let el = document.createElement("option");
     el.textContent = encodedStr;
     el.value = encodedStr;
     select.appendChild(el);
-
 }
 
 
