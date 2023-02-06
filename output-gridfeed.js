@@ -73,22 +73,22 @@ function parseArray(rawValues) {
 /***
  *      Returns an array of list items
  */
-function assignList(arrayOfValues, disciplineValidator) {
+// function assignList(arrayOfValues, disciplineValidator) {
 
-    let listValues = '';
+//     let listValues = '';
 
-    for (let i = 0; i < arrayOfValues.length; i++) {
+//     for (let i = 0; i < arrayOfValues.length; i++) {
 
-        let disciplineItem = arrayOfValues[i].trim() || null;
-        let validItem = (!disciplineValidator.includes(disciplineItem)) ? disciplineItem : null;
+//         let disciplineItem = arrayOfValues[i].trim() || null;
+//         let validItem = (!disciplineValidator.includes(disciplineItem)) ? disciplineItem : null;
 
-        if (validItem) {
-            listValues += '<li class="d-none hidden visually-hidden">' + validItem + '</li>';
-        }
-    }
+//         if (validItem) {
+//             listValues += '<li class="d-none hidden visually-hidden">' + validItem + '</li>';
+//         }
+//     }
 
-    return listValues;
-}
+//     return listValues;
+// }
 
 
 
@@ -280,12 +280,12 @@ try {
      *  we need to parse this out of this list of disciplines until this content item field is replaced
      * 
      * */
-    let disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
-    let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
-    let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
-    let validDisciplines = (listOfDisciplines) ?
-        '<ul class="d-none hidden visually-hidden">' + listOfDisciplines + '</ul>' :
-        '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
+    // let disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
+    // let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
+    // let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
+    // let validDisciplines = (listOfDisciplines) ?
+    //     '<ul class="d-none hidden visually-hidden">' + listOfDisciplines + '</ul>' :
+    //     '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
 
 
 
@@ -361,7 +361,6 @@ try {
             titleString,
             degreeString,
             summaryString,
-            validDisciplines,
             disciplineListStr,
             closeCardBody,
             openCardFooter,
