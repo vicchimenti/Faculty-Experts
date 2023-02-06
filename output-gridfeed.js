@@ -298,7 +298,7 @@ try {
     let disciplinArr = (expertsDict.disciplineList.content) ? expertsDict.disciplineList.content.split(';') : null;
     let disciplineFormattedList = (expertsDict.disciplineList.content) ? assignDisciplines(disciplinArr) : null;
     let disciplineListStr = (disciplineFormattedList) ?
-        '<ul class="list-group">' + disciplineFormattedList + '</ul>' :
+        '<ul class="list-group d-none hidden visually-hidden">' + disciplineFormattedList + '</ul>' :
         '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
             // let disciplineListStr = (expertsDict.disciplineList.content) ?
     //     '<span class="disciplineList d-none hidden visually-hidden">' + expertsDict.disciplineList.content + '</span>' :
