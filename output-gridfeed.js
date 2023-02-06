@@ -300,10 +300,6 @@ try {
     let disciplineListStr = (disciplineFormattedList) ?
         '<ul class="list-group disciplineList">' + disciplineFormattedList + '</ul>' :
         '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
-            // let disciplineListStr = (expertsDict.disciplineList.content) ?
-    //     '<span class="disciplineList d-none hidden visually-hidden">' + expertsDict.disciplineList.content + '</span>' :
-    //     '<span class="disciplineList d-none hidden visually-hidden">No List Provided</span>';
-
 
 
 
