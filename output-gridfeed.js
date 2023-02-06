@@ -71,29 +71,6 @@ function parseArray(rawValues) {
 
 
 /***
- *      Returns an array of list items
- */
-// function assignList(arrayOfValues, disciplineValidator) {
-
-//     let listValues = '';
-
-//     for (let i = 0; i < arrayOfValues.length; i++) {
-
-//         let disciplineItem = arrayOfValues[i].trim() || null;
-//         let validItem = (!disciplineValidator.includes(disciplineItem)) ? disciplineItem : null;
-
-//         if (validItem) {
-//             listValues += '<li class="d-none hidden visually-hidden">' + validItem + '</li>';
-//         }
-//     }
-
-//     return listValues;
-// }
-
-
-
-
-/***
  *      Returns an formatted list of disciplines
  */
 function assignDisciplines(arrayOfValues) {
