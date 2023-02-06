@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.15
+ *     @version 3.15.1
  */
 
 
@@ -27,7 +27,9 @@ try {
     var summary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' modifiers='striptags,htmlentities' />");
     var biography = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Biography' output='normal' display_field='value' />");
     var primaryImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='path/*' />");
-    var disciplines = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Disciplines' output='normal' display_field='value' />");
+    // var disciplines = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Disciplines' output='normal' display_field='value' />");
+    var disciplineList = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Discipline List" output="normal" modifiers="striptags,htmlentities" />');
+
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />");
     var contentID = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
 
@@ -112,38 +114,86 @@ try {
      *  parse the list of disciplines, add <li> tags
      * 
      * */
-    if (disciplines != "") {
-        var arrayOfDisciplines = disciplines.split(',');
-        let listItems = "";
-        let arrayOfSchools = [];
+    // if (disciplines != "") {
+    //     var arrayOfDisciplines = disciplines.split(',');
+    //     let listItems = "";
+    //     let arrayOfSchools = [];
 
         // trim whitespace on all disciplines and process for unordered list
-        for (let i = 0; i < arrayOfDisciplines.length; i++) {
-            let disciplineItem = arrayOfDisciplines[i].trim();
+        // for (let i = 0; i < arrayOfDisciplines.length; i++) {
+        //     let disciplineItem = arrayOfDisciplines[i].trim();
 
             // Check to see if existing discipline is a top level school
-            if (disciplineString.includes(disciplineItem)) {
-                let schoolString = arrayOfSchools.toString();
+            // if (disciplineString.includes(disciplineItem)) {
+            //     let schoolString = arrayOfSchools.toString();
 
                 // If a school then only display once
-                if (!schoolString.includes(disciplineItem)) {
-                    arrayOfSchools.push(disciplineItem);
-                }
+                // if (!schoolString.includes(disciplineItem)) {
+                //     arrayOfSchools.push(disciplineItem);
+                // }
 
             // If not a school then process as a discipline
-            } else {
+        //     } else {
+        //         if (i < (arrayOfDisciplines.length - 1)) {
+        //             listItems += '<span>' + disciplineItem + ', </span>';
+        //         } else {
+        //             listItems += '<span>' + disciplineItem + '</span>';
+        //         }
+        //     }
+        // }
+
+        // load all list items into an list group
+        // listOfDisciplines = '<span>' + listItems + '</span>';
+        // disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text">' + listOfDisciplines + '</p></div>';
+    // }
+
+
+
+
+        /***
+     *  parse the list of disciplines, add <li> tags
+     * 
+     * */
+        if (disciplineList != "") {
+            var arrayOfDisciplines = disciplineList.split(',');
+            let listItems = "";
+            // let arrayOfSchools = [];
+    
+            // trim whitespace on all disciplines and process for unordered list
+            for (let i = 0; i < arrayOfDisciplines.length; i++) {
+                let disciplineItem = arrayOfDisciplines[i].trim();
+
                 if (i < (arrayOfDisciplines.length - 1)) {
                     listItems += '<span>' + disciplineItem + ', </span>';
                 } else {
                     listItems += '<span>' + disciplineItem + '</span>';
                 }
+    
+                // Check to see if existing discipline is a top level school
+                // if (disciplineString.includes(disciplineItem)) {
+                //     let schoolString = arrayOfSchools.toString();
+    
+                    // If a school then only display once
+                    // if (!schoolString.includes(disciplineItem)) {
+                    //     arrayOfSchools.push(disciplineItem);
+                    // }
+    
+                // If not a school then process as a discipline
+                // } else {
+                //     if (i < (arrayOfDisciplines.length - 1)) {
+                //         listItems += '<span>' + disciplineItem + ', </span>';
+                //     } else {
+                //         listItems += '<span>' + disciplineItem + '</span>';
+                //     }
+                // }
             }
+    
+            // load all list items into an list group
+            listOfDisciplines = '<span>' + listItems + '</span>';
+            disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text">' + listOfDisciplines + '</p></div>';
         }
 
-        // load all list items into an list group
-        listOfDisciplines = '<span>' + listItems + '</span>';
-        disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text">' + listOfDisciplines + '</p></div>';
-    }
+
 
 
 
