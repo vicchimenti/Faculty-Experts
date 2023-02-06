@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  * 
- *      @version 3.3.4
+ *      @version 3.3.5
  * 
  * */
 
@@ -105,7 +105,7 @@ function assignDisciplines(arrayOfValues) {
         let disciplineItem = arrayOfValues[i].trim() || null;
 
         if (disciplineItem) {
-            disciplineValues += '<li class="list-group-item disciplineList">' + disciplineItem + '</li>';
+            disciplineValues += '<li class="list-group-item">' + disciplineItem + '</li>';
         }
     }
 
@@ -284,7 +284,7 @@ try {
     let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
     let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
     let validDisciplines = (listOfDisciplines) ?
-        '<ul class="list-group">' + listOfDisciplines + '</ul>' :
+        '<ul class="d-none hidden visually-hidden">' + listOfDisciplines + '</ul>' :
         '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
 
 
@@ -298,7 +298,7 @@ try {
     let disciplinArr = (expertsDict.disciplineList.content) ? expertsDict.disciplineList.content.split(';') : null;
     let disciplineFormattedList = (expertsDict.disciplineList.content) ? assignDisciplines(disciplinArr) : null;
     let disciplineListStr = (disciplineFormattedList) ?
-        '<ul class="list-group d-none hidden visually-hidden">' + disciplineFormattedList + '</ul>' :
+        '<ul class="list-group disciplineList">' + disciplineFormattedList + '</ul>' :
         '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
             // let disciplineListStr = (expertsDict.disciplineList.content) ?
     //     '<span class="disciplineList d-none hidden visually-hidden">' + expertsDict.disciplineList.content + '</span>' :
