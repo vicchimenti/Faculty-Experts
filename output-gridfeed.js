@@ -275,7 +275,6 @@ try {
 
     /***
      *  test current content for semi-colon seperated list of disciplines
-     *  this field in in development 20220928
      * 
      * */
     let disciplinArr = (expertsDict.disciplineList.content) ? expertsDict.disciplineList.content.split(',') : null;
