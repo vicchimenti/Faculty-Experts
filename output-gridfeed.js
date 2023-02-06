@@ -295,7 +295,7 @@ try {
      *  this field in in development 20220928
      * 
      * */
-    let disciplinArr = (expertsDict.disciplineList.content) ? expertsDict.disciplineList.content.split(';') : null;
+    let disciplinArr = (expertsDict.disciplineList.content) ? expertsDict.disciplineList.content.split(',') : null;
     let disciplineFormattedList = (expertsDict.disciplineList.content) ? assignDisciplines(disciplinArr) : null;
     let disciplineListStr = (disciplineFormattedList) ?
         '<ul class="list-group disciplineList">' + disciplineFormattedList + '</ul>' :
