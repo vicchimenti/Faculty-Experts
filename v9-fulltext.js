@@ -128,23 +128,6 @@ try {
                     listItems += '<span>' + disciplineItem + '</span>';
                 }
     
-                // Check to see if existing discipline is a top level school
-                // if (disciplineString.includes(disciplineItem)) {
-                //     let schoolString = arrayOfSchools.toString();
-    
-                    // If a school then only display once
-                    // if (!schoolString.includes(disciplineItem)) {
-                    //     arrayOfSchools.push(disciplineItem);
-                    // }
-    
-                // If not a school then process as a discipline
-                // } else {
-                //     if (i < (arrayOfDisciplines.length - 1)) {
-                //         listItems += '<span>' + disciplineItem + ', </span>';
-                //     } else {
-                //         listItems += '<span>' + disciplineItem + '</span>';
-                //     }
-                // }
             }
     
             // load all list items into an list group
