@@ -109,31 +109,28 @@ try {
 
 
 
-        /***
+    /***
      *  parse the list of disciplines, add <li> tags
      * 
      * */
-        if (disciplineList != "") {
-            var arrayOfDisciplines = disciplineList.split(',');
-            let listItems = "";
-            // let arrayOfSchools = [];
-    
-            // trim whitespace on all disciplines and process for unordered list
-            for (let i = 0; i < arrayOfDisciplines.length; i++) {
-                let disciplineItem = arrayOfDisciplines[i].trim();
+    if (disciplineList != "") {
+        let arrayOfDisciplines = disciplineList.split(',');
+        let listItems = "";
 
-                if (i < (arrayOfDisciplines.length - 1)) {
-                    listItems += '<span>' + disciplineItem + ', </span>';
-                } else {
-                    listItems += '<span>' + disciplineItem + '</span>';
-                }
-    
+        for (let i = 0; i < arrayOfDisciplines.length; i++) {
+            let disciplineItem = arrayOfDisciplines[i].trim();
+
+            if (i < (arrayOfDisciplines.length - 1)) {
+                listItems += '<span>' + disciplineItem + ', </span>';
+            } else {
+                listItems += '<span>' + disciplineItem + '</span>';
             }
-    
-            // load all list items into an list group
-            listOfDisciplines = '<span>' + listItems + '</span>';
-            disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text">' + listOfDisciplines + '</p></div>';
+
         }
+
+        listOfDisciplines = '<span>' + listItems + '</span>';
+        disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text">' + listOfDisciplines + '</p></div>';
+    }
 
 
 
