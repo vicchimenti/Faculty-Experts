@@ -274,22 +274,6 @@ try {
 
 
     /***
-     *  parse the list of disciplines
-     *  currently using nested t4 lists which generate an item for the college name
-     *  we need to parse this out of this list of disciplines until this content item field is replaced
-     * 
-     * */
-    // let disciplineString = "Athletics, Arts & Sciences, Business and Economics, Education, Law, Nursing, School of Theology and Ministry, Science and Engineering";
-    // let arrayOfDisciplines = (expertsDict.disciplines.content) ? expertsDict.disciplines.content.split(',') : null;
-    // let listOfDisciplines = (arrayOfDisciplines) ? assignList(arrayOfDisciplines, disciplineString) : null;
-    // let validDisciplines = (listOfDisciplines) ?
-    //     '<ul class="d-none hidden visually-hidden">' + listOfDisciplines + '</ul>' :
-    //     '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
-
-
-
-
-    /***
      *  test current content for semi-colon seperated list of disciplines
      *  this field in in development 20220928
      * 
