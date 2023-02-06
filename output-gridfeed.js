@@ -83,7 +83,7 @@ function assignList(arrayOfValues, disciplineValidator) {
         let validItem = (!disciplineValidator.includes(disciplineItem)) ? disciplineItem : null;
 
         if (validItem) {
-            listValues += '<li class="list-group-item">' + validItem + '</li>';
+            listValues += '<li class="d-none hidden visually-hidden">' + validItem + '</li>';
         }
     }
 
@@ -105,7 +105,7 @@ function assignDisciplines(arrayOfValues) {
         let disciplineItem = arrayOfValues[i].trim() || null;
 
         if (disciplineItem) {
-            disciplineValues += '<li class="d-none hidden visually-hidden disciplineList">' + disciplineItem + '</li>';
+            disciplineValues += '<li class="list-group-item disciplineList">' + disciplineItem + '</li>';
         }
     }
 
