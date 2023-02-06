@@ -295,11 +295,14 @@ try {
      *  this field in in development 20220928
      * 
      * */
-    // let disciplinArr = (expertsDict.disciplineList.content) ? expertsDict.disciplineList.content.split(':') : null;
-    // let disciplineListStr = (expertsDict.disciplineList.content) ? assignDisciplines(disciplinArr) : null;
-    let disciplineListStr = (expertsDict.disciplineList.content) ?
-        '<span class="disciplineList d-none hidden visually-hidden">' + expertsDict.disciplineList.content + '</span>' :
-        '<span class="disciplineList d-none hidden visually-hidden">No List Provided</span>';
+    let disciplinArr = (expertsDict.disciplineList.content) ? expertsDict.disciplineList.content.split(';') : null;
+    let disciplineFormattedList = (expertsDict.disciplineList.content) ? assignDisciplines(disciplinArr) : null;
+    let disciplineListStr = (disciplineFormattedList) ?
+        '<ul class="list-group">' + disciplineFormattedList + '</ul>' :
+        '<span class="list-group hidden visually-hidden">No areas of expertise provided</span>';
+            // let disciplineListStr = (expertsDict.disciplineList.content) ?
+    //     '<span class="disciplineList d-none hidden visually-hidden">' + expertsDict.disciplineList.content + '</span>' :
+    //     '<span class="disciplineList d-none hidden visually-hidden">No List Provided</span>';
 
 
 
