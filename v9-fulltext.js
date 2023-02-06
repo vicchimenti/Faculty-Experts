@@ -108,45 +108,6 @@ try {
 
 
 
-    /***
-     *  parse the list of disciplines, add <li> tags
-     * 
-     * */
-    // if (disciplines != "") {
-    //     var arrayOfDisciplines = disciplines.split(',');
-    //     let listItems = "";
-    //     let arrayOfSchools = [];
-
-        // trim whitespace on all disciplines and process for unordered list
-        // for (let i = 0; i < arrayOfDisciplines.length; i++) {
-        //     let disciplineItem = arrayOfDisciplines[i].trim();
-
-            // Check to see if existing discipline is a top level school
-            // if (disciplineString.includes(disciplineItem)) {
-            //     let schoolString = arrayOfSchools.toString();
-
-                // If a school then only display once
-                // if (!schoolString.includes(disciplineItem)) {
-                //     arrayOfSchools.push(disciplineItem);
-                // }
-
-            // If not a school then process as a discipline
-        //     } else {
-        //         if (i < (arrayOfDisciplines.length - 1)) {
-        //             listItems += '<span>' + disciplineItem + ', </span>';
-        //         } else {
-        //             listItems += '<span>' + disciplineItem + '</span>';
-        //         }
-        //     }
-        // }
-
-        // load all list items into an list group
-        // listOfDisciplines = '<span>' + listItems + '</span>';
-        // disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text">' + listOfDisciplines + '</p></div>';
-    // }
-
-
-
 
         /***
      *  parse the list of disciplines, add <li> tags
