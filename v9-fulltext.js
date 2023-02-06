@@ -1,5 +1,5 @@
 /***
- *     @author Victor Chimenti, MSCS-SE '20
+ *     @author Victor Chimenti, MSCS
  *     @file v9-fulltext.js
  *     @see Seattle University Newsroom Experts Application at https://www.seattleu.edu/newsroom/experts/
  *
@@ -7,7 +7,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 3.15.1
+ *     @version 3.15.2
  */
 
 
@@ -131,8 +131,6 @@ try {
         listOfDisciplines = '<span>' + listItems + '</span>';
         disciplineWrapper = '<div class="facultyDisciplines"><h2>Areas of Expertise</h2><p class="card-text">' + listOfDisciplines + '</p></div>';
     }
-
-
 
 
 
