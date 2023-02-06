@@ -182,7 +182,6 @@ try {
         department: getContentValues('<t4 type="content" name="Department" output="normal" modifiers="striptags,htmlentities" />'),
         summary: getContentValues('<t4 type="content" name="Summary" output="normal" modifiers="striptags,htmlentities" />'),
         primaryImage: getContentValues('<t4 type="content" name="Photo" output="normal" formatter="path/*" />'),
-        disciplines: getContentValues('<t4 type="content" name="Disciplines" output="normal" display_field="value" />'),
         disciplineList: getContentValues('<t4 type="content" name="Discipline List" output="normal" modifiers="striptags,htmlentities" />'),
         fullTextLink: getContentValues('<t4 type="content" name="Full Name" output="fulltext" use-element="true" filename-element="Full Name" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
